@@ -1,0 +1,532 @@
+[2014-09-27 09:48:03] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 09:54:01] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 09:54:34] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 09:58:21] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 09:59:18] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 09:59:19] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:03:25] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:04:04] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:04:31] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:05:46] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:06:39] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:08:45] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:09:01] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:10:40] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:11:11] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:14:27] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:15:38] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:16:19] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:16:24] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:18:29] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:18:50] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:19:21] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 10:19:34] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 19:20:20] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 19:29:44] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 19:30:26] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 19:34:53] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 19:35:21] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 19:35:34] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 19:38:20] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 19:40:42] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 19:42:23] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 19:43:46] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 19:54:32] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 19:54:37] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 19:54:55] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 19:54:58] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []
+[2014-09-27 19:57:46] production.ERROR: exception 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException' in D:\www\SimaProj\bootstrap\compiled.php:5702
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(5019): Illuminate\Routing\RouteCollection->match(Object(Illuminate\Http\Request))
+#1 D:\www\SimaProj\bootstrap\compiled.php(5007): Illuminate\Routing\Router->findRoute(Object(Illuminate\Http\Request))
+#2 D:\www\SimaProj\bootstrap\compiled.php(4999): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#3 D:\www\SimaProj\bootstrap\compiled.php(722): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#4 D:\www\SimaProj\bootstrap\compiled.php(703): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(7763): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#6 D:\www\SimaProj\bootstrap\compiled.php(8370): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#7 D:\www\SimaProj\bootstrap\compiled.php(8317): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(10955): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(664): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#11 {main} [] []

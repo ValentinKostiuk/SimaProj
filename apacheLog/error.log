@@ -1,0 +1,14 @@
+[Sun Sep 28 00:48:33.007495 2014] [core:alert] [pid 3288:tid 1172] [client 127.0.0.1:55216] D:/www/SimaProj/.htaccess: Redirect to non-URL
+[Sun Sep 28 00:48:35.222505 2014] [core:alert] [pid 3288:tid 1172] [client 127.0.0.1:55217] D:/www/SimaProj/.htaccess: Redirect to non-URL
+[Sun Sep 28 00:48:42.428539 2014] [core:alert] [pid 3288:tid 1172] [client 127.0.0.1:55218] D:/www/SimaProj/.htaccess: Redirect to non-URL
+[Sun Sep 28 00:48:46.260557 2014] [core:alert] [pid 3288:tid 1172] [client 127.0.0.1:55219] D:/www/SimaProj/.htaccess: Redirect to non-URL
+[Sun Sep 28 00:49:03.751640 2014] [core:error] [pid 3288:tid 1172] (OS 87)Параметр задан неверно.  : [client 127.0.0.1:55220] AH00127: Cannot map GET /publicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublic HTTP/1.1 to file
+[Sun Sep 28 00:49:14.978692 2014] [core:alert] [pid 3288:tid 1172] [client 127.0.0.1:55221] D:/www/SimaProj/.htaccess: Redirect takes two or three arguments, an optional status, then document to be redirected and destination URL
+[Sun Sep 28 00:49:23.757734 2014] [core:alert] [pid 3288:tid 1172] [client 127.0.0.1:55222] D:/www/SimaProj/.htaccess: Redirect takes two or three arguments, an optional status, then document to be redirected and destination URL
+[Sun Sep 28 00:49:28.582756 2014] [core:alert] [pid 3288:tid 1172] [client 127.0.0.1:55223] D:/www/SimaProj/.htaccess: Redirect takes two or three arguments, an optional status, then document to be redirected and destination URL
+[Sun Sep 28 00:52:01.299474 2014] [core:error] [pid 3288:tid 1172] (OS 87)Параметр задан неверно.  : [client 127.0.0.1:55241] AH00127: Cannot map GET /publicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublicpublic HTTP/1.1 to file
+[Sun Sep 28 00:52:19.742561 2014] [core:alert] [pid 3288:tid 1172] [client 127.0.0.1:55244] D:/www/SimaProj/.htaccess: Redirect to non-URL
+[Sun Sep 28 00:52:25.151586 2014] [core:alert] [pid 3288:tid 1172] [client 127.0.0.1:55246] D:/www/SimaProj/.htaccess: Redirect to non-URL
+[Sun Sep 28 00:52:26.037590 2014] [core:alert] [pid 3288:tid 1172] [client 127.0.0.1:55247] D:/www/SimaProj/.htaccess: Redirect to non-URL
+[Sun Sep 28 00:52:53.312718 2014] [core:alert] [pid 3288:tid 1172] [client 127.0.0.1:55248] D:/www/SimaProj/.htaccess: Redirect to non-URL
+[Sun Sep 28 00:52:55.423728 2014] [core:alert] [pid 3288:tid 1172] [client 127.0.0.1:55249] D:/www/SimaProj/.htaccess: Redirect to non-URL

@@ -1,0 +1,44 @@
+html, body {
+	height: 100%;
+}
+
+/*----------border of page---------*/
+div.window-border {
+	position: fixed;
+	background: #313131;
+	z-index: 9999;
+}
+
+div.window-border.top {
+	height: 15px;
+	width: 100%;
+	top: 0;
+}
+
+div.window-border.bottom {
+	height: 15px;
+	width: 100%;
+	bottom: 0;
+}
+
+div.window-border.right {
+	width: 15px;
+	height: 100%;
+	right: 0;
+	top: 0;
+}
+
+div.window-border.left {
+	width: 15px;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
+/*----------border of page---------*/
+
+.whole-page-wrapper {
+	height: 100%;
+	background: #EEEEEE;
+	padding: 15px;
+}
