@@ -373,3 +373,10 @@
 127.0.0.1 - - [28/Sep/2014:23:47:10 +0300] "GET /statics/styles/main.css HTTP/1.1" 200 596
 127.0.0.1 - - [28/Sep/2014:23:47:10 +0300] "GET /statics/scripts/libs/jquery-1.11.1.min.js HTTP/1.1" 304 -
 127.0.0.1 - - [28/Sep/2014:23:47:10 +0300] "GET /statics/images/jasmine.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Sep/2014:00:17:29 +0300] "GET / HTTP/1.1" 200 1743
+127.0.0.1 - - [29/Sep/2014:00:17:29 +0300] "GET /statics/styles/main.css HTTP/1.1" 200 596
+127.0.0.1 - - [29/Sep/2014:00:17:29 +0300] "GET /statics/scripts/libs/jquery-1.11.1.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Sep/2014:00:17:29 +0300] "GET /statics/images/jasmine.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Sep/2014:20:55:07 +0300] "GET / HTTP/1.1" 200 1743
+127.0.0.1 - - [29/Sep/2014:20:55:20 +0300] "GET /statics/styles/main.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Sep/2014:20:55:21 +0300] "GET /statics/scripts/libs/jquery-1.11.1.min.js HTTP/1.1" 304 -
