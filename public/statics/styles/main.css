@@ -1,5 +1,9 @@
 html, body {
 	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 /*----------border of page---------*/
@@ -39,6 +43,116 @@ div.window-border.left {
 
 .whole-page-wrapper {
 	height: 100%;
-	background: #EEEEEE;
+	/*background: #EEEEEE;*/
+	position: relative;
 	padding: 15px;
+}
+
+/*--------heading of layout------*/
+.header-wrapper{
+	max-width:940px;
+	margin: auto auto;
+	padding: 30px 30px 20px 30px;
+}
+.header-wrapper-inner{
+	text-align: center;
+	vertical-align: baseline;
+}
+.header-logo{
+
+}
+
+.header-logo-image{
+	width: 350px;
+	height: 150px;
+}
+
+/*-----------------site menu styles---------------*/
+
+.header-main-site-nav-menu{
+	display: inline-block;
+	margin: 0;
+	padding: 10px 0;
+}
+
+.header-main-site-nav-menu-item{
+	position: relative;
+	display: inline-block;
+	list-style: none;
+	padding: 0 6px 0 6px;
+}
+.header-main-site-nav-menu-item a{
+	color: #808080;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.header-main-site-nav-menu-item:hover a{
+	color: #2E2E2E;
+}
+.header-main-site-nav-menu-item.active a{
+	color: #2E2E2E;
+}
+
+.header-container-ruler{
+	border: none;
+	border-top: #E3E3E3 solid 1px;
+}
+
+
+/*-----------------------main content------------------------*/
+
+.main-content-wrapper{
+	max-width:940px;
+	margin: auto auto;
+	padding: 30px 30px 20px 30px;
+}
+
+.main-content-container{
+	text-align: center;
+}
+
+/*-----------------------main page footer--------------------*/
+
+.footer-wrapper{
+	max-width:940px;
+	margin: auto auto 20px;
+	padding: 30px 30px 20px 30px;
+}
+
+.footer-container-ruler{
+	border: none;
+	border-top: #E3E3E3 solid 1px;
+}
+
+.footer-social-networks-container{
+	text-align: center;
+	padding: 10px;
+}
+
+.footer-social-networks-container a{
+	color: #808080;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.footer-social-networks-container .footer-social-networks-icon{
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin: 0 6px 0 6px;
+	background: url("../images/main/logo.jpg") -300px 0;
+}
+
+.footer-inner .copyright-like{
+	text-align: center;
+	padding: 10px;
+}
+.footer-inner .copyright-like a{
+	color: #B3B3B3;
+	text-decoration: none;
+	font-size:11px;
+}
+.footer-inner .copyright-like a sup{
+	text-decoration: none;
 }

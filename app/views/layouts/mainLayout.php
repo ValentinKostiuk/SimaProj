@@ -15,52 +15,58 @@
 <div class="whole-page-wrapper">
 
 	<header class="header-wrapper">
-		<div class="header-inner">
+		<div class="header-wrapper-inner">
 			<div class="header-container">
 
-				<div class="logo">
+				<div class="header-logo">
 					<a href="/">
-						<img src="statics/images/jasmine.png">
+						<img class="header-logo-image" src="statics/images/main/logo.jpg">
 					</a>
 				</div>
 
-				<nav>
-					<ul class="menu">
-						<li>
-							<a>Главная</a>
-						<li>
-							<a>Обо мне</a>
+				<nav class="header-main-site-nav">
+					<ul class="header-main-site-nav-menu">
+						<li class="header-main-site-nav-menu-item">
+							<a href="/">Главная</a>
 						</li>
-						<li>
-							<a>Галерея</a>
+						<li class="header-main-site-nav-menu-item">
+							<a href="/">Обо мне</a>
 						</li>
-						<li>
-							<a>Магазин</a>
+						<li class="header-main-site-nav-menu-item">
+							<a href="/">Галерея</a>
 						</li>
-						<li>
-							<a>FAQ</a>
+						<li class="header-main-site-nav-menu-item">
+							<a href="/">Магазин</a>
 						</li>
-						<li>
-							<a>Контакты</a>
+						<li class="header-main-site-nav-menu-item">
+							<a href="/">FAQ</a>
+						</li>
+						<li class="header-main-site-nav-menu-item">
+							<a href="/">Контакты</a>
 						</li>
 					</ul>
 				</nav>
+
+				<div class="header-container-ruler"></div>
 			</div>
 		</div>
 	</header>
 
 	<div class="main-content-wrapper">
-		<div class="main-content-container"></div>
+		<div class="main-content-container">
+			<img src="statics/images/main/test-image.jpg">
+		</div>
 	</div>
 
 	<footer class="footer-wrapper">
 		<div class="footer-inner">
-			<div class="social-networks-container">
-				<a href="vk.com" target="_blank"><i class="icon-vk-com"></i></a>
-				<a href="http://instagram.com" target="_blank"><i class="icon-instagram-com"></i></a>
+			<div class="footer-container-ruler"></div>
+			<div class="footer-social-networks-container">
+				<a href="vk.com" target="_blank"><i class="footer-social-networks-icon vk-com">vk.com</i></a>
+				<a href="http://instagram.com" target="_blank"><i class="footer-social-networks-icon instagram-com">insta</i></a>
 			</div>
 			<div class="copyright-like">
-				<a href="http://valentin-kostiuk.16mb.com" target="_blank">by vk</a>
+				<a href="http://valentin-kostiuk.16mb.com" target="_blank">2014 by vk<sup>&copy;</sup></a>
 			</div>
 		</div>
 	</footer>
