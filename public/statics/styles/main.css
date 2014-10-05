@@ -63,8 +63,8 @@ div.window-border.left {
 }
 
 .header-logo-image{
-	width: 350px;
-	height: 150px;
+	width: 825px;
+	height: 160px;
 }
 
 /*-----------------site menu styles---------------*/
@@ -180,7 +180,7 @@ div.window-border.left {
 	width: 24px;
 	height: 24px;
 	margin: 0 6px 0 6px;
-	background: url("../images/main/logo.jpg") -300px 0;
+	background: url("../images/main/logo.png") -300px 0;
 }
 
 .footer-inner .copyright-like{

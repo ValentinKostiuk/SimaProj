@@ -24,7 +24,7 @@
 
 				<div class="header-logo">
 					<a href="/">
-						<img class="header-logo-image" src="statics/images/main/logo.jpg">
+						<img class="header-logo-image" src="statics/images/main/logo.png">
 					</a>
 				</div>
 
