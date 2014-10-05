@@ -87,7 +87,7 @@ div.window-border.left {
 	font-size: 12px;
 }
 
-.header-main-site-nav-menu-item:hover a{
+.header-main-site-nav-menu-item:hover>a{
 	color: #2E2E2E;
 }
 .header-main-site-nav-menu-item.active a{
@@ -97,6 +97,45 @@ div.window-border.left {
 .header-container-ruler{
 	border: none;
 	border-top: #E3E3E3 solid 1px;
+}
+
+.header-main-site-sub-nav{
+	display: none;
+	position: absolute;
+	padding: 10px 20px 10px 20px;
+	background-color: #FFFFFF;
+	z-index: 1;
+}
+.header-main-site-sub-nav .header-main-site-sub-nav{
+	left: 99%;
+	top: 0;
+}
+
+*:hover > .header-main-site-sub-nav{
+	display: block;
+}
+
+.header-main-site-sub-nav-menu{
+	margin: 0;
+	padding: 0;
+}
+
+.header-main-site-sub-nav-menu-item{
+	display: block;
+	position: relative;
+	white-space: nowrap;
+	list-style: none;
+	padding: 6px 6px;
+	text-align: left;
+	border-bottom: #999999 dotted 1px;
+}
+
+.header-main-site-sub-nav-menu-item:hover>a{
+	color: #2E2E2E;
+}
+
+.header-main-site-sub-nav-menu-item:last-child {
+	border-bottom: none;
 }
 
 
@@ -156,3 +195,10 @@ div.window-border.left {
 .footer-inner .copyright-like a sup{
 	text-decoration: none;
 }
+
+/*other delete*/
+.owl-carousel-image{
+	width: 600px;
+	height: 400px;
+}
+/*other delete*/

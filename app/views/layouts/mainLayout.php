@@ -5,7 +5,11 @@
 	<title>Серафима Дидковская</title>
 	<link rel="shortcut icon" href="//jquery.com/jquery-wp-content/themes/jquery.com/i/favicon.ico">
 	<link rel="stylesheet" href="statics/styles/main.css">
+	<link rel="stylesheet" href="statics/thirdPartyLibs/owl-carousel/owl.carousel.css">
+	<link rel="stylesheet" href="statics/thirdPartyLibs/owl-carousel/owl.theme.css">
 	<script type="text/javascript" src="statics/scripts/libs/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="statics/thirdPartyLibs/owl-carousel/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="statics/scripts/mainLayoutInit.js"></script>
 </head>
 <body>
 <div class="window-border top"></div>
@@ -26,22 +30,48 @@
 
 				<nav class="header-main-site-nav">
 					<ul class="header-main-site-nav-menu">
-						<li class="header-main-site-nav-menu-item">
+						<li class="header-main-site-nav-menu-item main-menu-item">
 							<a href="/">Главная</a>
 						</li>
-						<li class="header-main-site-nav-menu-item">
+						<li class="header-main-site-nav-menu-item main-menu-item">
 							<a href="/">Обо мне</a>
 						</li>
-						<li class="header-main-site-nav-menu-item">
-							<a href="/">Галерея</a>
+						<li class="header-main-site-nav-menu-item main-menu-item">
+							<a href="/gallery">Галерея</a>
+							<div class="header-main-site-sub-nav">
+								<ul class="header-main-site-sub-nav-menu">
+									<li class="header-main-site-sub-nav-menu-item main-menu-item">
+										<a href="/gallery/men">Для мужчин</a>
+									</li>
+									<li class="header-main-site-sub-nav-menu-item main-menu-item">
+										<a href="/gallery/women">Для дам</a>
+									</li>
+									<li class="header-main-site-sub-nav-menu-item main-menu-item">
+										<a href="/gallery/kids">Для Маленьких</a>
+										<div class="header-main-site-sub-nav">
+											<ul class="header-main-site-sub-nav-menu">
+												<li class="header-main-site-sub-nav-menu-item main-menu-item">
+													<a href="/gallery/men">Для мужчин</a>
+												</li>
+												<li class="header-main-site-sub-nav-menu-item main-menu-item">
+													<a href="/gallery/women">Для дам</a>
+												</li>
+												<li class="header-main-site-sub-nav-menu-item main-menu-item">
+													<a href="/gallery/kids">Для Маленьких</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
 						</li>
-						<li class="header-main-site-nav-menu-item">
+						<li class="header-main-site-nav-menu-item main-menu-item">
 							<a href="/">Магазин</a>
 						</li>
-						<li class="header-main-site-nav-menu-item">
+						<li class="header-main-site-nav-menu-item main-menu-item">
 							<a href="/">FAQ</a>
 						</li>
-						<li class="header-main-site-nav-menu-item">
+						<li class="header-main-site-nav-menu-item main-menu-item">
 							<a href="/">Контакты</a>
 						</li>
 					</ul>
@@ -54,7 +84,14 @@
 
 	<div class="main-content-wrapper">
 		<div class="main-content-container">
-			<img src="statics/images/main/test-image.jpg">
+			<div id="owl-example" class="owl-carousel">
+				<img class="owl-carousel-image" src="statics/images/main/test-image.jpg">
+				<img class="owl-carousel-image" src="statics/images/main/test-image2.jpg">
+				<img class="owl-carousel-image" src="statics/images/main/test-image3.jpg">
+				<img class="owl-carousel-image" src="statics/images/main/test-image4.jpg">
+				<img class="owl-carousel-image" src="statics/images/main/test-image5.jpg">
+				<img class="owl-carousel-image" src="statics/images/main/test-image6.jpg">
+			</div>
 		</div>
 	</div>
 
