@@ -23,10 +23,12 @@
 
 		allItems.each(function(index, item){
 			var currentItem = $(item),
-				link;
-			if(currentItem.children(layoutSelectors.subMenuContainer).length > 0){
 				link = currentItem.children('a');
-				link.text(link.text() + ' +')
+			if(currentItem.children(layoutSelectors.subMenuContainer).length > 0){
+				link.text(link.text() + ' +');
+			}
+			if(link[0].href === window.location.href){
+				currentItem.addClass('active');
 			}
 		});
 	}

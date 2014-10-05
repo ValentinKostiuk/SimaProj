@@ -34,7 +34,7 @@
 							<a href="/">Главная</a>
 						</li>
 						<li class="header-main-site-nav-menu-item main-menu-item">
-							<a href="/">Обо мне</a>
+							<a href="/about">Обо мне</a>
 						</li>
 						<li class="header-main-site-nav-menu-item main-menu-item">
 							<a href="/gallery">Галерея</a>
@@ -66,13 +66,13 @@
 							</div>
 						</li>
 						<li class="header-main-site-nav-menu-item main-menu-item">
-							<a href="/">Магазин</a>
+							<a href="/shop">Магазин</a>
 						</li>
 						<li class="header-main-site-nav-menu-item main-menu-item">
-							<a href="/">FAQ</a>
+							<a href="/faq">FAQ</a>
 						</li>
 						<li class="header-main-site-nav-menu-item main-menu-item">
-							<a href="/">Контакты</a>
+							<a href="/contacts">Контакты</a>
 						</li>
 					</ul>
 				</nav>
