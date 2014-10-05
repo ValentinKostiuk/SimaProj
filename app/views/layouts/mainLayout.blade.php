@@ -84,14 +84,7 @@
 
 	<div class="main-content-wrapper">
 		<div class="main-content-container">
-			<div id="owl-example" class="owl-carousel">
-				<img class="owl-carousel-image" src="statics/images/main/test-image.jpg">
-				<img class="owl-carousel-image" src="statics/images/main/test-image2.jpg">
-				<img class="owl-carousel-image" src="statics/images/main/test-image3.jpg">
-				<img class="owl-carousel-image" src="statics/images/main/test-image4.jpg">
-				<img class="owl-carousel-image" src="statics/images/main/test-image5.jpg">
-				<img class="owl-carousel-image" src="statics/images/main/test-image6.jpg">
-			</div>
+			@yield('content', 'Hmm, that\'s interesting! I don\'t know what to say...')
 		</div>
 	</div>
 

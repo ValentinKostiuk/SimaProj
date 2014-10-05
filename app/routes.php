@@ -22,5 +22,5 @@
 //    return 'bar route';
 //});
 
-Route::any('/', 'LandingPageController@showLandingPage');
+Route::any('/', 'MainSiteController@showLandingPage');
 

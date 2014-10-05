@@ -34,7 +34,6 @@
 	}
 
 	$(document).ready(function() {
-		$("#owl-example").owlCarousel({autoPlay: true, singleItem: true, pagination: false});
 		initMainSiteMenu();
 	});
 }());

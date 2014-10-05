@@ -6,10 +6,10 @@
  * Date: 28.09.2014
  * Time: 22:09
  */
-class LandingPageController extends BaseController
+class MainSiteController extends BaseController
 {
 	public function showLandingPage()
 	{
-		return View::make('layouts.mainLayout');
+		return View::make('landingPage');
 	}
 } 
