@@ -1,6 +1,7 @@
 <?php
 
-class HomeController extends BaseController {
+class HomeController extends BaseController
+{
 
 	/*
 	|--------------------------------------------------------------------------
@@ -17,8 +18,23 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-        return asset('assets/images/jasmine.png');
+		return asset('assets/images/jasmine.png');
 		//return View::make('hello');
+	}
+
+	public function showHash()
+	{
+//		$user = User::find(1);
+//		Auth::login ($user );
+
+		if(Auth::attempt (array ('username' => 'ValentinKostiuk' , 'password' => 'SO239290so')))
+		{
+			return Auth::id();
+		}
+
+		return 'trololo';
+
+		//return User::find(1);
 	}
 
 }

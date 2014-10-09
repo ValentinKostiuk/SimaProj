@@ -24,3 +24,7 @@
 
 Route::any('/', 'MainSiteController@showLandingPage');
 
+Route::get('/auth/login', 'AuthController@login');
+Route::post('/auth/login', 'AuthController@tryLogin');
+Route::get('/auth/logout', 'AuthController@logout');
+
