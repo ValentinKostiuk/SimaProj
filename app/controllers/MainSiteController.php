@@ -10,6 +10,6 @@ class MainSiteController extends BaseController
 {
 	public function showLandingPage()
 	{
-		return View::make('landingPage');
+		return View::make('main.landingPage');
 	}
 } 

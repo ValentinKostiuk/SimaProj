@@ -9,7 +9,7 @@ class AuthController extends BaseController
 {
 	public function login()
 	{
-		return View::make('login');
+		return View::make('auth.login');
 	}
 	public function tryLogin()
 	{
@@ -18,7 +18,7 @@ class AuthController extends BaseController
 
 		if(Auth::attempt (array('email' => $email , 'password' => $password), true))
 		{
-			return 'Authorized';
+			return Redirect::intended (action('DashboardController@showMainDashboard'));
 		}
 		return Redirect::intended (action('AuthController@login'));
 	}
