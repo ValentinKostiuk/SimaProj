@@ -40,7 +40,7 @@
 			padding: 0 10px;
 			line-height: 25px;
 			font-size: 13px;
-			background-color: #FFFFFF !important;
+			background-color: #FFFFFF;
 			border: #999999 solid 1px;
 			border-radius: 3px;
 			}

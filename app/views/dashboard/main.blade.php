@@ -1,5 +1,8 @@
 @extends('layouts.dashboardLayout')
 @section('content')
-    <div>Contact Valik</div>
-    <a href="{{{action('AuthController@logout')}}}">Logout</a>
+    <h1>SUPER CONTENT</h1>
+    <h1>SUPER CONTENT</h1>
+    <h1>SUPER CONTENT</h1>
+    <h1>SUPER CONTENT</h1>
+    <h1>SUPER CONTENT</h1>
 @stop

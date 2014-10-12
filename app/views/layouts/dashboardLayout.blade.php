@@ -4,9 +4,10 @@
 		<meta charset="UTF-8">
 		<title>Admin Dashboard</title>
 		<link rel="shortcut icon" href="//jquery.com/jquery-wp-content/themes/jquery.com/i/favicon.ico">
-		<link rel="stylesheet" href="statics/styles/main.css">
-		<script type="text/javascript" src="statics/scripts/libs/jquery-1.11.1.min.js"></script>
-		<script type="text/javascript" src="statics/scripts/mainLayoutInit.js"></script>
+		<link rel="stylesheet" href="/statics/styles/main.css">
+		<link rel="stylesheet" href="/statics/styles/dashboard.css">
+		<script type="text/javascript" src="/statics/scripts/libs/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="/statics/scripts/dashboardLayoutInit.js"></script>
 	</head>
 	<body>
 		<div class="window-border top"></div>
@@ -18,13 +19,37 @@
 				<div class="header-wrapper-inner">
 					<div class="header-container">
 						<h1>Welcome To System Dashboard</h1>
+						<nav class="header-container-user-menu">
+							<ul class="header-container-user-nav-menu">
+								<li class="header-container-user-nav-menu-item user-menu-item">
+									<span>{{{Auth::user()->username}}}</span>
+									<div class="header-container-user-sub-nav">
+										<ul class="header-container-user-sub-nav-menu">
+											<li class="header-container-user-sub-nav-menu-item user-menu-item">
+												<a href="{{{action('AuthController@logout')}}}">Logout</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
 						<nav class="header-main-site-nav">
 							<ul class="header-main-site-nav-menu">
 								<li class="header-main-site-nav-menu-item main-menu-item">
 									<a href="/dashboard">Dashboard</a>
 								</li>
 								<li class="header-main-site-nav-menu-item main-menu-item">
-									<a href="/dashboard/users/create">Create new user</a>
+									<a href="/dashboard/users" onclick="return false;">Users</a>
+									<div class="header-main-site-sub-nav">
+										<ul class="header-main-site-sub-nav-menu">
+											<li class="header-main-site-sub-nav-menu-item main-menu-item">
+												<a href="/dashboard/users">View all users</a>
+											</li>
+											<li class="header-main-site-sub-nav-menu-item main-menu-item">
+												<a href="/dashboard/users/create">Create new user</a>
+											</li>
+										</ul>
+									</div>
 								</li>
 								<li class="header-main-site-nav-menu-item main-menu-item">
 									<a href="/dashboard/carousel/addNewImage">Add New Image To Carousel</a>
@@ -42,6 +67,26 @@
 				</div>
 			</header>
 			<div class="main-content-wrapper">
+				@if (isset($modelState) && isset($modelState['errors']))
+				<div class="main-content-error-wrapper">
+					<h3 class="main-content-error-wrapper-heading">You have following errors, during request submission:</h3>
+					<ul class="main-content-error-wrapper-list">
+						@foreach ($modelState['errors'] as $error)
+						<li class="main-content-error-wrapper-list-item">{{$error}}</li>
+						@endforeach
+					</ul>
+				</div>
+				@endif
+				@if (isset($modelState) && isset($modelState['success']))
+				<div class="main-content-success-wrapper">
+					<h3 class="main-content-success-wrapper-heading">Request completed successfully:</h3>
+					<ul class="main-content-success-wrapper-list">
+						@foreach ($modelState['success'] as $success)
+						<li class="main-content-success-wrapper-list-item">{{$success}}</li>
+						@endforeach
+					</ul>
+				</div>
+				@endif
 				<div class="main-content-container">
 					@yield('content', 'Hmm, that\'s interesting! I don\'t know what to say...')
 				</div>
