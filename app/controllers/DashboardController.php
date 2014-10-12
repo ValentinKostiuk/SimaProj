@@ -30,7 +30,7 @@ class DashboardController extends BaseController
 	public function deleteUser()
 	{
 		$user = User::find(Input::get('id'));
-		if ($user->role === 1) {
+		if ($user->role == 1) {
 			$model['users'] = User::all();
 			$modelState['errors'][] = 'User \'' . $user->username . '\' is Super admin. Super admin can not be deleted!';
 			return View::make('dashboard.users', array(

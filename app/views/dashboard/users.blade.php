@@ -9,9 +9,9 @@
 			<span class="dashboard-field-label">E-mail: </span><span class="dashboard-field-value">{{$user->email}}</span><br />
 			<span class="dashboard-field-label">Role: </span>
 			<span class="dashboard-field-value">
-			@if ($user->role === 1)
+			@if ($user->role == 1)
 				Super Admin
-			@elseif ($user->role > 1)
+			@elseif ($user->role == 2)
 				Admin
 			@else
 				Average user
