@@ -189,7 +189,7 @@ abstract class Facade {
 	}
 
 	/**
-	 * Handle dynamic, assets calls to the object.
+	 * Handle dynamic, static calls to the object.
 	 *
 	 * @param  string  $method
 	 * @param  array   $args

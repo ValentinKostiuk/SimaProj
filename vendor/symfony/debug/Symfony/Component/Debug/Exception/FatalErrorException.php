@@ -39,7 +39,7 @@ class FatalErrorException extends \ErrorException
                         }
                     } elseif ('dynamic' === $frame['type']) {
                         $frame['type'] = '->';
-                    } elseif ('assets' === $frame['type']) {
+                    } elseif ('static' === $frame['type']) {
                         $frame['type'] = '::';
                     }
 

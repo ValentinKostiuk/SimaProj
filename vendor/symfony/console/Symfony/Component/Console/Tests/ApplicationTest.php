@@ -53,7 +53,7 @@ class ApplicationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Replaces the dynamic placeholders of the command help text with a assets version.
+     * Replaces the dynamic placeholders of the command help text with a static version.
      * The placeholder %command.full_name% includes the script path that is not predictable
      * and can not be tested against.
      */
@@ -270,7 +270,7 @@ class ApplicationTest extends \PHPUnit_Framework_TestCase
         return array(
             array('f', 'Command "f" is not defined.'),
             array('a', 'Command "a" is ambiguous (afoobar, afoobar1 and 1 more).'),
-            array('foo:b', 'Command "foo:b" is ambiguous (foo:bar, foo:bar1 and 1 more).')
+            array('foo:b', 'Command "foo:b" is ambiguous (foo:bar, foo:bar1 and 1 more).'),
         );
     }
 
@@ -317,7 +317,7 @@ class ApplicationTest extends \PHPUnit_Framework_TestCase
     {
         return array(
             array('foo3:baR'),
-            array('foO3:bar')
+            array('foO3:bar'),
         );
     }
 

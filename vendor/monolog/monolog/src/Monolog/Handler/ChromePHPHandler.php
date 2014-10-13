@@ -51,6 +51,18 @@ class ChromePHPHandler extends AbstractProcessingHandler
     protected static $sendHeaders = true;
 
     /**
+     * @param integer $level  The minimum logging level at which this handler will be triggered
+     * @param Boolean $bubble Whether the messages that are handled can bubble up the stack or not
+     */
+    public function __construct($level = Logger::DEBUG, $bubble = true)
+    {
+        parent::__construct($level, $bubble);
+        if (!function_exists('json_encode')) {
+            throw new \RuntimeException('PHP\'s json extension is required to use Monolog\'s ChromePHPHandler');
+        }
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function handleBatch(array $records)
@@ -167,7 +179,7 @@ class ChromePHPHandler extends AbstractProcessingHandler
     }
 
     /**
-     * BC getter for the sendHeaders property that has been made assets
+     * BC getter for the sendHeaders property that has been made static
      */
     public function __get($property)
     {
@@ -179,7 +191,7 @@ class ChromePHPHandler extends AbstractProcessingHandler
     }
 
     /**
-     * BC setter for the sendHeaders property that has been made assets
+     * BC setter for the sendHeaders property that has been made static
      */
     public function __set($property, $value)
     {

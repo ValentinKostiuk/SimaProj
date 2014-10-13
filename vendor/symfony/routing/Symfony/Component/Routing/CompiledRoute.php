@@ -30,7 +30,7 @@ class CompiledRoute
     /**
      * Constructor.
      *
-     * @param string      $staticPrefix       The assets prefix of the compiled route
+     * @param string      $staticPrefix       The static prefix of the compiled route
      * @param string      $regex              The regular expression to use to match this route
      * @param array       $tokens             An array of tokens to use to generate URL for this route
      * @param array       $pathVariables      An array of path variables
@@ -52,9 +52,9 @@ class CompiledRoute
     }
 
     /**
-     * Returns the assets prefix.
+     * Returns the static prefix.
      *
-     * @return string The assets prefix
+     * @return string The static prefix
      */
     public function getStaticPrefix()
     {
@@ -130,5 +130,4 @@ class CompiledRoute
     {
         return $this->hostVariables;
     }
-
 }

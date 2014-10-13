@@ -44,10 +44,8 @@ trait SoftDeletingTrait {
 		{
 			$this->withTrashed()->where($this->getKeyName(), $this->getKey())->forceDelete();
 		}
-		else
-		{
-			return $this->runSoftDelete();
-		}
+
+		return $this->runSoftDelete();
 	}
 
 	/**
@@ -156,7 +154,7 @@ trait SoftDeletingTrait {
 	 */
 	public function getDeletedAtColumn()
 	{
-		return defined('assets::DELETED_AT') ? static::DELETED_AT : 'deleted_at';
+		return defined('static::DELETED_AT') ? static::DELETED_AT : 'deleted_at';
 	}
 
 	/**

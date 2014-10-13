@@ -1,0 +1,48 @@
+[2014-10-13 19:23:20] production.ERROR: exception 'UnexpectedValueException' with message 'The Response content must be a string or object implementing __toString(), "boolean" given.' in D:\www\SimaProj\bootstrap\compiled.php:9984
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(10359): Symfony\Component\HttpFoundation\Response->setContent(false)
+#1 D:\www\SimaProj\bootstrap\compiled.php(9886): Illuminate\Http\Response->setContent(false)
+#2 D:\www\SimaProj\bootstrap\compiled.php(5189): Symfony\Component\HttpFoundation\Response->__construct(false)
+#3 D:\www\SimaProj\bootstrap\compiled.php(4998): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), false)
+#4 D:\www\SimaProj\bootstrap\compiled.php(4984): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(715): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 D:\www\SimaProj\bootstrap\compiled.php(696): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 D:\www\SimaProj\bootstrap\compiled.php(7744): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(8351): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(8298): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 D:\www\SimaProj\bootstrap\compiled.php(10957): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 D:\www\SimaProj\bootstrap\compiled.php(657): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 {main} [] []
+[2014-10-13 19:23:37] production.ERROR: exception 'UnexpectedValueException' with message 'The Response content must be a string or object implementing __toString(), "boolean" given.' in D:\www\SimaProj\bootstrap\compiled.php:9984
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(10359): Symfony\Component\HttpFoundation\Response->setContent(false)
+#1 D:\www\SimaProj\bootstrap\compiled.php(9886): Illuminate\Http\Response->setContent(false)
+#2 D:\www\SimaProj\bootstrap\compiled.php(5189): Symfony\Component\HttpFoundation\Response->__construct(false)
+#3 D:\www\SimaProj\bootstrap\compiled.php(4998): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), false)
+#4 D:\www\SimaProj\bootstrap\compiled.php(4984): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(715): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 D:\www\SimaProj\bootstrap\compiled.php(696): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 D:\www\SimaProj\bootstrap\compiled.php(7744): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(8351): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(8298): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 D:\www\SimaProj\bootstrap\compiled.php(10957): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 D:\www\SimaProj\bootstrap\compiled.php(657): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 {main} [] []
+[2014-10-13 19:24:00] production.ERROR: exception 'UnexpectedValueException' with message 'The Response content must be a string or object implementing __toString(), "boolean" given.' in D:\www\SimaProj\bootstrap\compiled.php:9984
+Stack trace:
+#0 D:\www\SimaProj\bootstrap\compiled.php(10359): Symfony\Component\HttpFoundation\Response->setContent(false)
+#1 D:\www\SimaProj\bootstrap\compiled.php(9886): Illuminate\Http\Response->setContent(false)
+#2 D:\www\SimaProj\bootstrap\compiled.php(5189): Symfony\Component\HttpFoundation\Response->__construct(false)
+#3 D:\www\SimaProj\bootstrap\compiled.php(4998): Illuminate\Routing\Router->prepareResponse(Object(Illuminate\Http\Request), false)
+#4 D:\www\SimaProj\bootstrap\compiled.php(4984): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#5 D:\www\SimaProj\bootstrap\compiled.php(715): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#6 D:\www\SimaProj\bootstrap\compiled.php(696): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#7 D:\www\SimaProj\bootstrap\compiled.php(7744): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#8 D:\www\SimaProj\bootstrap\compiled.php(8351): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#9 D:\www\SimaProj\bootstrap\compiled.php(8298): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#10 D:\www\SimaProj\bootstrap\compiled.php(10957): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#11 D:\www\SimaProj\bootstrap\compiled.php(657): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#12 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#13 {main} [] []

@@ -46,7 +46,7 @@ class FirePHPHandler extends AbstractProcessingHandler
     protected static $initialized = false;
 
     /**
-     * Shared assets message index between potentially multiple handlers
+     * Shared static message index between potentially multiple handlers
      * @var int
      */
     protected static $messageIndex = 1;
@@ -170,7 +170,7 @@ class FirePHPHandler extends AbstractProcessingHandler
     }
 
     /**
-     * BC getter for the sendHeaders property that has been made assets
+     * BC getter for the sendHeaders property that has been made static
      */
     public function __get($property)
     {
@@ -182,7 +182,7 @@ class FirePHPHandler extends AbstractProcessingHandler
     }
 
     /**
-     * BC setter for the sendHeaders property that has been made assets
+     * BC setter for the sendHeaders property that has been made static
      */
     public function __set($property, $value)
     {

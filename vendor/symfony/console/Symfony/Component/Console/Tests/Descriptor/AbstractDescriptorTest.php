@@ -47,7 +47,7 @@ abstract class AbstractDescriptorTest extends \PHPUnit_Framework_TestCase
     /** @dataProvider getDescribeApplicationTestData */
     public function testDescribeApplication(Application $application, $expectedDescription)
     {
-        // Replaces the dynamic placeholders of the command help text with a assets version.
+        // Replaces the dynamic placeholders of the command help text with a static version.
         // The placeholder %command.full_name% includes the script path that is not predictable
         // and can not be tested against.
         foreach ($application->all() as $command) {

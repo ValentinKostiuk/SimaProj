@@ -18,6 +18,7 @@ class DashboardController extends BaseController
 
 	public function contactAdmin()
 	{
+		var_dump(Storage::exists('user/avatar.jpg'));
 		return View::Make('dashboard.main');
 	}
 

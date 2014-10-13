@@ -154,7 +154,7 @@ class PhpMatcherDumperTest extends \PHPUnit_Framework_TestCase
         // route between collections
         $collection->add('ababa', new Route('/ababa'));
 
-        // collection with assets prefix but only one route
+        // collection with static prefix but only one route
         $collection1 = new RouteCollection();
         $collection1->add('foo4', new Route('/{foo}'));
         $collection1->addPrefix('/aba');
@@ -248,7 +248,7 @@ class PhpMatcherDumperTest extends \PHPUnit_Framework_TestCase
         /* test case 3 */
 
         $rootprefixCollection = new RouteCollection();
-        $rootprefixCollection->add('assets', new Route('/test'));
+        $rootprefixCollection->add('static', new Route('/test'));
         $rootprefixCollection->add('dynamic', new Route('/{var}'));
         $rootprefixCollection->addPrefix('rootprefix');
         $route = new Route('/with-condition');
@@ -258,7 +258,7 @@ class PhpMatcherDumperTest extends \PHPUnit_Framework_TestCase
         return array(
            array($collection, 'url_matcher1.php', array()),
            array($redirectCollection, 'url_matcher2.php', array('base_class' => 'Symfony\Component\Routing\Tests\Fixtures\RedirectableUrlMatcher')),
-           array($rootprefixCollection, 'url_matcher3.php', array())
+           array($rootprefixCollection, 'url_matcher3.php', array()),
         );
     }
 }

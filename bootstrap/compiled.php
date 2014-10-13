@@ -191,9 +191,8 @@ class Container implements ArrayAccess
     {
         if (isset($this->reboundCallbacks[$abstract])) {
             return $this->reboundCallbacks[$abstract];
-        } else {
-            return array();
         }
+        return array();
     }
     public function make($abstract, $parameters = array())
     {
@@ -221,9 +220,8 @@ class Container implements ArrayAccess
                 $abstract = '\\' . $abstract;
             }
             return $abstract;
-        } else {
-            return $this->bindings[$abstract]['concrete'];
         }
+        return $this->bindings[$abstract]['concrete'];
     }
     protected function missingLeadingSlash($abstract)
     {
@@ -267,10 +265,9 @@ class Container implements ArrayAccess
     {
         if ($parameter->isDefaultValueAvailable()) {
             return $parameter->getDefaultValue();
-        } else {
-            $message = "Unresolvable dependency resolving [{$parameter}] in class {$parameter->getDeclaringClass()->getName()}";
-            throw new BindingResolutionException($message);
         }
+        $message = "Unresolvable dependency resolving [{$parameter}] in class {$parameter->getDeclaringClass()->getName()}";
+        throw new BindingResolutionException($message);
     }
     protected function resolveClass(ReflectionParameter $parameter)
     {
@@ -279,9 +276,8 @@ class Container implements ArrayAccess
         } catch (BindingResolutionException $e) {
             if ($parameter->isOptional()) {
                 return $parameter->getDefaultValue();
-            } else {
-                throw $e;
             }
+            throw $e;
         }
     }
     protected function keyParametersByArgument(array $dependencies, array $parameters)
@@ -338,8 +334,7 @@ class Container implements ArrayAccess
     }
     protected function dropStaleInstances($abstract)
     {
-        unset($this->instances[$abstract]);
-        unset($this->aliases[$abstract]);
+        unset($this->instances[$abstract], $this->aliases[$abstract]);
     }
     public function forgetInstance($abstract)
     {
@@ -368,8 +363,7 @@ class Container implements ArrayAccess
     }
     public function offsetUnset($key)
     {
-        unset($this->bindings[$key]);
-        unset($this->instances[$key]);
+        unset($this->bindings[$key], $this->instances[$key]);
     }
     public function __get($key)
     {
@@ -429,7 +423,7 @@ use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 class Application extends Container implements HttpKernelInterface, TerminableInterface, ResponsePreparerInterface
 {
-    const VERSION = '4.2.9';
+    const VERSION = '4.2.11';
     protected $booted = false;
     protected $bootingCallbacks = array();
     protected $bootedCallbacks = array();
@@ -493,9 +487,8 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
     {
         if (count(func_get_args()) > 0) {
             return in_array($this['env'], func_get_args());
-        } else {
-            return $this['env'];
         }
+        return $this['env'];
     }
     public function isLocal()
     {
@@ -692,7 +685,7 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
     public function forgetMiddleware($class)
     {
         $this->middlewares = array_filter($this->middlewares, function ($m) use($class) {
-            return get_class($m['class']) != $class;
+            return $m['class'] != $class;
         });
     }
     public function handle(SymfonyRequest $request, $type = HttpKernelInterface::MASTER_REQUEST, $catch = true)
@@ -773,9 +766,8 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
     {
         if ($code == 404) {
             throw new NotFoundHttpException($message);
-        } else {
-            throw new HttpException($code, $message, null, $headers);
         }
+        throw new HttpException($code, $message, null, $headers);
     }
     public function missing(Closure $callback)
     {
@@ -866,9 +858,8 @@ class EnvironmentDetector
     {
         if ($consoleArgs) {
             return $this->detectConsoleEnvironment($environments, $consoleArgs);
-        } else {
-            return $this->detectWebEnvironment($environments);
         }
+        return $this->detectWebEnvironment($environments);
     }
     protected function detectWebEnvironment($environments)
     {
@@ -888,9 +879,8 @@ class EnvironmentDetector
     {
         if (!is_null($value = $this->getEnvironmentArgument($args))) {
             return head(array_slice(explode('=', $value), 1));
-        } else {
-            return $this->detectWebEnvironment($environments);
         }
+        return $this->detectWebEnvironment($environments);
     }
     protected function getEnvironmentArgument(array $args)
     {
@@ -1019,7 +1009,7 @@ class Request extends SymfonyRequest
         $results = array();
         $input = $this->all();
         foreach ($keys as $key) {
-            array_set($results, $key, array_get($input, $key, null));
+            array_set($results, $key, array_get($input, $key));
         }
         return $results;
     }
@@ -1052,11 +1042,15 @@ class Request extends SymfonyRequest
             $files = array($files);
         }
         foreach ($files as $file) {
-            if ($file instanceof SplFileInfo && $file->getPath() != '') {
+            if ($this->isValidFile($file)) {
                 return true;
             }
         }
         return false;
+    }
+    protected function isValidFile($file)
+    {
+        return $file instanceof SplFileInfo && $file->getPath() != '';
     }
     public function header($key = null, $default = null)
     {
@@ -1093,9 +1087,8 @@ class Request extends SymfonyRequest
     {
         if (is_null($key)) {
             return $this->{$source}->all();
-        } else {
-            return $this->{$source}->get($key, $default, true);
         }
+        return $this->{$source}->get($key, $default, true);
     }
     public function merge(array $input)
     {
@@ -3504,10 +3497,7 @@ class Str
     public static function words($value, $words = 100, $end = '...')
     {
         preg_match('/^\\s*+(?:\\S++\\s*+){1,' . $words . '}/u', $value, $matches);
-        if (!isset($matches[0])) {
-            return $value;
-        }
-        if (strlen($value) == strlen($matches[0])) {
+        if (!isset($matches[0]) || strlen($value) === strlen($matches[0])) {
             return $value;
         }
         return rtrim($matches[0]) . $end;
@@ -3559,8 +3549,11 @@ class Str
     }
     public static function snake($value, $delimiter = '_')
     {
+        if (ctype_lower($value)) {
+            return $value;
+        }
         $replace = '$1' . $delimiter . '$2';
-        return ctype_lower($value) ? $value : strtolower(preg_replace('/(.)([A-Z])/', $replace, $value));
+        return strtolower(preg_replace('/(.)([A-Z])/', $replace, $value));
     }
     public static function startsWith($haystack, $needles)
     {
@@ -4104,17 +4097,15 @@ class FileEnvironmentVariablesLoader implements EnvironmentVariablesLoaderInterf
         }
         if (!$this->files->exists($path = $this->getFile($environment))) {
             return array();
-        } else {
-            return array_dot($this->files->getRequire($path));
         }
+        return array_dot($this->files->getRequire($path));
     }
     protected function getFile($environment)
     {
         if ($environment) {
             return $this->path . '/.env.' . $environment . '.php';
-        } else {
-            return $this->path . '/.env.php';
         }
+        return $this->path . '/.env.php';
     }
 }
 namespace Illuminate\Config;
@@ -4171,9 +4162,8 @@ class Filesystem
     {
         if ($this->exists($path)) {
             return $this->put($path, $data . $this->get($path));
-        } else {
-            return $this->put($path, $data);
         }
+        return $this->put($path, $data);
     }
     public function append($path, $data)
     {
@@ -4256,9 +4246,8 @@ class Filesystem
     {
         if ($force) {
             return @mkdir($path, $mode, $recursive);
-        } else {
-            return mkdir($path, $mode, $recursive);
         }
+        return mkdir($path, $mode, $recursive);
     }
     public function copyDirectory($directory, $destination, $options = null)
     {
@@ -4550,10 +4539,6 @@ class SessionServiceProvider extends ServiceProvider
             return $manager->driver();
         });
     }
-    protected function getDriver()
-    {
-        return $this->app['config']['session.driver'];
-    }
 }
 namespace Illuminate\View;
 
@@ -4574,7 +4559,7 @@ class ViewServiceProvider extends ServiceProvider
     }
     public function registerEngineResolver()
     {
-        $this->app->bindShared('view.engine.resolver', function ($app) {
+        $this->app->bindShared('view.engine.resolver', function () {
             $resolver = new EngineResolver();
             foreach (array('php', 'blade') as $engine) {
                 $this->{'register' . ucfirst($engine) . 'Engine'}($resolver);
@@ -5056,9 +5041,8 @@ class Router implements HttpKernelInterface, RouteFiltererInterface
     {
         if (is_string($callback) && !str_contains($callback, '@')) {
             return $callback . '@filter';
-        } else {
-            return $callback;
         }
+        return $callback;
     }
     public function when($pattern, $name, $methods = null)
     {
@@ -5366,13 +5350,7 @@ class Route
     protected function extractOptionalParameters()
     {
         preg_match_all('/\\{(\\w+?)\\?\\}/', $this->uri, $matches);
-        $optional = array();
-        if (isset($matches[1])) {
-            foreach ($matches[1] as $key) {
-                $optional[$key] = null;
-            }
-        }
-        return $optional;
+        return isset($matches[1]) ? array_fill_keys($matches[1], null) : array();
     }
     public function beforeFilters()
     {
@@ -5718,9 +5696,8 @@ class RouteCollection implements Countable, IteratorAggregate
             return (new Route('OPTIONS', $request->path(), function () use($others) {
                 return new Response('', 200, array('Allow' => implode(',', $others)));
             }))->bind($request);
-        } else {
-            $this->methodNotAllowed($others);
         }
+        $this->methodNotAllowed($others);
     }
     protected function methodNotAllowed(array $others)
     {
@@ -5846,7 +5823,7 @@ class ControllerDispatcher
     }
     protected function filterFailsOn($filter, $request, $method)
     {
-        $on = array_get($filter, 'options.on', null);
+        $on = array_get($filter, 'options.on');
         if (is_null($on)) {
             return false;
         }
@@ -5924,9 +5901,8 @@ class UrlGenerator
     {
         if (is_null($secure)) {
             return $this->forceSchema ?: $this->request->getScheme() . '://';
-        } else {
-            return $secure ? 'https://' : 'http://';
         }
+        return $secure ? 'https://' : 'http://';
     }
     public function forceSchema($schema)
     {
@@ -5938,9 +5914,8 @@ class UrlGenerator
         $parameters = (array) $parameters;
         if (!is_null($route)) {
             return $this->toRoute($route, $parameters, $absolute);
-        } else {
-            throw new InvalidArgumentException("Route [{$name}] not defined.");
         }
+        throw new InvalidArgumentException("Route [{$name}] not defined.");
     }
     protected function toRoute($route, array $parameters, $absolute)
     {
@@ -6004,9 +5979,8 @@ class UrlGenerator
     {
         if (in_array($this->request->getPort(), array('80', '443'))) {
             return $domain;
-        } else {
-            return $domain .= ':' . $this->request->getPort();
         }
+        return $domain . ':' . $this->request->getPort();
     }
     protected function getRouteRoot($route, $domain)
     {
@@ -6018,9 +5992,8 @@ class UrlGenerator
             return $this->getScheme(false);
         } elseif ($route->httpsOnly()) {
             return $this->getScheme(true);
-        } else {
-            return $this->getScheme(null);
         }
+        return $this->getScheme(null);
     }
     public function action($action, $parameters = array(), $absolute = true)
     {
@@ -6271,8 +6244,15 @@ class Dispatcher
     }
     public function forget($event)
     {
-        unset($this->listeners[$event]);
-        unset($this->sorted[$event]);
+        unset($this->listeners[$event], $this->sorted[$event]);
+    }
+    public function forgetQueued()
+    {
+        foreach ($this->listeners as $key => $value) {
+            if (ends_with($key, '_queue')) {
+                $this->forget($key);
+            }
+        }
     }
 }
 namespace Illuminate\Database\Eloquent;
@@ -6674,6 +6654,10 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
             return true;
         }
     }
+    public function forceDelete()
+    {
+        return $this->delete();
+    }
     protected function performDeleteOnModel()
     {
         $this->newQuery()->where($this->getKeyName(), $this->getKey())->delete();
@@ -6795,9 +6779,9 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
             return false;
         }
         if ($this->exists) {
-            $saved = $this->performUpdate($query);
+            $saved = $this->performUpdate($query, $options);
         } else {
-            $saved = $this->performInsert($query);
+            $saved = $this->performInsert($query, $options);
         }
         if ($saved) {
             $this->finishSave($options);
@@ -6812,14 +6796,14 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
             $this->touchOwners();
         }
     }
-    protected function performUpdate(Builder $query)
+    protected function performUpdate(Builder $query, array $options)
     {
         $dirty = $this->getDirty();
         if (count($dirty) > 0) {
             if ($this->fireModelEvent('updating') === false) {
                 return false;
             }
-            if ($this->timestamps) {
+            if ($this->timestamps && array_get($options, 'timestamps', true)) {
                 $this->updateTimestamps();
             }
             $dirty = $this->getDirty();
@@ -6830,12 +6814,12 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
         }
         return true;
     }
-    protected function performInsert(Builder $query)
+    protected function performInsert(Builder $query, array $options)
     {
         if ($this->fireModelEvent('creating') === false) {
             return false;
         }
-        if ($this->timestamps) {
+        if ($this->timestamps && array_get($options, 'timestamps', true)) {
             $this->updateTimestamps();
         }
         $attributes = $this->attributes;
@@ -6857,7 +6841,9 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
     {
         foreach ($this->touches as $relation) {
             $this->{$relation}()->touch();
-            $this->{$relation}->touchOwners();
+            if (!is_null($this->{$relation})) {
+                $this->{$relation}->touchOwners();
+            }
         }
     }
     public function touches($relation)
@@ -6882,9 +6868,8 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
     {
         if (isset($this->original[$this->getKeyName()])) {
             return $this->original[$this->getKeyName()];
-        } else {
-            return $this->getAttribute($this->getKeyName());
         }
+        return $this->getAttribute($this->getKeyName());
     }
     public function touch()
     {
@@ -7452,8 +7437,7 @@ abstract class Model implements ArrayAccess, ArrayableInterface, JsonableInterfa
     }
     public function __unset($key)
     {
-        unset($this->attributes[$key]);
-        unset($this->relations[$key]);
+        unset($this->attributes[$key], $this->relations[$key]);
     }
     public function __call($method, $parameters)
     {
@@ -7535,9 +7519,8 @@ class DatabaseManager implements ConnectionResolverInterface
         $this->disconnect($name = $name ?: $this->getDefaultConnection());
         if (!isset($this->connections[$name])) {
             return $this->connection($name);
-        } else {
-            return $this->refreshPdoConnections($name);
         }
+        return $this->refreshPdoConnections($name);
     }
     protected function refreshPdoConnections($name)
     {
@@ -7641,9 +7624,8 @@ class ConnectionFactory
         $config = $this->parseConfig($config, $name);
         if (isset($config['read'])) {
             return $this->createReadWriteConnection($config);
-        } else {
-            return $this->createSingleConnection($config);
         }
+        return $this->createSingleConnection($config);
     }
     protected function createSingleConnection(array $config)
     {
@@ -7674,9 +7656,8 @@ class ConnectionFactory
     {
         if (isset($config[$type][0])) {
             return $config[$type][array_rand($config[$type])];
-        } else {
-            return $config[$type];
         }
+        return $config[$type];
     }
     protected function mergeReadWriteConfig(array $config, array $merge)
     {
@@ -8512,6 +8493,9 @@ class LogServiceProvider extends ServiceProvider
     {
         $logger = new Writer(new Logger($this->app['env']), $this->app['events']);
         $this->app->instance('log', $logger);
+        $this->app->bind('Psr\\Log\\LoggerInterface', function ($app) {
+            return $app['log']->getMonolog();
+        });
         if (isset($this->app['log.setup'])) {
             call_user_func($this->app['log.setup'], $logger);
         }
@@ -8784,6 +8768,13 @@ class Logger implements LoggerInterface
         }
         return static::$levels[$level];
     }
+    public static function toMonologLevel($level)
+    {
+        if (is_string($level) && defined(__CLASS__ . '::' . strtoupper($level))) {
+            return constant(__CLASS__ . '::' . strtoupper($level));
+        }
+        return $level;
+    }
     public function isHandling($level)
     {
         $record = array('level' => $level);
@@ -8877,7 +8868,7 @@ abstract class AbstractHandler implements HandlerInterface
     protected $processors = array();
     public function __construct($level = Logger::DEBUG, $bubble = true)
     {
-        $this->level = $level;
+        $this->setLevel($level);
         $this->bubble = $bubble;
     }
     public function isHandling(array $record)
@@ -8923,7 +8914,7 @@ abstract class AbstractHandler implements HandlerInterface
     }
     public function setLevel($level)
     {
-        $this->level = $level;
+        $this->level = Logger::toMonologLevel($level);
         return $this;
     }
     public function getLevel()
@@ -8986,15 +8977,19 @@ class StreamHandler extends AbstractProcessingHandler
     protected $url;
     private $errorMessage;
     protected $filePermission;
-    public function __construct($stream, $level = Logger::DEBUG, $bubble = true, $filePermission = null)
+    protected $useLocking;
+    public function __construct($stream, $level = Logger::DEBUG, $bubble = true, $filePermission = null, $useLocking = false)
     {
         parent::__construct($level, $bubble);
         if (is_resource($stream)) {
             $this->stream = $stream;
-        } else {
+        } elseif (is_string($stream)) {
             $this->url = $stream;
+        } else {
+            throw new \InvalidArgumentException('A stream must either be a resource or a string.');
         }
         $this->filePermission = $filePermission;
+        $this->useLocking = $useLocking;
     }
     public function close()
     {
@@ -9021,7 +9016,13 @@ class StreamHandler extends AbstractProcessingHandler
                 throw new \UnexpectedValueException(sprintf('The stream or file "%s" could not be opened: ' . $this->errorMessage, $this->url));
             }
         }
+        if ($this->useLocking) {
+            flock($this->stream, LOCK_EX);
+        }
         fwrite($this->stream, (string) $record['formatted']);
+        if ($this->useLocking) {
+            flock($this->stream, LOCK_UN);
+        }
     }
     private function customErrorHandler($code, $msg)
     {
@@ -9039,14 +9040,14 @@ class RotatingFileHandler extends StreamHandler
     protected $nextRotation;
     protected $filenameFormat;
     protected $dateFormat;
-    public function __construct($filename, $maxFiles = 0, $level = Logger::DEBUG, $bubble = true, $filePermission = null)
+    public function __construct($filename, $maxFiles = 0, $level = Logger::DEBUG, $bubble = true, $filePermission = null, $useLocking = false)
     {
         $this->filename = $filename;
         $this->maxFiles = (int) $maxFiles;
         $this->nextRotation = new \DateTime('tomorrow');
         $this->filenameFormat = '{filename}-{date}';
         $this->dateFormat = 'Y-m-d';
-        parent::__construct($this->getTimedFilename(), $level, $bubble, $filePermission);
+        parent::__construct($this->getTimedFilename(), $level, $bubble, $filePermission, $useLocking);
     }
     public function close()
     {
@@ -9159,9 +9160,8 @@ class SymfonyDisplayer implements ExceptionDisplayerInterface
     {
         if ($this->returnJson) {
             return new JsonResponse(array('error' => $exception->getMessage(), 'file' => $exception->getFile(), 'line' => $exception->getLine()), 500);
-        } else {
-            return $this->symfony->createResponse($exception);
         }
+        return $this->symfony->createResponse($exception);
     }
 }
 namespace Illuminate\Exception;
@@ -9554,7 +9554,7 @@ class MessageBag implements ArrayableInterface, Countable, JsonableInterface, Me
     protected function transform($messages, $format, $messageKey)
     {
         $messages = (array) $messages;
-        foreach ($messages as $key => &$message) {
+        foreach ($messages as &$message) {
             $replace = array(':message', ':key');
             $message = str_replace($replace, array($message, $messageKey), $format);
         }
@@ -10243,12 +10243,14 @@ class Response
         if (!$request->isMethodSafe()) {
             return false;
         }
-        $lastModified = $request->headers->get('If-Modified-Since');
         $notModified = false;
+        $lastModified = $this->headers->get('Last-Modified');
+        $modifiedSince = $request->headers->get('If-Modified-Since');
         if ($etags = $request->getEtags()) {
-            $notModified = (in_array($this->getEtag(), $etags) || in_array('*', $etags)) && (!$lastModified || $this->headers->get('Last-Modified') == $lastModified);
-        } elseif ($lastModified) {
-            $notModified = $lastModified == $this->headers->get('Last-Modified');
+            $notModified = in_array($this->getEtag(), $etags) || in_array('*', $etags);
+        }
+        if ($modifiedSince && $lastModified) {
+            $notModified = strtotime($modifiedSince) >= strtotime($lastModified) && (!$etags || $notModified);
         }
         if ($notModified) {
             $this->setNotModified();

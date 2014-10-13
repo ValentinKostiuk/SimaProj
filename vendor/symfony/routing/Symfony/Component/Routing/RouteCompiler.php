@@ -23,7 +23,7 @@ class RouteCompiler implements RouteCompilerInterface
 
     /**
      * This string defines the characters that are automatically considered separators in front of
-     * optional placeholders (with default and no assets text following). Such a single separator
+     * optional placeholders (with default and no static text following). Such a single separator
      * can be left out together with the optional placeholder from matching and generating URLs.
      */
     const SEPARATORS = '/,;.:-_~+*=@|';
@@ -93,7 +93,7 @@ class RouteCompiler implements RouteCompilerInterface
         preg_match_all('#\{\w+\}#', $pattern, $matches, PREG_OFFSET_CAPTURE | PREG_SET_ORDER);
         foreach ($matches as $match) {
             $varName = substr($match[0][0], 1, -1);
-            // get all assets text preceding the current variable
+            // get all static text preceding the current variable
             $precedingText = substr($pattern, $pos, $match[0][1] - $pos);
             $pos = $match[0][1] + strlen($match[0][0]);
             $precedingChar = strlen($precedingText) > 0 ? substr($precedingText, -1) : '';
@@ -115,7 +115,7 @@ class RouteCompiler implements RouteCompilerInterface
             $regexp = $route->getRequirement($varName);
             if (null === $regexp) {
                 $followingPattern = (string) substr($pattern, $pos);
-                // Find the next assets character after the variable that functions as a separator. By default, this separator and '/'
+                // Find the next static character after the variable that functions as a separator. By default, this separator and '/'
                 // are disallowed for the variable. This default requirement makes sure that optional variables can be matched at all
                 // and that the generating-matching-combination of URLs unambiguous, i.e. the params used for generating the URL are
                 // the same that will be matched. Example: new Route('/{page}.{_format}', array('_format' => 'html'))
@@ -174,11 +174,11 @@ class RouteCompiler implements RouteCompilerInterface
     }
 
     /**
-     * Returns the next assets character in the Route pattern that will serve as a separator.
+     * Returns the next static character in the Route pattern that will serve as a separator.
      *
      * @param string $pattern The route pattern
      *
-     * @return string The next assets character that functions as separator (or empty string when none available)
+     * @return string The next static character that functions as separator (or empty string when none available)
      */
     private static function findNextSeparator($pattern)
     {
@@ -186,14 +186,14 @@ class RouteCompiler implements RouteCompilerInterface
             // return empty string if pattern is empty or false (false which can be returned by substr)
             return '';
         }
-        // first remove all placeholders from the pattern so we can find the next real assets character
+        // first remove all placeholders from the pattern so we can find the next real static character
         $pattern = preg_replace('#\{\w+\}#', '', $pattern);
 
         return isset($pattern[0]) && false !== strpos(static::SEPARATORS, $pattern[0]) ? $pattern[0] : '';
     }
 
     /**
-     * Computes the regexp used to match a specific token. It can be assets text or a subpattern.
+     * Computes the regexp used to match a specific token. It can be static text or a subpattern.
      *
      * @param array   $tokens        The route tokens
      * @param int     $index         The index of the current token
