@@ -151,3 +151,83 @@
 .dashboard-form-submit-button:hover{
 	color: #333333;
 }
+
+/*---------------------carousel items------------*/
+.dashboard-carousel-items-heading{
+
+}
+
+.dashboard-carousel-items-wrapper{
+	margin: auto auto 20px;
+	padding: 0;
+	text-align: center;
+	font-size: 14px;
+	background-color: #EEEEEE;
+	border: #999999 solid 1px;
+	border-radius: 6px;
+}
+
+.dashboard-carousel-item-container{
+	text-align: left;
+	padding: 10px 20px 10px 20px;
+	border-bottom: #999999 solid 1px;
+}
+
+.dashboard-carousel-item-container:last-child{
+	border: none;
+}
+
+.dashboard-carousel-item-heading{
+	text-align: center;
+}
+
+.dashboard-carousel-item-image-wrapper{
+	display: inline-block;
+}
+
+.dashboard-carousel-item-image{
+	width: 200px;
+	height: 150px;
+}
+
+.dashboard-carousel-item-fields{
+	display: inline-block;
+	width: 550px;
+	height: 150px;
+	padding: 20px 10px 0 10px;
+	vertical-align: top;
+	word-break: break-all;
+}
+
+.dashboard-carousel-item-field-label,
+.dashboard-carousel-item-field-value{
+	line-height: 30px;
+}
+
+.dashboard-carousel-item-field-label{
+	font-weight: bold;
+}
+
+.dashboard-carousel-item-forms-wrapper{
+	display: inline-block;
+	height: 150px;
+	vertical-align: top;
+}
+
+.dashboard-carousel-item-forms-submit-button{
+	width: 80px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #666666;
+	padding: 4px 15px;
+	margin: 15px 0 15px 0;
+	border: #999999 solid 1px;
+	border-radius: 3px;
+}
+.dashboard-carousel-item-forms-submit-button:hover{
+	color: #333333;
+}
+
+.dashboard-carousel-disabled-items-heading{
+	margin-top: 40px;
+}
