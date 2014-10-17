@@ -2,7 +2,7 @@
 @section('content')
 <div class="dashboard-form-wrapper">
 	<h3 class="dashboard-form-heading">Create New User</h3>
-	<form action="{{{action('DashboardController@createCarouselItemPost')}}}" method="POST" enctype="multipart/form-data">
+	<form action="{{{action('CarouselManagementController@createCarouselItemPost')}}}" method="POST" enctype="multipart/form-data">
 		<div class="dashboard-inputs-container">
 			<label for="imageTitle" class="dashboard-input-label">Enter image title:</label>
 			<input type="text" name="imageTitle" id="imageTitle" class="dashboard-input">

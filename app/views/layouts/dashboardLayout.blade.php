@@ -39,26 +39,36 @@
 									<a href="/dashboard">Dashboard</a>
 								</li>
 								<li class="header-main-site-nav-menu-item main-menu-item">
-									<a href="/dashboard/users" onclick="return false;">Users</a>
+									<a href="{{{action('UserManagementController@users')}}}" onclick="return false;">Users</a>
 									<div class="header-main-site-sub-nav">
 										<ul class="header-main-site-sub-nav-menu">
 											<li class="header-main-site-sub-nav-menu-item main-menu-item">
-												<a href="/dashboard/users">View all users</a>
+												<a href="{{{action('UserManagementController@users')}}}">View all users</a>
 											</li>
 											<li class="header-main-site-sub-nav-menu-item main-menu-item">
-												<a href="/dashboard/users/create">Create new user</a>
+												<a href="{{{action('UserManagementController@createUserGet')}}}">Create new user</a>
 											</li>
 										</ul>
 									</div>
 								</li>
 								<li class="header-main-site-nav-menu-item main-menu-item">
-									<a href="/dashboard/carousel/addNewImage">Add New Image To Carousel</a>
+									<a href="{{{action('CarouselManagementController@carouselItems')}}}" onclick="return false;">Manage Carousel</a>
+									<div class="header-main-site-sub-nav">
+										<ul class="header-main-site-sub-nav-menu">
+											<li class="header-main-site-sub-nav-menu-item main-menu-item">
+												<a href="{{{action('CarouselManagementController@carouselItems')}}}">View all carousel items</a>
+											</li>
+											<li class="header-main-site-sub-nav-menu-item main-menu-item">
+												<a href="{{{action('CarouselManagementController@createCarouselItemGet')}}}">Create carousel item</a>
+											</li>
+										</ul>
+									</div>
 								</li>
 								<li class="header-main-site-nav-menu-item main-menu-item">
-									<a href="/dashboard/gallery/addNewItem">Add New Image To Gallery</a>
+									<a href="/dashboard/gallery/addNewItem" onclick="return false;">Add New Image To Gallery</a>
 								</li>
 								<li class="header-main-site-nav-menu-item main-menu-item">
-									<a href="dashboard/contactAdmin">Contact Admin</a>
+									<a href="dashboard/contactAdmin" onclick="return false;">Contact Admin</a>
 								</li>
 							</ul>
 						</nav>

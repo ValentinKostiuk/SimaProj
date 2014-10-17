@@ -14,13 +14,13 @@
 			<span class="dashboard-carousel-item-field-label">On click redirect action link: </span><span class="dashboard-carousel-item-field-value">{{$item['linkTo']}}</span>
 		</div>
 		<div class="dashboard-carousel-item-forms-wrapper">
-			<form action="{{{action('DashboardController@carouselItemDisable')}}}" method="POST">
+			<form action="{{{action('CarouselManagementController@carouselItemDisable')}}}" method="POST">
 				<div class="dashboard-carousel-item-forms-button-container">
 					<input type="text" name="id" id="id" style="display: none; visibility: hidden" value="{{$item['id']}}">
 					<input type="submit" class="dashboard-carousel-item-forms-submit-button" value="Disable">
 				</div>
 			</form>
-			<form action="{{{action('DashboardController@carouselItemDelete')}}}" method="POST">
+			<form action="{{{action('CarouselManagementController@carouselItemDelete')}}}" method="POST">
 				<div class="dashboard-carousel-item-forms-button-container">
 					<input type="text" name="id" id="id" style="display: none; visibility: hidden" value="{{$item['id']}}">
 					<input type="submit" class="dashboard-carousel-item-forms-submit-button" value="Delete">
@@ -46,13 +46,13 @@
 			<span class="dashboard-carousel-item-field-label">On click redirect action link: </span><span class="dashboard-carousel-item-field-value">{{$item['linkTo']}}</span>
 		</div>
 		<div class="dashboard-carousel-item-forms-wrapper">
-			<form action="{{{action('DashboardController@carouselItemEnable')}}}" method="POST">
+			<form action="{{{action('CarouselManagementController@carouselItemEnable')}}}" method="POST">
 				<div class="dashboard-carousel-item-forms-button-container">
 					<input type="text" name="id" id="id" style="display: none; visibility: hidden" value="{{$item['id']}}">
 					<input type="submit" class="dashboard-carousel-item-forms-submit-button" value="Enable">
 				</div>
 			</form>
-			<form action="{{{action('DashboardController@carouselItemDelete')}}}" method="POST">
+			<form action="{{{action('CarouselManagementController@carouselItemDelete')}}}" method="POST">
 				<div class="dashboard-carousel-item-forms-button-container">
 					<input type="text" name="id" id="id" style="display: none; visibility: hidden" value="{{$item['id']}}">
 					<input type="submit" class="dashboard-carousel-item-forms-submit-button" value="Delete">

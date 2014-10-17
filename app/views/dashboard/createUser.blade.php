@@ -2,7 +2,7 @@
 @section('content')
 <div class="dashboard-form-wrapper">
 	<h3 class="dashboard-form-heading">Create New User</h3>
-	<form action="{{{action('DashboardController@createUserPost')}}}" method="POST">
+	<form action="{{{action('UserManagementController@createUserPost')}}}" method="POST">
 		<div class="dashboard-inputs-container">
 			<label for="username" class="dashboard-input-label">Enter name of new user:</label>
 			<input type="text" name="username" id="username" class="dashboard-create-user-name dashboard-input">
