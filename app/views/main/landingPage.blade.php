@@ -1,16 +1,18 @@
 @extends('layouts.mainLayout')
 @section('content')
-<div id="owl-example" class="owl-carousel">
-	<img class="owl-carousel-image" src="statics/images/main/test-image.jpg">
-	<img class="owl-carousel-image" src="statics/images/main/test-image2.jpg">
-	<img class="owl-carousel-image" src="statics/images/main/test-image3.jpg">
-	<img class="owl-carousel-image" src="statics/images/main/test-image4.jpg">
-	<img class="owl-carousel-image" src="statics/images/main/test-image5.jpg">
-	<img class="owl-carousel-image" src="statics/images/main/test-image6.jpg">
+
+@if(isset($model['carouselItems']))
+<div id="carouselItems" class="owl-carousel">
+	@foreach ($model['carouselItems'] as $item)
+		<div class="owl-carousel-image-wrapper">
+			<a href="{{$item['linkTo']}}"><img src="{{$item['imageUrl']}}" title="{{$item['imageTitle']}}" class="owl-carousel-image"/></a>
+		</div>
+	@endforeach
 </div>
+@endif
 <script type="text/javascript">
 	$(document).ready(function() {
-	    $("#owl-example").owlCarousel({autoPlay: true, singleItem: true, pagination: false});
+		$("#carouselItems").owlCarousel({autoPlay: true, singleItem: true, pagination: false});
 	});
 </script>
 @stop
