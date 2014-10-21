@@ -2,14 +2,12 @@
 
 use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
-class CarouselItem extends Eloquent {
+class ProductItem extends Eloquent {
 	use SoftDeletingTrait;
 
-	protected $table = "carousel_items";
+	protected $table = "product_items";
 
 	protected $primaryKey = "id";
 
-	public $timestamps = false;
 	protected $dates = ['deleted_at'];
-
-} 
+}

@@ -23,3 +23,7 @@ Route::post('/dashboard/carouselItem/create', 'CarouselManagementController@crea
 Route::post('/dashboard/carouselItem/enable', 'CarouselManagementController@carouselItemEnable');
 Route::post('/dashboard/carouselItem/disable', 'CarouselManagementController@carouselItemDisable');
 Route::post('/dashboard/carouselItem/delete', 'CarouselManagementController@carouselItemDelete');
+//products management
+Route::get('/dashboard/productItems', 'ProductManagementController@productItems');
+Route::get('/dashboard/productItem/create', 'ProductManagementController@createProductItemGet');
+Route::post('/dashboard/productItem/create', 'ProductManagementController@createProductItemPost');
