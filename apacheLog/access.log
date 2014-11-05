@@ -4441,3 +4441,8 @@
 127.0.0.1 - - [21/Oct/2014:23:27:47 +0300] "GET /dashboard/productItem/create HTTP/1.1" 200 5493
 127.0.0.1 - - [21/Oct/2014:23:27:51 +0300] "POST /dashboard/productItem/create HTTP/1.1" 200 163
 127.0.0.1 - - [21/Oct/2014:23:28:06 +0300] "GET /dashboard/productItem/create HTTP/1.1" 200 5493
+127.0.0.1 - - [05/Nov/2014:19:32:05 +0200] "GET /dashboard/productItem/create HTTP/1.1" 200 5493
+127.0.0.1 - - [05/Nov/2014:19:32:15 +0200] "GET /statics/styles/main.css HTTP/1.1" 304 -
+127.0.0.1 - - [05/Nov/2014:19:32:15 +0200] "GET /statics/styles/dashboard.css HTTP/1.1" 304 -
+127.0.0.1 - - [05/Nov/2014:19:32:15 +0200] "GET /statics/scripts/dashboardLayoutInit.js HTTP/1.1" 304 -
+127.0.0.1 - - [05/Nov/2014:19:32:15 +0200] "GET /statics/scripts/libs/jquery-1.11.1.min.js HTTP/1.1" 304 -

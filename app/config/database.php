@@ -54,9 +54,9 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => '127.0.0.1:3306',
-			'database'  => 'SimaProjectDb',
-			'username'  => 'root',
+			'host'      => 'mysql.hostinger.com.ua',
+			'database'  => 'u573920814_sima',
+			'username'  => 'u573920814_root',
 			'password'  => 'SO239290so',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
