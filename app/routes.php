@@ -27,3 +27,5 @@ Route::post('/dashboard/carouselItem/delete', 'CarouselManagementController@caro
 Route::get('/dashboard/productItems', 'ProductManagementController@productItems');
 Route::get('/dashboard/productItem/create', 'ProductManagementController@createProductItemGet');
 Route::post('/dashboard/productItem/create', 'ProductManagementController@createProductItemPost');
+Route::post('/dashboard/productItem/disable', 'ProductManagementController@productItemDisable');
+Route::post('/dashboard/productItem/disable', 'ProductManagementController@productItemDelete');
