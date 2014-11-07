@@ -255,3 +255,13 @@
 .dashboard-carousel-disabled-items-heading{
 	margin-top: 40px;
 }
+
+/*-------product items-----------*/
+
+.dashboard-carousel-item-fields.product-items{
+	height: auto;
+}
+
+.dashboard-carousel-item-fields.product-items .description-field{
+	line-height: 30px;
+}

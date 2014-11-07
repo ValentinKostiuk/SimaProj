@@ -77,7 +77,7 @@ class ProductManagementController extends BaseController {
 
 		$modelState['success'][] = 'New product successfully added to gallery!';
 
-		return Redirect::action('ProductManagementController@createProductItemGet')->with('modelState', $modelState);
+		return Redirect::action('ProductManagementController@productItems')->with('modelState', $modelState);
 	}
 
 	public function ProductItems(){
@@ -137,6 +137,18 @@ class ProductManagementController extends BaseController {
 			Storage::delete($fileInStoragePath);
 		}
 		$modelState['success'][] = 'Item deleted '. $deletedItemName .' successfully!';
+		return Redirect::action('ProductManagementController@productItems')->with('modelState', $modelState);
+	}
+
+	public function productItemEnable(){
+		$item = ProductItem::onlyTrashed()->where('id', Input::get('id'))->firstOrFail();
+		$imageHash = $item['imageUrl'];
+		if(ProductItem::where('imageUrl', $imageHash)->count() > 0){
+			$modelState['errors'][] = 'Item with same image is already enabled in carousel! Disable or delete active item, then try enable this again!';
+		} else {
+			$item->restore();
+			$modelState['success'][] = 'Item enabled ' . $item->name . ' successfully!';
+		}
 		return Redirect::action('ProductManagementController@productItems')->with('modelState', $modelState);
 	}
 } 

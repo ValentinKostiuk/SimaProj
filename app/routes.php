@@ -2,6 +2,8 @@
 
 Route::any('/', 'MainSiteController@showLandingPage');
 
+Route::get('/gallery/{productGroup?}', 'GalleryController@showProductGroup');
+
 
 //Authorization routs
 Route::get('/auth/login', 'AuthController@login');
@@ -28,4 +30,5 @@ Route::get('/dashboard/productItems', 'ProductManagementController@productItems'
 Route::get('/dashboard/productItem/create', 'ProductManagementController@createProductItemGet');
 Route::post('/dashboard/productItem/create', 'ProductManagementController@createProductItemPost');
 Route::post('/dashboard/productItem/disable', 'ProductManagementController@productItemDisable');
-Route::post('/dashboard/productItem/disable', 'ProductManagementController@productItemDelete');
+Route::post('/dashboard/productItem/delete', 'ProductManagementController@productItemDelete');
+Route::post('/dashboard/productItem/enable', 'ProductManagementController@productItemEnable');

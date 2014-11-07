@@ -65,7 +65,17 @@
 									</div>
 								</li>
 								<li class="header-main-site-nav-menu-item main-menu-item">
-									<a href="/dashboard/gallery/addNewItem" onclick="return false;">Add New Image To Gallery</a>
+									<a href="{{{action('ProductManagementController@productItems')}}}" onclick="return false;">Manage Gallery</a>
+									<div class="header-main-site-sub-nav">
+										<ul class="header-main-site-sub-nav-menu">
+											<li class="header-main-site-sub-nav-menu-item main-menu-item">
+												<a href="{{{action('ProductManagementController@productItems')}}}">View all gallery items</a>
+											</li>
+											<li class="header-main-site-sub-nav-menu-item main-menu-item">
+												<a href="{{{action('ProductManagementController@createProductItemGet')}}}">Create product item</a>
+											</li>
+										</ul>
+									</div>
 								</li>
 								<li class="header-main-site-nav-menu-item main-menu-item">
 									<a href="dashboard/contactAdmin" onclick="return false;">Contact Admin</a>
@@ -112,3 +122,16 @@
 		</div>
 	</body>
 </html>
+{{--<div class="header-main-site-sub-nav">--}}
+	{{--<ul class="header-main-site-sub-nav-menu">--}}
+		{{--<li class="header-main-site-sub-nav-menu-item main-menu-item">--}}
+			{{--<a href="/gallery/men">Для мужчин</a>--}}
+			{{--</li>--}}
+		{{--<li class="header-main-site-sub-nav-menu-item main-menu-item">--}}
+			{{--<a href="/gallery/women">Для дам</a>--}}
+			{{--</li>--}}
+		{{--<li class="header-main-site-sub-nav-menu-item main-menu-item">--}}
+			{{--<a href="/gallery/kids">Для Маленьких</a>--}}
+			{{--</li>--}}
+		{{--</ul>--}}
+{{--</div>--}}

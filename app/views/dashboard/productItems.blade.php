@@ -9,11 +9,11 @@
 		<div class="dashboard-carousel-item-image-wrapper">
 			<img src="{{$item['imageUrl']}}" class="dashboard-carousel-item-image"/>
 		</div>
-		<div class="dashboard-carousel-item-fields">
+		<div class="dashboard-carousel-item-fields product-items">
 			<span class="dashboard-carousel-item-field-label">Product group: </span><span class="dashboard-carousel-item-field-value">{{$item['productGroup']}}</span><br />
 			<span class="dashboard-carousel-item-field-label">Product price: </span><span class="dashboard-carousel-item-field-value">{{$item['price']}}</span><br />
 			<span class="dashboard-carousel-item-field-label">On hover title: </span><span class="dashboard-carousel-item-field-value">{{$item['title']}}</span><br />
-			<span class="dashboard-carousel-item-field-label">Product description: </span><span class="dashboard-carousel-item-field-value">{{$item['description']}}</span>
+			<span class="dashboard-carousel-item-field-label">Product description: </span><span class="dashboard-product-item-field-value description-field">{{$item['description']}}</span>
 		</div>
 		<div class="dashboard-carousel-item-forms-wrapper">
 			<form action="{{{action('ProductManagementController@productItemDisable')}}}" method="POST">
@@ -43,14 +43,14 @@
 		<div class="dashboard-carousel-item-image-wrapper">
 			<img src="{{$item['imageUrl']}}" class="dashboard-carousel-item-image"/>
 		</div>
-		<div class="dashboard-carousel-item-fields">
+		<div class="dashboard-carousel-item-fields product-items">
 			<span class="dashboard-carousel-item-field-label">Product group: </span><span class="dashboard-carousel-item-field-value">{{$item['productGroup']}}</span><br />
 			<span class="dashboard-carousel-item-field-label">Product price: </span><span class="dashboard-carousel-item-field-value">{{$item['price']}}</span><br />
 			<span class="dashboard-carousel-item-field-label">On hover title: </span><span class="dashboard-carousel-item-field-value">{{$item['title']}}</span><br />
-			<span class="dashboard-carousel-item-field-label">Product description: </span><span class="dashboard-carousel-item-field-value">{{$item['description']}}</span>
+			<span class="dashboard-carousel-item-field-label">Product description: </span><span class="dashboard-carousel-item-field-value description-field">{{$item['description']}}</span>
 		</div>
 		<div class="dashboard-carousel-item-forms-wrapper">
-			<form action="{{{action('ProductManagementController@productItemDisable')}}}" method="POST">
+			<form action="{{{action('ProductManagementController@productItemEnable')}}}" method="POST">
 				<div class="dashboard-carousel-item-forms-button-container">
 					<input type="text" name="id" id="id" style="display: none; visibility: hidden" value="{{$item['id']}}">
 					<input type="submit" class="dashboard-carousel-item-forms-submit-button" value="Enable">
