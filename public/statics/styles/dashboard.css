@@ -265,3 +265,30 @@
 .dashboard-carousel-item-fields.product-items .description-field{
 	line-height: 30px;
 }
+
+/*----------big menu---------*/
+.dashboard-big-menu-list{
+	display: inline-block;
+	width: 350px;
+	list-style: none;
+	text-align: left;
+}
+
+.dashboard-big-menu-list-item a{
+	text-decoration: none;
+	color: #666666;
+}
+
+.dashboard-big-menu-list-item span{
+	display: inline-block;
+	height: 80px;
+	vertical-align: middle;
+	font-size: 20px;
+	line-height: 13px;
+	padding-left: 10px;
+}
+
+.dashboard-big-menu-image{
+	width: 80px;
+	height: 80px;
+}
