@@ -63,8 +63,10 @@ div.window-border.left {
 }
 
 .header-logo-image{
-	width: 825px;
-	height: 160px;
+	/*width: 825px;
+	height: 160px;*/
+	position: relative;
+	left: 16px;
 }
 
 /*-----------------site menu styles---------------*/
@@ -177,11 +179,30 @@ div.window-border.left {
 
 .footer-social-networks-container .footer-social-networks-icon{
 	display: inline-block;
-	width: 24px;
-	height: 24px;
+	width: 32px;
+	height: 32px;
 	margin: 0 6px 0 6px;
-	background: url("../images/main/logo.png") -300px 0;
+	background: url("../images/main/social-icons.png") 0 0;
 }
+
+/*---social icons---*/
+.footer-social-networks-icon.vk-com{
+	background-position: -75px -38px;
+}
+.footer-social-networks-icon.instagram-com{
+	background-position: -2px -38px;
+}
+.footer-social-networks-icon.facebook-com{
+	background-position: -38px -2px;
+}
+.footer-social-networks-icon.twitter-com{
+	background-position: -2px -2px;
+}
+.footer-social-networks-icon.mail{
+	background-position: -38px -74px;
+}
+
+/*---social icons---*/
 
 .footer-inner .copyright-like{
 	text-align: center;

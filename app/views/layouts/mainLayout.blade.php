@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Серафима Дидковская</title>
-		<link rel="shortcut icon" href="//jquery.com/jquery-wp-content/themes/jquery.com/i/favicon.ico">
+		<link rel="shortcut icon" href="/statics/images/main/ico.jpg">
 		<link rel="stylesheet" href="/statics/styles/main.css">
 		<link rel="stylesheet" href="/statics/styles/gallery.css">
 		<link rel="stylesheet" href="/statics/thirdPartyLibs/owl-carousel/owl.carousel.css">
@@ -23,7 +23,7 @@
 					<div class="header-container">
 						<div class="header-logo">
 							<a href="/">
-							<img class="header-logo-image" src="/statics/images/main/logo.png">
+							<img class="header-logo-image" src="/statics/images/main/logo.jpg">
 							</a>
 						</div>
 						<nav class="header-main-site-nav">
@@ -74,8 +74,11 @@
 				<div class="footer-inner">
 					<div class="footer-container-ruler"></div>
 					<div class="footer-social-networks-container">
-						<a href="vk.com" target="_blank"><i class="footer-social-networks-icon vk-com">vk.com</i></a>
-						<a href="http://instagram.com" target="_blank"><i class="footer-social-networks-icon instagram-com">insta</i></a>
+						<a href="https://twitter.com/DidkovskaSima" target="_blank"><i class="footer-social-networks-icon twitter-com"></i></a>
+						<a href="https://vk.com/simadidkovskaya" target="_blank"><i class="footer-social-networks-icon vk-com"></i></a>
+						<a href="http://instagram.com/didkovskayasima" target="_blank"><i class="footer-social-networks-icon instagram-com"></i></a>
+						<a href="https://www.facebook.com/simadidkovskaya" target="_blank"><i class="footer-social-networks-icon facebook-com"></i></a>
+						<a href="mailto:didkovskayasima@gmail.com" target="_blank"><i class="footer-social-networks-icon mail"></i></a>
 					</div>
 					<div class="copyright-like">
 						<a href="http://valentin-kostiuk.16mb.com" target="_blank">2014 by vk<sup>&copy;</sup></a>
