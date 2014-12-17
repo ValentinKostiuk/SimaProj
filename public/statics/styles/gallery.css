@@ -11,7 +11,11 @@
 
 .gallery-item-name{
 	display: inline-block;
+	margin-top: 10px;
 	width: 300px;
+	text-decoration: none;
+	color: #000000;
+	font-weight: bold;
 }
 
 .gallery-item-price{
@@ -19,4 +23,53 @@
 	width: 300px;
 	font-size: 12px;
 	color: #a3a3a3;
+}
+
+/*-----------galleryProductPage.blade.php-------------*/
+
+.gallery-product-heading{}
+
+.gallery-product-table{
+	width: 100%;
+}
+
+.gallery-product-image-col{
+	width: 65%;
+	text-align: left;
+}
+
+.gallery-product-image{
+	width: 100%;
+}
+
+.gallery-product-short-description-col{
+	width: 35%;
+	text-align: left;
+	padding-left: 15px;
+	vertical-align: top;
+	color: #808080;
+	font-size: 14px;
+}
+
+.gallery-product-short-description-col-liable{
+	font-weight: bold;
+	line-height: 24px;
+}
+.gallery-product-short-description-col-field{
+	line-height: 24px;
+}
+
+.gallery-product-short-description{
+	display: inline-block;
+	margin-top: 20px;
+	line-height: normal;
+}
+
+.gallery-product-long-description{
+	width: 60%;
+	padding-top: 20px;
+	margin: auto;
+	color: #808080;
+	font-size: 14px;
+	text-align: left;
 }

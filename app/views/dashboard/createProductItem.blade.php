@@ -13,6 +13,9 @@
 			<label for="productTitle" class="dashboard-input-label">Enter image title (optional):</label>
 			<input type="text" name="productTitle" id="productTitle" class="dashboard-input">
 			<br/>
+			<label for="productShortDescription" class="dashboard-input-label">Enter short description of product:</label>
+			<input type="text" name="productShortDescription" id="productShortDescription" maxlength="250" class="dashboard-input">
+			<br/>
 			<label for="productPrice" class="dashboard-input-label">Enter product price:</label>
 			<input type="text" name="productPrice" id="productPrice" class="dashboard-input">
 			<br/>
@@ -23,7 +26,7 @@
 				@endforeach
 			</select>
 			<br/>
-			<label for="productDescription" class="dashboard-input-label">Enter product description:</label>
+			<label for="productDescription" class="dashboard-input-label">Enter full product description (optional):</label>
 			<textarea name="productDescription" id="productDescription" class="dashboard-textaria"></textarea>
 			<br/>
 		</div>

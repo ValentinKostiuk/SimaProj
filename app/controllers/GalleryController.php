@@ -54,4 +54,31 @@ class GalleryController extends BaseController
 			'model' => $model
 		));
 	}
+
+	public function showProduct($productId = null)
+	{
+		if (!$productId) {
+			return Redirect::action('GalleryController@showProductGroup');
+		}
+
+		$product = ProductItem::find($productId);
+
+		if ($product === null) {
+			App::abort(404);
+		}
+
+		$productModel = array(
+			'imageUrl' => Storage::url($this->storageFolder . $product['imageUrl']),
+			'name' => $product['name'],
+			'title' => $product['title'],
+			'price' => floatval($product['price']),
+			'shortDescription' => $product['shortDescription'],
+			'description' => $product['description'],
+			'id' => $product['id']
+		);
+
+		return View::Make('main.galleryProductPage', array(
+			'product' => $productModel
+		));
+	}
 }

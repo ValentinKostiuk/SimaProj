@@ -182,12 +182,18 @@ div.window-border.left {
 	width: 32px;
 	height: 32px;
 	margin: 0 6px 0 6px;
-	background: url("../images/main/social-icons.png") 0 0;
+	background: url("../images/main/social-icons1.png") 0 0;
+}
+
+.footer-social-networks-container .footer-social-networks-icon:hover{
+	-webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.86);
+	-moz-box-shadow:    4px 4px 5px 0px rgba(50, 50, 50, 0.86);
+	box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.86);
 }
 
 /*---social icons---*/
 .footer-social-networks-icon.vk-com{
-	background-position: -75px -38px;
+	background-position: -74px -38px;
 }
 .footer-social-networks-icon.instagram-com{
 	background-position: -2px -38px;

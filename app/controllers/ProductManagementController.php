@@ -37,6 +37,7 @@ class ProductManagementController extends BaseController {
 		$productGroup = Input::get('productGroup', 0);
 		$productPrice = floatval(Input::get('productPrice', 0));
 		$productDescription = Input::get('productDescription', '');
+		$productShortDescription = Input::get('productShortDescription', '');
 
 		if(!Input::hasFile('productImage')){
 			$errors[] = 'Image file is not chosen!';
@@ -72,6 +73,7 @@ class ProductManagementController extends BaseController {
 		$productItem->name = $productName;
 		$productItem->productGroup = $productGroup;
 		$productItem->description = $productDescription;
+		$productItem->shortDescription = $productShortDescription;
 		$productItem->price = $productPrice;
 		$productItem->save();
 
@@ -94,6 +96,7 @@ class ProductManagementController extends BaseController {
 				'title' => $item['title'],
 				'price' => floatval($item['price']),
 				'description' => $item['description'],
+				'shortDescription' => $item['shortDescription'],
 				'productGroup' => $this->productGroupEnum[intval($item['productGroup'])],
 				'id' => $item['id']
 			);
@@ -108,6 +111,7 @@ class ProductManagementController extends BaseController {
 				'title' => $item['title'],
 				'price' => floatval($item['price']),
 				'description' => $item['description'],
+				'shortDescription' => $item['shortDescription'],
 				'productGroup' => $this->productGroupEnum[intval($item['productGroup'])],
 				'id' => $item['id']
 			);

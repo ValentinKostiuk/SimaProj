@@ -2,8 +2,8 @@
 
 Route::any('/', 'MainSiteController@showLandingPage');
 
+Route::get('/gallery/product/{productId?}', 'GalleryController@showProduct');
 Route::get('/gallery/{productGroup?}', 'GalleryController@showProductGroup');
-
 
 //Authorization routs
 Route::get('/auth/login', 'AuthController@login');
