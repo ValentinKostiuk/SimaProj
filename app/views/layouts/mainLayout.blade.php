@@ -13,45 +13,22 @@
 		<script type="text/javascript" src="/statics/scripts/mainLayoutInit.js"></script>
 	</head>
 	<body>
-		<div class="window-border top"></div>
-		<div class="window-border bottom"></div>
-		<div class="window-border right"></div>
-		<div class="window-border left"></div>
 		<div class="whole-page-wrapper">
 			<header class="header-wrapper">
 				<div class="header-wrapper-inner">
 					<div class="header-container">
-						<div class="header-logo">
-							<a href="/">
-							<img class="header-logo-image" src="/statics/images/main/logo.jpg">
-							</a>
-						</div>
 						<nav class="header-main-site-nav">
+							<span class="header-logo">
+								<a href="/">
+									<img class="header-logo-image" src="/statics/images/main/logo.png">
+								</a>
+							</span>
 							<ul class="header-main-site-nav-menu">
 								<li class="header-main-site-nav-menu-item main-menu-item">
 									<a href="/">Главная</a>
 								</li>
 								<li class="header-main-site-nav-menu-item main-menu-item">
-									<a href="/about">Обо мне</a>
-								</li>
-								<li class="header-main-site-nav-menu-item main-menu-item">
-									<a href="/gallery" onclick="return false;">Галерея</a>
-									<div class="header-main-site-sub-nav">
-										<ul class="header-main-site-sub-nav-menu">
-											<li class="header-main-site-sub-nav-menu-item main-menu-item">
-												<a href="/gallery">Все товары</a>
-											</li>
-											<li class="header-main-site-sub-nav-menu-item main-menu-item">
-												<a href="/gallery/men">Для мужчин</a>
-											</li>
-											<li class="header-main-site-sub-nav-menu-item main-menu-item">
-												<a href="/gallery/women">Для дам</a>
-											</li>
-											<li class="header-main-site-sub-nav-menu-item main-menu-item">
-												<a href="/gallery/kids">Для Маленьких</a>
-											</li>
-										</ul>
-									</div>
+									<a href="/gallery">Галерея</a>
 								</li>
 								<li class="header-main-site-nav-menu-item main-menu-item">
 									<a href="/faq">FAQ</a>

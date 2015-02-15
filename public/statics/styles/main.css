@@ -6,94 +6,68 @@ html, body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-/*----------border of page---------*/
-div.window-border {
-	position: fixed;
-	background: #313131;
-	z-index: 9999;
-}
-
-div.window-border.top {
-	height: 15px;
-	width: 100%;
-	top: 0;
-}
-
-div.window-border.bottom {
-	height: 15px;
-	width: 100%;
-	bottom: 0;
-}
-
-div.window-border.right {
-	width: 15px;
-	height: 100%;
-	right: 0;
-	top: 0;
-}
-
-div.window-border.left {
-	width: 15px;
-	height: 100%;
-	left: 0;
-	top: 0;
-}
-
-/*----------border of page---------*/
-
 .whole-page-wrapper {
 	height: 100%;
-	/*background: #EEEEEE;*/
+	background: #FBDEBE;
 	position: relative;
-	padding: 15px;
+	margin: auto;
 }
 
 /*--------heading of layout------*/
 .header-wrapper{
-	max-width:940px;
-	margin: auto auto;
-	padding: 30px 30px 20px 30px;
+	padding-top: 15px;
+	background: #F8D6AE;
 }
 .header-wrapper-inner{
 	text-align: center;
-	vertical-align: baseline;
 }
 .header-logo{
-
+	display: inline-block;
+	text-decoration: none;
 }
 
 .header-logo-image{
-	/*width: 825px;
-	height: 160px;*/
-	position: relative;
-	left: 16px;
 }
 
 /*-----------------site menu styles---------------*/
 
 .header-main-site-nav-menu{
 	display: inline-block;
-	margin: 0;
-	padding: 10px 0;
+	height: 82px;
+	margin: 0 0 0 124px;
+	padding: 0;
+	vertical-align: top;
 }
 
 .header-main-site-nav-menu-item{
-	position: relative;
 	display: inline-block;
+	position: relative;
+	height: 50px;
+	margin-top: 15px;
+	padding: 0 14px;
+	border-radius: 3px;
+	line-height: 48px;
 	list-style: none;
-	padding: 0 6px 0 6px;
 }
 .header-main-site-nav-menu-item a{
-	color: #808080;
+	display: inline;
+	color: #48291A;
+	font-size: 24px;
+	font-weight: bold;
 	text-decoration: none;
-	font-size: 13px;
 }
 
+.header-main-site-nav-menu-item:hover{
+	background: -webkit-linear-gradient(#F7D8B6, #E0A667); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#F7D8B6, #E0A667); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#F7D8B6, #E0A667); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#F7D8B6, #E0A667); /* Standard syntax */
+}
 .header-main-site-nav-menu-item:hover>a{
-	color: #2E2E2E;
+	color: #48291A;
 }
 .header-main-site-nav-menu-item.active a{
-	color: #2E2E2E;
+	color: #48291A;
 }
 
 .header-container-ruler{
