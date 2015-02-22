@@ -7,31 +7,37 @@ html, body {
 }
 
 .whole-page-wrapper {
-	height: 100%;
-	background: #FBDEBE;
 	position: relative;
+	height: 100%;
+	max-width: 1200px;
 	margin: auto;
+	background: -webkit-linear-gradient(#CCCCCC, #FFFFFF); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#CCCCCC, #FFFFFF); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#CCCCCC, #FFFFFF); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#CCCCCC, #FFFFFF); /* Standard syntax */
 }
 
 /*--------heading of layout------*/
-.header-wrapper{
+.header-wrapper {
 	padding-top: 15px;
 	background: #F8D6AE;
 }
-.header-wrapper-inner{
+
+.header-wrapper-inner {
 	text-align: center;
 }
-.header-logo{
+
+.header-logo {
 	display: inline-block;
 	text-decoration: none;
 }
 
-.header-logo-image{
+.header-logo-image {
 }
 
 /*-----------------site menu styles---------------*/
 
-.header-main-site-nav-menu{
+.header-main-site-nav-menu {
 	display: inline-block;
 	height: 82px;
 	margin: 0 0 0 124px;
@@ -39,7 +45,7 @@ html, body {
 	vertical-align: top;
 }
 
-.header-main-site-nav-menu-item{
+.header-main-site-nav-menu-item {
 	display: inline-block;
 	position: relative;
 	height: 50px;
@@ -49,7 +55,8 @@ html, body {
 	line-height: 48px;
 	list-style: none;
 }
-.header-main-site-nav-menu-item a{
+
+.header-main-site-nav-menu-item a {
 	display: inline;
 	color: #48291A;
 	font-size: 24px;
@@ -57,46 +64,50 @@ html, body {
 	text-decoration: none;
 }
 
-.header-main-site-nav-menu-item:hover{
+.header-main-site-nav-menu-item:hover,
+.header-main-site-nav-menu-item.active {
 	background: -webkit-linear-gradient(#F7D8B6, #E0A667); /* For Safari 5.1 to 6.0 */
 	background: -o-linear-gradient(#F7D8B6, #E0A667); /* For Opera 11.1 to 12.0 */
 	background: -moz-linear-gradient(#F7D8B6, #E0A667); /* For Firefox 3.6 to 15 */
 	background: linear-gradient(#F7D8B6, #E0A667); /* Standard syntax */
 }
-.header-main-site-nav-menu-item:hover>a{
-	color: #48291A;
-}
-.header-main-site-nav-menu-item.active a{
+
+.header-main-site-nav-menu-item:hover > a {
 	color: #48291A;
 }
 
-.header-container-ruler{
+.header-main-site-nav-menu-item.active a {
+	color: #48291A;
+}
+
+.header-container-ruler {
 	border: none;
 	border-top: #E3E3E3 solid 1px;
 }
 
-.header-main-site-sub-nav{
+.header-main-site-sub-nav {
 	display: none;
 	position: absolute;
 	padding: 10px 20px 10px 20px;
 	background-color: #FFFFFF;
 	z-index: 1;
 }
-.header-main-site-sub-nav .header-main-site-sub-nav{
+
+.header-main-site-sub-nav .header-main-site-sub-nav {
 	left: 99%;
 	top: 0;
 }
 
-*:hover > .header-main-site-sub-nav{
+*:hover > .header-main-site-sub-nav {
 	display: block;
 }
 
-.header-main-site-sub-nav-menu{
+.header-main-site-sub-nav-menu {
 	margin: 0;
 	padding: 0;
 }
 
-.header-main-site-sub-nav-menu-item{
+.header-main-site-sub-nav-menu-item {
 	display: block;
 	position: relative;
 	white-space: nowrap;
@@ -106,7 +117,7 @@ html, body {
 	border-bottom: #999999 dotted 1px;
 }
 
-.header-main-site-sub-nav-menu-item:hover>a{
+.header-main-site-sub-nav-menu-item:hover > a {
 	color: #2E2E2E;
 }
 
@@ -114,44 +125,109 @@ html, body {
 	border-bottom: none;
 }
 
+.header-container-ruler {
+	border: none;
+	height: 1px;
+	background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /*Safari 5.1-6*/
+	background: -o-linear-gradient(right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /*Opera 11.1-12*/
+	background: -moz-linear-gradient(right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /*Fx 3.6-15*/
+	background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /*Standard*/
+}
 
 /*-----------------------main content------------------------*/
 
-.main-content-wrapper{
-	max-width:940px;
-	margin: auto auto;
-	padding: 30px 30px 20px 30px;
+.main-content-wrapper {
+	margin: auto auto 120px;
+	padding: 0;
 }
 
-.main-content-container{
+.main-content-container {
 	text-align: center;
 }
 
 /*-----------------------main page footer--------------------*/
 
-.footer-wrapper{
-	max-width:940px;
-	margin: auto auto 20px;
-	padding: 30px 30px 20px 30px;
-}
-
-.footer-container-ruler{
-	border: none;
-	border-top: #E3E3E3 solid 1px;
-}
-
-.footer-social-networks-container{
+.footer-wrapper {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 122px;
+	background: #F8D6AE;
 	text-align: center;
-	padding: 10px;
 }
 
-.footer-social-networks-container a{
+.footer-container-ruler {
+	border: none;
+	height: 2px;
+	background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /*Safari 5.1-6*/
+	background: -o-linear-gradient(right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /*Opera 11.1-12*/
+	background: -moz-linear-gradient(right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /*Fx 3.6-15*/
+	background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /*Standard*/
+}
+
+.footer-main-site-nav-menu {
+	display: inline-block;
+	height: 82px;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.footer-main-site-nav-menu-item {
+	display: inline-block;
+	position: relative;
+	height: 50px;
+	margin-top: 15px;
+	padding: 0 14px;
+	border-radius: 3px;
+	line-height: 48px;
+	list-style: none;
+}
+
+.footer-main-site-nav-menu-item a {
+	display: inline;
+	color: #48291A;
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.footer-main-site-nav-menu-item:hover,
+.footer-main-site-nav-menu-item.active {
+	background: -webkit-linear-gradient(#F7D8B6, #E0A667); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#F7D8B6, #E0A667); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#F7D8B6, #E0A667); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#F7D8B6, #E0A667); /* Standard syntax */
+}
+
+.footer-main-site-nav-menu-item:hover > a {
+	color: #48291A;
+}
+
+.footer-main-site-nav-menu-item.active a {
+	color: #48291A;
+}
+
+.footer-social-networks-container {
+	display: inline-block;
+	height: 82px;
+	padding: 0;
+	vertical-align: top;
+}
+
+.footer-social-networks-container a {
+	display: inline-block;
+	position: relative;
+	height: 50px;
+	margin-top: 20px;
+	border-radius: 3px;
+	line-height: 48px;
 	color: #808080;
 	text-decoration: none;
 	font-size: 12px;
 }
 
-.footer-social-networks-container .footer-social-networks-icon{
+.footer-social-networks-container .footer-social-networks-icon {
 	display: inline-block;
 	width: 32px;
 	height: 32px;
@@ -159,47 +235,49 @@ html, body {
 	background: url("../images/main/social-icons1.png") 0 0;
 }
 
-.footer-social-networks-container .footer-social-networks-icon:hover{
+.footer-social-networks-container .footer-social-networks-icon:hover {
 	-webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.86);
-	-moz-box-shadow:    4px 4px 5px 0px rgba(50, 50, 50, 0.86);
-	box-shadow:         4px 4px 5px 0px rgba(50, 50, 50, 0.86);
+	-moz-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.86);
+	box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.86);
 }
 
 /*---social icons---*/
-.footer-social-networks-icon.vk-com{
+.footer-social-networks-icon.vk-com {
 	background-position: -74px -38px;
 }
-.footer-social-networks-icon.instagram-com{
+
+.footer-social-networks-icon.instagram-com {
 	background-position: -2px -38px;
 }
-.footer-social-networks-icon.facebook-com{
+
+.footer-social-networks-icon.facebook-com {
 	background-position: -38px -2px;
 }
-.footer-social-networks-icon.twitter-com{
+
+.footer-social-networks-icon.twitter-com {
 	background-position: -2px -2px;
 }
-.footer-social-networks-icon.mail{
+
+.footer-social-networks-icon.mail {
 	background-position: -38px -74px;
 }
 
 /*---social icons---*/
 
-.footer-inner .copyright-like{
+.footer-inner .copyright-like {
 	text-align: center;
 	padding: 10px;
 }
-.footer-inner .copyright-like a{
+
+.footer-inner .copyright-like a {
 	color: #B3B3B3;
 	text-decoration: none;
-	font-size:11px;
+	font-size: 11px;
 }
-.footer-inner .copyright-like a sup{
+
+.footer-inner .copyright-like a sup {
 	text-decoration: none;
 }
 
 /*other delete*/
-.owl-carousel-image{
-	width: 600px;
-	height: 400px;
-}
 /*other delete*/

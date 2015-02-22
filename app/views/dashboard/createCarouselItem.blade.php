@@ -1,7 +1,7 @@
 @extends('layouts.dashboardLayout')
 @section('content')
 <div class="dashboard-form-wrapper">
-	<h3 class="dashboard-form-heading">Create New User</h3>
+	<h3 class="dashboard-form-heading">Create New Carousel Item</h3>
 	<form action="{{{action('CarouselManagementController@createCarouselItemPost')}}}" method="POST" enctype="multipart/form-data">
 		<div class="dashboard-inputs-container">
 			<label for="imageTitle" class="dashboard-input-label">Enter image title:</label>

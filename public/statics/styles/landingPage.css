@@ -1,0 +1,107 @@
+.landing-page-top-block-wrapper {
+	margin-bottom: 57px;
+}
+
+.landing-page-top-block {
+	padding-top: 30px;
+	padding-bottom: 12px;
+	background: url("/statics/images/main/tracery.png"), -webkit-radial-gradient(circle 50% 0%, farthest-side, #FDE4C8, #F5C28F); /* Safari 5.1 to 6.0 */
+	background: url("/statics/images/main/tracery.png"), -o-radial-gradient(circle 50% 0%, farthest-side, #FDE4C8, #F5C28F); /* For Opera 11.6 to 12.0 */
+	background: url("/statics/images/main/tracery.png"), -moz-radial-gradient(circle 50% 0%, farthest-side, #FDE4C8, #F5C28F); /* For Firefox 3.6 to 15 */
+	background: url("/statics/images/main/tracery.png"), radial-gradient(circle farthest-side at 50% 0%, #FDE4C8, #F5C28F); /* Standard syntax (must be last) */
+}
+
+.landing-page-top-block-left-logo-wrapper {
+	display: inline-block;
+	width: 335px;
+	margin: 0 68px 0 0;
+	padding: 139px 0 0;
+	vertical-align: top;
+}
+
+.landing-page-top-block-carousel-wrapper {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+#carouselItems {
+	display: inline-block;
+	width: 500px;
+	margin: auto;
+}
+
+.owl-carousel-image {
+	width: 500px;
+	height: 300px;
+}
+
+#carouselItems .owl-buttons {
+	position: absolute;
+	width: 100%;
+	margin: auto;
+	top: 130px;
+}
+
+#carouselItems .owl-pagination {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	bottom: -74px;
+}
+
+#carouselItems .owl-buttons .owl-prev {
+	float: left;
+	width: 20px;
+	height: 40px;
+	margin: 0;
+	padding: 3px 3px;
+	border-radius: 0;
+	font-size: 30px;
+	line-height: 40px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background: #000000;
+	filter: Alpha(Opacity=50);
+	opacity: 0.5;
+}
+
+#carouselItems .owl-buttons .owl-next {
+	float: right;
+	width: 20px;
+	height: 40px;
+	margin: 0;
+	padding: 3px 3px;
+	border-radius: 0;
+	font-size: 30px;
+	line-height: 40px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background: #000000;
+	filter: Alpha(Opacity=50);
+	opacity: 0.5;
+}
+
+#carouselItems .owl-buttons .owl-next:hover,
+#carouselItems .owl-buttons .owl-prev:hover {
+	filter: Alpha(Opacity=80);
+	opacity: 0.8;
+}
+
+.landing-page-top-block-shadow {
+	height: 20px;
+	background: -webkit-radial-gradient(circle 50% 0%, farthest-side, rgba(85, 85, 85, 0.7), rgba(85, 85, 85, 0)); /* Safari 5.1 to 6.0 */
+	background: -o-radial-gradient(circle 50% 0%, farthest-side, rgba(85, 85, 85, 0.7), rgba(85, 85, 85, 0)); /* For Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient(circle 50% 0%, farthest-side, rgba(85, 85, 85, 0.7), rgba(85, 85, 85, 0)); /* For Firefox 3.6 to 15 */
+	background: radial-gradient(ellipse farthest-side at 50% 0%, rgba(85, 85, 85, 0.7), rgba(85, 85, 85, 0)); /* Standard syntax (must be last) */
+}
+
+.landing-page-horizontal-ruler {
+	border: none;
+	height: 1px;
+	background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(150, 150, 150, 1), rgba(255, 255, 255, 0)); /*Safari 5.1-6*/
+	background: -o-linear-gradient(right, rgba(255, 255, 255, 0), rgba(150, 150, 150, 1), rgba(255, 255, 255, 0)); /*Opera 11.1-12*/
+	background: -moz-linear-gradient(right, rgba(255, 255, 255, 0), rgba(150, 150, 150, 1), rgba(255, 255, 255, 0)); /*Fx 3.6-15*/
+	background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(150, 150, 150, 1), rgba(255, 255, 255, 0)); /*Standard*/
+}
