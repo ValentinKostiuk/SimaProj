@@ -65,7 +65,7 @@
  * @category  Crypt
  * @package   Crypt_Rijndael
  * @author    Jim Wigginton <terrafrost@php.net>
- * @copyright MMVIII Jim Wigginton
+ * @copyright 2008 Jim Wigginton
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
@@ -1219,7 +1219,7 @@ class Crypt_Rijndael extends Crypt_Base
 
             // Generating encrypt code:
             $init_encrypt.= '
-                assets $t0, $t1, $t2, $t3, $sbox;
+                static $t0, $t1, $t2, $t3, $sbox;
                 if (!$t0) {
                     for ($i = 0; $i < 256; ++$i) {
                         $t0[$i]    = (int)$self->t0[$i];
@@ -1277,7 +1277,7 @@ class Crypt_Rijndael extends Crypt_Base
 
             // Generating decrypt code:
             $init_decrypt.= '
-                assets $dt0, $dt1, $dt2, $dt3, $isbox;
+                static $dt0, $dt1, $dt2, $dt3, $isbox;
                 if (!$dt0) {
                     for ($i = 0; $i < 256; ++$i) {
                         $dt0[$i]   = (int)$self->dt0[$i];

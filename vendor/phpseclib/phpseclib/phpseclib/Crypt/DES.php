@@ -53,7 +53,7 @@
  * @category  Crypt
  * @package   Crypt_DES
  * @author    Jim Wigginton <terrafrost@php.net>
- * @copyright MMVII Jim Wigginton
+ * @copyright 2007 Jim Wigginton
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
@@ -1378,7 +1378,7 @@ class Crypt_DES extends Crypt_Base
         // Is there a re-usable $lambda_functions in there? If not, we have to create it.
         if (!isset($lambda_functions[$code_hash])) {
             // Init code for both, encrypt and decrypt.
-            $init_crypt = 'assets $sbox1, $sbox2, $sbox3, $sbox4, $sbox5, $sbox6, $sbox7, $sbox8, $shuffleip, $shuffleinvip;
+            $init_crypt = 'static $sbox1, $sbox2, $sbox3, $sbox4, $sbox5, $sbox6, $sbox7, $sbox8, $shuffleip, $shuffleinvip;
                 if (!$sbox1) {
                     $sbox1 = array_map("intval", $self->sbox1);
                     $sbox2 = array_map("intval", $self->sbox2);

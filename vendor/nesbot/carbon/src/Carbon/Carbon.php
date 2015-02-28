@@ -31,7 +31,7 @@ use InvalidArgumentException;
  * @property-read integer $micro
  * @property-read integer $dayOfWeek 0 (for Sunday) through 6 (for Saturday)
  * @property-read integer $dayOfYear 0 through 365
- * @property-read integer $weekOfMonth 1 through 6
+ * @property-read integer $weekOfMonth 1 through 5
  * @property-read integer $weekOfYear ISO-8601 week number of year, weeks starting on Monday
  * @property-read integer $daysInMonth number of days in the given month
  * @property-read integer $age does a diffInYears() with default parameters
@@ -160,7 +160,7 @@ class Carbon extends DateTime
     /**
      * Create a new Carbon instance.
      *
-     * Please see the testing aids section (specifically assets::setTestNow())
+     * Please see the testing aids section (specifically static::setTestNow())
      * for more on the possibility of this constructor returning a test instance.
      *
      * @param string              $time
@@ -435,66 +435,52 @@ class Carbon extends DateTime
      */
     public function __get($name)
     {
-        switch ($name) {
-            case 'year':
-            case 'month':
-            case 'day':
-            case 'hour':
-            case 'minute':
-            case 'second':
-            case 'micro':
-            case 'dayOfWeek':
-            case 'dayOfYear':
-            case 'weekOfYear':
-            case 'daysInMonth':
-            case 'timestamp':
-                $formats = array(
-                    'year' => 'Y',
-                    'month' => 'n',
-                    'day' => 'j',
-                    'hour' => 'G',
-                    'minute' => 'i',
-                    'second' => 's',
-                    'micro' => 'u',
-                    'dayOfWeek' => 'w',
-                    'dayOfYear' => 'z',
-                    'weekOfYear' => 'W',
-                    'daysInMonth' => 't',
-                    'timestamp' => 'U',
-                );
-
+        switch(true)
+        {
+            case array_key_exists($name, $formats = array(
+                'year' => 'Y',
+                'month' => 'n',
+                'day' => 'j',
+                'hour' => 'G',
+                'minute' => 'i',
+                'second' => 's',
+                'micro' => 'u',
+                'dayOfWeek' => 'w',
+                'dayOfYear' => 'z',
+                'weekOfYear' => 'W',
+                'daysInMonth' => 't',
+                'timestamp' => 'U',
+            )):
                 return (int) $this->format($formats[$name]);
 
-            case 'weekOfMonth':
+            case $name === 'weekOfMonth':
                 return (int) ceil($this->day / self::DAYS_PER_WEEK);
 
-            case 'age':
+            case $name === 'age':
                 return (int) $this->diffInYears();
 
-            case 'quarter':
+            case $name === 'quarter':
                 return (int) ceil($this->month / 3);
 
-            case 'offset':
+            case $name === 'offset':
                 return $this->getOffset();
 
-            case 'offsetHours':
+            case $name === 'offsetHours':
                 return $this->getOffset() / self::SECONDS_PER_MINUTE / self::MINUTES_PER_HOUR;
 
-            case 'dst':
+            case $name === 'dst':
                 return $this->format('I') == '1';
 
-            case 'local':
+            case $name === 'local':
                 return $this->offset == $this->copy()->setTimezone(date_default_timezone_get())->offset;
 
-            case 'utc':
+            case $name === 'utc':
                 return $this->offset == 0;
 
-            case 'timezone':
-            case 'tz':
+            case $name === 'timezone' || $name === 'tz':
                 return $this->getTimezone();
 
-            case 'timezoneName':
-            case 'tzName':
+            case $name === 'timezoneName' || $name === 'tzName':
                 return $this->getTimezone()->getName();
 
             default:
@@ -762,7 +748,7 @@ class Carbon extends DateTime
      * Set a Carbon instance (real or mock) to be returned when a "now"
      * instance is created.  The provided instance will be returned
      * specifically under the following conditions:
-     *   - A call to the assets now() method, ex. Carbon::now()
+     *   - A call to the static now() method, ex. Carbon::now()
      *   - When a null (or blank string) is passed to the constructor or parse(), ex. new Carbon(null)
      *   - When the string "now" is passed to the constructor or parse(), ex. new Carbon('now')
      *
@@ -843,7 +829,7 @@ class Carbon extends DateTime
              $format = preg_replace('#(?<!%)((?:%%)*)%e#', '\1%#d', $format);
         }
 
-        return strftime($format, $this->timestamp);
+        return strftime($format, strtotime($this));
     }
 
     /**
@@ -1349,6 +1335,64 @@ class Carbon extends DateTime
     }
 
     /**
+     * Add months without overflowing to the instance. Positive $value 
+     * travels forward while negative $value travels into the past.
+     *
+     * @param integer $value
+     *
+     * @return static
+     */
+    public function addMonthsNoOverflow($value)
+    {
+        // jump straight into the month to avoid any php overflow weirdness
+        $newYear   = $this->year + floor(($this->month + $value) / 12);
+        $newMonth = ($this->month + $value) % 12;
+        $newDate = self::create($newYear, $newMonth, $this->day, $this->hour, $this->minute, $this->second, $this->getTimeZone());
+
+        if ($newDate->day != $this->day) {
+            // it seems like this would be dependent on whether the value is
+            // positive or negative, but because of how we set the month above,
+            // we should always zero out and subtract a month
+            $newDate->day(1)->subMonth();
+            $newDate->day($newDate->daysInMonth);
+        }
+
+        return $newDate;
+    }
+
+    /**
+     * Add a month with no overflow to the instance
+     *
+     * @return static
+     */
+    public function addMonthNoOverflow()
+    {
+        return $this->addMonthsNoOverflow(1);
+    }
+
+    /**
+     * Remove a month with no overflow from the instance
+     *
+     * @return static
+     */
+    public function subMonthNoOverflow()
+    {
+        return $this->addMonthsNoOverflow(-1);
+    }
+
+    /**
+     * Remove months with no overflow from the instance
+     *
+     * @param integer $value
+     *
+     * @return static
+     */
+    public function subMonthsNoOverflow($value)
+    {
+        return $this->addMonthsNoOverflow(-1 * $value);
+    }
+
+    /**
      * Add days to the instance. Positive $value travels forward while
      * negative $value travels into the past.
      *
@@ -1783,6 +1827,26 @@ class Carbon extends DateTime
     }
 
     /**
+     * The number of seconds since midnight.
+     *
+     * @return integer
+     */
+    public function secondsSinceMidnight()
+    {
+        return $this->diffInSeconds($this->copy()->startOfDay());
+    }
+
+    /**
+     * The number of seconds until 23:23:59.
+     *
+     * @return integer
+     */
+    public function secondsUntilEndOfDay()
+    {
+        return $this->diffInSeconds($this->copy()->endOfDay());
+    }
+
+    /**
      * Get the difference in a human readable format.
      *
      * When comparing a value in the past to default now:
@@ -1802,10 +1866,11 @@ class Carbon extends DateTime
      * 5 months after
      *
      * @param Carbon $other
+     * @param bool   $absolute removes time difference modifiers ago, after, etc
      *
      * @return string
      */
-    public function diffForHumans(Carbon $other = null)
+    public function diffForHumans(Carbon $other = null, $absolute = false)
     {
         $isNow = $other === null;
 
@@ -1846,6 +1911,10 @@ class Carbon extends DateTime
 
         $txt = $delta . ' ' . $unit;
         $txt .= $delta == 1 ? '' : 's';
+
+        if ($absolute) {
+            return $txt;
+        }
 
         if ($isNow) {
             if ($isFuture) {
@@ -1992,7 +2061,7 @@ class Carbon extends DateTime
      * Modify to the next occurance of a given day of the week.
      * If no dayOfWeek is provided, modify to the next occurance
      * of the current day of the week.  Use the supplied consts
-     * to indicate the desired dayOfWeek, ex. assets::MONDAY.
+     * to indicate the desired dayOfWeek, ex. static::MONDAY.
      *
      * @param int $dayOfWeek
      *
@@ -2011,7 +2080,7 @@ class Carbon extends DateTime
      * Modify to the previous occurance of a given day of the week.
      * If no dayOfWeek is provided, modify to the previous occurance
      * of the current day of the week.  Use the supplied consts
-     * to indicate the desired dayOfWeek, ex. assets::MONDAY.
+     * to indicate the desired dayOfWeek, ex. static::MONDAY.
      *
      * @param int $dayOfWeek
      *
@@ -2030,7 +2099,7 @@ class Carbon extends DateTime
      * Modify to the first occurance of a given day of the week
      * in the current month. If no dayOfWeek is provided, modify to the
      * first day of the current month.  Use the supplied consts
-     * to indicate the desired dayOfWeek, ex. assets::MONDAY.
+     * to indicate the desired dayOfWeek, ex. static::MONDAY.
      *
      * @param int $dayOfWeek
      *
@@ -2051,7 +2120,7 @@ class Carbon extends DateTime
      * Modify to the last occurance of a given day of the week
      * in the current month. If no dayOfWeek is provided, modify to the
      * last day of the current month.  Use the supplied consts
-     * to indicate the desired dayOfWeek, ex. assets::MONDAY.
+     * to indicate the desired dayOfWeek, ex. static::MONDAY.
      *
      * @param int $dayOfWeek
      *
@@ -2072,7 +2141,7 @@ class Carbon extends DateTime
      * Modify to the given occurance of a given day of the week
      * in the current month. If the calculated occurance is outside the scope
      * of the current month, then return false and no modifications are made.
-     * Use the supplied consts to indicate the desired dayOfWeek, ex. assets::MONDAY.
+     * Use the supplied consts to indicate the desired dayOfWeek, ex. static::MONDAY.
      *
      * @param int $nth
      * @param int $dayOfWeek
@@ -2092,7 +2161,7 @@ class Carbon extends DateTime
      * Modify to the first occurance of a given day of the week
      * in the current quarter. If no dayOfWeek is provided, modify to the
      * first day of the current quarter.  Use the supplied consts
-     * to indicate the desired dayOfWeek, ex. assets::MONDAY.
+     * to indicate the desired dayOfWeek, ex. static::MONDAY.
      *
      * @param int $dayOfWeek
      *
@@ -2107,7 +2176,7 @@ class Carbon extends DateTime
      * Modify to the last occurance of a given day of the week
      * in the current quarter. If no dayOfWeek is provided, modify to the
      * last day of the current quarter.  Use the supplied consts
-     * to indicate the desired dayOfWeek, ex. assets::MONDAY.
+     * to indicate the desired dayOfWeek, ex. static::MONDAY.
      *
      * @param int $dayOfWeek
      *
@@ -2122,7 +2191,7 @@ class Carbon extends DateTime
      * Modify to the given occurance of a given day of the week
      * in the current quarter. If the calculated occurance is outside the scope
      * of the current quarter, then return false and no modifications are made.
-     * Use the supplied consts to indicate the desired dayOfWeek, ex. assets::MONDAY.
+     * Use the supplied consts to indicate the desired dayOfWeek, ex. static::MONDAY.
      *
      * @param int $nth
      * @param int $dayOfWeek
@@ -2143,7 +2212,7 @@ class Carbon extends DateTime
      * Modify to the first occurance of a given day of the week
      * in the current year. If no dayOfWeek is provided, modify to the
      * first day of the current year.  Use the supplied consts
-     * to indicate the desired dayOfWeek, ex. assets::MONDAY.
+     * to indicate the desired dayOfWeek, ex. static::MONDAY.
      *
      * @param int $dayOfWeek
      *
@@ -2158,7 +2227,7 @@ class Carbon extends DateTime
      * Modify to the last occurance of a given day of the week
      * in the current year. If no dayOfWeek is provided, modify to the
      * last day of the current year.  Use the supplied consts
-     * to indicate the desired dayOfWeek, ex. assets::MONDAY.
+     * to indicate the desired dayOfWeek, ex. static::MONDAY.
      *
      * @param int $dayOfWeek
      *
@@ -2173,7 +2242,7 @@ class Carbon extends DateTime
      * Modify to the given occurance of a given day of the week
      * in the current year. If the calculated occurance is outside the scope
      * of the current year, then return false and no modifications are made.
-     * Use the supplied consts to indicate the desired dayOfWeek, ex. assets::MONDAY.
+     * Use the supplied consts to indicate the desired dayOfWeek, ex. static::MONDAY.
      *
      * @param int $nth
      * @param int $dayOfWeek
@@ -2199,5 +2268,15 @@ class Carbon extends DateTime
         $dt = ($dt === null) ? static::now($this->tz) : $dt;
 
         return $this->addSeconds((int) ($this->diffInSeconds($dt, false) / 2));
+    }
+
+    /**
+     * Check if its the birthday. Compares the date/month values of the two dates.
+     * @param  Carbon  $dt
+     * @return boolean
+     */
+    public function isBirthday(Carbon $dt)
+    {
+        return $this->month === $dt->month && $this->day === $dt->day;
     }
 }

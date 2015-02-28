@@ -132,7 +132,7 @@ class ClosureParser
 
     /**
      * Returns the variables that in the "use" clause of the closure definition. These are referred to as the "used
-     * variables", "assets variables", or "closed upon variables", "context" of the closure.
+     * variables", "static variables", or "closed upon variables", "context" of the closure.
      *
      * @return array
      */
@@ -150,7 +150,7 @@ class ClosureParser
             // Combine the two arrays to create a canonical hash of variable names and values
             $this->usedVariables = array();
             foreach ($usedVarNames as $name) {
-                if (isset($usedVarValues[$name])) {
+                if (array_key_exists($name, $usedVarValues)) {
                     $this->usedVariables[$name] = $usedVarValues[$name];
                 }
             }

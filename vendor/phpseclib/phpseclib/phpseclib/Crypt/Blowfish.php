@@ -48,7 +48,7 @@
  * @package   Crypt_Blowfish
  * @author    Jim Wigginton <terrafrost@php.net>
  * @author    Hans-Juergen Petrich <petrich@tronic-media.com>
- * @copyright MMVII Jim Wigginton
+ * @copyright 2007 Jim Wigginton
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
@@ -550,7 +550,7 @@ class Crypt_Blowfish extends Crypt_Base
                 case $gen_hi_opt_code:
                     $p = $this->bctx['p'];
                     $init_crypt = '
-                        assets $sb_0, $sb_1, $sb_2, $sb_3;
+                        static $sb_0, $sb_1, $sb_2, $sb_3;
                         if (!$sb_0) {
                             $sb_0 = $self->bctx["sb"][0];
                             $sb_1 = $self->bctx["sb"][1];

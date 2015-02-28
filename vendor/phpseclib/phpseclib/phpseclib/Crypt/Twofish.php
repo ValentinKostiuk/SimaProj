@@ -48,7 +48,7 @@
  * @package   Crypt_Twofish
  * @author    Jim Wigginton <terrafrost@php.net>
  * @author    Hans-Juergen Petrich <petrich@tronic-media.com>
- * @copyright MMVII Jim Wigginton
+ * @copyright 2007 Jim Wigginton
  * @license   http://www.opensource.org/licenses/mit-license.html  MIT License
  * @link      http://phpseclib.sourceforge.net
  */
@@ -770,7 +770,7 @@ class Crypt_Twofish extends Crypt_Base
                     $K = $this->K;
 
                     $init_crypt = '
-                        assets $S0, $S1, $S2, $S3;
+                        static $S0, $S1, $S2, $S3;
                         if (!$S0) {
                             for ($i = 0; $i < 256; ++$i) {
                                 $S0[] = (int)$self->S0[$i];
