@@ -24,6 +24,27 @@
 			<div class="landing-page-top-block-shadow"></div>
 		</div>
 		<div class="landing-page-horizontal-ruler"></div>
+		<div class="landing-page-product-groups-wrapper">
+			<div class="landing-page-product-group women">
+				<a href="/gallery/women">
+					<h3>Женщинам</h3>
+					<img src="#" class="landing-page-product-group-image">
+				</a>
+			</div>
+			<div class="landing-page-product-group men">
+				<a href="/gallery/men">
+					<h3>Мужчинам</h3>
+					<img src="#" class="landing-page-product-group-image">
+				</a>
+			</div>
+			<div class="landing-page-product-group kids">
+				<a href="/gallery/kids">
+					<h3>Детям</h3>
+					<img src="#" class="landing-page-product-group-image">
+				</a>
+			</div>
+		</div>
+		<div class="landing-page-horizontal-ruler"></div>
 	@endif
 	<script type="text/javascript">
 		$(document).ready(function () {
