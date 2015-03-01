@@ -27,7 +27,7 @@
 		<div class="landing-page-product-groups-wrapper">
 			<div class="landing-page-product-group women">
 				<a href="/gallery/women">
-					<h3>Женщинам</h3>
+					<h3>Женщинам JUJ</h3>
 					<img src="#" class="landing-page-product-group-image">
 				</a>
 			</div>
