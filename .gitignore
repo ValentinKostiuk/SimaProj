@@ -6,3 +6,6 @@ composer.lock
 .idea
 apacheLog
 Thumbs.db
+
+public/files/carousel
+public/files/products
