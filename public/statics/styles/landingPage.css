@@ -105,3 +105,31 @@
 	background: -moz-linear-gradient(right, rgba(255, 255, 255, 0), rgba(150, 150, 150, 1), rgba(255, 255, 255, 0)); /*Fx 3.6-15*/
 	background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(150, 150, 150, 1), rgba(255, 255, 255, 0)); /*Standard*/
 }
+
+/*  product groups banners */
+.landing-page-product-groups-wrapper {
+	margin-top: 20px;
+	margin-bottom: 65px;
+}
+
+.landing-page-product-group {
+	display: inline-block;
+	margin-right: 23px;
+}
+
+.landing-page-product-group-banner {
+	text-decoration: none;
+}
+
+.landing-page-product-group-heading {
+	color: #000000;
+	text-decoration: none;
+	margin-top: 4px;
+	font-weight: normal;
+}
+
+.landing-page-product-group-image {
+	width: 285px;
+	height: 185px;
+	border: 3px solid #7B7B7B;
+}

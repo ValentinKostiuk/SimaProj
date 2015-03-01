@@ -26,21 +26,21 @@
 		<div class="landing-page-horizontal-ruler"></div>
 		<div class="landing-page-product-groups-wrapper">
 			<div class="landing-page-product-group women">
-				<a href="/gallery/women">
-					<h3>Женщинам JUJ</h3>
-					<img src="#" class="landing-page-product-group-image">
+				<a href="/gallery/women" class="landing-page-product-group-banner">
+					<h3 class="landing-page-product-group-heading">Женщинам</h3>
+					<img src="/statics/images/main/product-group-women.jpg" class="landing-page-product-group-image">
 				</a>
 			</div>
 			<div class="landing-page-product-group men">
-				<a href="/gallery/men">
-					<h3>Мужчинам</h3>
-					<img src="#" class="landing-page-product-group-image">
+				<a href="/gallery/men" class="landing-page-product-group-banner">
+					<h3 class="landing-page-product-group-heading">Мужчинам</h3>
+					<img src="/statics/images/main/product-group-men.jpg" class="landing-page-product-group-image">
 				</a>
 			</div>
 			<div class="landing-page-product-group kids">
-				<a href="/gallery/kids">
-					<h3>Детям</h3>
-					<img src="#" class="landing-page-product-group-image">
+				<a href="/gallery/kids" class="landing-page-product-group-banner">
+					<h3 class="landing-page-product-group-heading">Детям</h3>
+					<img src="/statics/images/main/product-group-kids.jpg" class="landing-page-product-group-image">
 				</a>
 			</div>
 		</div>
