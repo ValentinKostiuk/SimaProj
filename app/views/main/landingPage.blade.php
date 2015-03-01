@@ -28,6 +28,7 @@
 			<div class="landing-page-product-group women">
 				<a href="/gallery/women">
 					<h3>Женщинам</h3>
+					here will place some image
 					<img src="#" class="landing-page-product-group-image">
 				</a>
 			</div>
