@@ -133,3 +133,41 @@
 	height: 185px;
 	border: 3px solid #7B7B7B;
 }
+
+/*  help articles  */
+.landing-page-articles-wrapper {
+	margin-top: 65px;
+	margin-bottom: 65px;
+}
+
+.landing-page-article {
+	display: inline-block;
+	margin-right: 23px;
+	text-align: left;
+}
+
+.landing-page-article-heading{
+	text-decoration: none;
+	margin-top: 4px;
+	font-weight: normal;
+}
+
+.landing-page-article-text {
+	width: 285px;
+	height: 202px;
+	font-size: 17px;
+	overflow: hidden;
+	margin-bottom: 36px;
+}
+
+.landing-page-article-read-more-link{
+	padding: 4px 10px 4px 10px;
+	border: 1px solid #AAAAAA;
+	border-radius: 16px;
+	text-decoration: none;
+	color: #000000;
+	background: -webkit-linear-gradient(#FFFFFF, #DDDDDD); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#FFFFFF, #DDDDDD); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#FFFFFF, #DDDDDD); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#FFFFFF, #DDDDDD); /* Standard syntax */
+}
