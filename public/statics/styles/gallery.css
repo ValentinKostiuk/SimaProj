@@ -1,12 +1,77 @@
+.gallery-content-wrapper{
+	padding-top: 45px;
+}
+
+.gallery-left-menu-wrapper{
+	position: fixed;
+	width: 220px;
+	height: auto;
+	margin-bottom: 120px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	background: url("/statics/images/main/tracery.png"), -webkit-radial-gradient(circle 50% 0%, farthest-side, #FDE4C8, #F5C28F); /* Safari 5.1 to 6.0 */
+	background: url("/statics/images/main/tracery.png"), -o-radial-gradient(circle 50% 0%, farthest-side, #FDE4C8, #F5C28F); /* For Opera 11.6 to 12.0 */
+	background: url("/statics/images/main/tracery.png"), -moz-radial-gradient(circle 50% 0%, farthest-side, #FDE4C8, #F5C28F); /* For Firefox 3.6 to 15 */
+	background: url("/statics/images/main/tracery.png"), radial-gradient(circle farthest-side at 50% 0%, #FDE4C8, #F5C28F); /* Standard syntax (must be last) */
+}
+
+.gallery-left-menu{
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+.gallery-left-menu-item {
+	display: block;
+	position: relative;
+	height: 59px;
+	margin-bottom: 2px;
+	padding: 0 0 0 47px;
+	line-height: 56px;
+	list-style: none;
+}
+
+.gallery-left-menu-item a {
+	display: block;
+	color: #48291A;
+	font-size: 24px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.gallery-left-menu-item:hover,
+.gallery-left-menu-item.active {
+	background: -webkit-linear-gradient(#F7D8B6, #E0A667); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#F7D8B6, #E0A667); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#F7D8B6, #E0A667); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#F7D8B6, #E0A667); /* Standard syntax */
+}
+
+.gallery-left-menu-item:hover > a {
+	color: #48291A;
+}
+
+.gallery-left-menu-item.active a {
+	color: #48291A;
+}
+
+
+.gallery-items-wrapper{
+	margin-left: 220px;
+	text-align: center;
+	text-decoration: none;
+}
+
 .gallery-item-wrapper{
 	display: inline-block;
-	width: 300px;
-	margin: 20px;
+	width: 292px;
+	margin: 0 15px 30px 15px;
 }
 
 .gallery-item-image{
-	width: 280px;
-	height: 170px;
+	width: 285px;
+	height: 185px;
+	border: 3px solid #7B7B7B;
 }
 
 .gallery-item-name{
@@ -21,7 +86,8 @@
 .gallery-item-price{
 	display: inline-block;
 	width: 300px;
-	font-size: 12px;
+	margin-top: 13px;
+	font-size: 16px;
 	color: #a3a3a3;
 }
 

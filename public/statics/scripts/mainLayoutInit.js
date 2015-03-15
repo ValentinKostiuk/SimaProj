@@ -27,6 +27,10 @@
 			if(currentItem.children(layoutSelectors.subMenuContainer).length > 0){
 				link.text(link.text() + ' +');
 			}
+			if(~link[0].href.indexOf('gallery') && ~window.location.href.indexOf('gallery')){
+				currentItem.addClass('active');
+				return;
+			}
 			if(link[0].href === window.location.href){
 				currentItem.addClass('active');
 			}

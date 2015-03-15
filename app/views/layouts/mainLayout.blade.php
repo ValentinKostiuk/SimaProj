@@ -5,7 +5,6 @@
 	<title>Серафима Дидковская</title>
 	<link rel="shortcut icon" href="/statics/images/main/ico.jpg">
 	<link rel="stylesheet" href="/statics/styles/main.css">
-	<link rel="stylesheet" href="/statics/styles/gallery.css">
 	<link rel="stylesheet" href="/statics/thirdPartyLibs/owl-carousel/owl.carousel.css">
 	<link rel="stylesheet" href="/statics/thirdPartyLibs/owl-carousel/owl.theme.css">
 	<script type="text/javascript" src="/statics/scripts/libs/jquery-1.11.1.min.js"></script>
