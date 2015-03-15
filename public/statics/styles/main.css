@@ -164,6 +164,10 @@ html, body {
 	background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /*Standard*/
 }
 
+.footer-main-site-nav {
+	margin-top: 8px;
+}
+
 .footer-main-site-nav-menu {
 	display: inline-block;
 	height: 82px;
@@ -210,6 +214,7 @@ html, body {
 .footer-social-networks-container {
 	display: inline-block;
 	height: 82px;
+	margin-left: 160px;
 	padding: 0;
 	vertical-align: top;
 }
@@ -228,10 +233,10 @@ html, body {
 
 .footer-social-networks-container .footer-social-networks-icon {
 	display: inline-block;
-	width: 32px;
-	height: 32px;
-	margin: 0 6px 0 6px;
-	background: url("../images/main/social-icons1.png") 0 0;
+	width: 46px;
+	height: 46px;
+	margin: 0 27px 0 0;
+	background: url("../images/main/social-icons.png") 0 0 no-repeat;
 }
 
 .footer-social-networks-container .footer-social-networks-icon:hover {
@@ -242,23 +247,19 @@ html, body {
 
 /*---social icons---*/
 .footer-social-networks-icon.vk-com {
-	background-position: -74px -38px;
+	background-position: 0px 0px;
 }
 
 .footer-social-networks-icon.instagram-com {
-	background-position: -2px -38px;
+	background-position: -46px 0px;
 }
 
 .footer-social-networks-icon.facebook-com {
-	background-position: -38px -2px;
-}
-
-.footer-social-networks-icon.twitter-com {
-	background-position: -2px -2px;
+	background-position: -92px 0px;
 }
 
 .footer-social-networks-icon.mail {
-	background-position: -38px -74px;
+	background-position: -138px 0px;
 }
 
 /*---social icons---*/

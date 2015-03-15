@@ -68,16 +68,18 @@
 					</li>
 				</ul>
 				<span class="footer-social-networks-container">
-					<a href="https://twitter.com/DidkovskaSima" target="_blank"><i
-								class="footer-social-networks-icon twitter-com"></i></a>
-					<a href="https://vk.com/simadidkovskaya" target="_blank"><i
-								class="footer-social-networks-icon vk-com"></i></a>
-					<a href="http://instagram.com/didkovskayasima" target="_blank"><i
-								class="footer-social-networks-icon instagram-com"></i></a>
-					<a href="https://www.facebook.com/simadidkovskaya" target="_blank"><i
-								class="footer-social-networks-icon facebook-com"></i></a>
-					<a href="mailto:didkovskayasima@gmail.com" target="_blank"><i
-								class="footer-social-networks-icon mail"></i></a>
+					<a href="https://vk.com/simadidkovskaya" target="_blank">
+						<i class="footer-social-networks-icon vk-com"></i>
+					</a>
+					<a href="http://instagram.com/didkovskayasima" target="_blank">
+						<i class="footer-social-networks-icon instagram-com"></i>
+					</a>
+					<a href="https://www.facebook.com/simadidkovskaya" target="_blank">
+						<i class="footer-social-networks-icon facebook-com"></i>
+					</a>
+					<a href="mailto:didkovskayasima@gmail.com" target="_blank">
+						<i class="footer-social-networks-icon mail"></i>
+					</a>
 				</span>
 			</nav>
 			<div class="copyright-like">
