@@ -2205,3 +2205,514 @@ Stack trace:
 #9 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(641): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
 #10 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
 #11 {main} [] []
+[2015-03-30 19:37:35] local.ERROR: exception 'PDOException' with message 'SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'description' at row 1' in D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php:369
+Stack trace:
+#0 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(369): PDOStatement->execute(Array)
+#1 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(617): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `pr...', Array)
+#2 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(581): Illuminate\Database\Connection->runQueryCallback('insert into `pr...', Array, Object(Closure))
+#3 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(370): Illuminate\Database\Connection->run('insert into `pr...', Array, Object(Closure))
+#4 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(327): Illuminate\Database\Connection->statement('insert into `pr...', Array)
+#5 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `pr...', Array)
+#6 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1910): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `pr...', Array, 'id')
+#7 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#8 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(972): call_user_func_array(Array, Array)
+#9 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1580): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#10 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1580): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#11 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1550): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#12 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1456): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder), Array)
+#13 D:\www\SimaProj\app\controllers\ProductManagementController.php(78): Illuminate\Database\Eloquent\Model->save()
+#14 [internal function]: ProductManagementController->createProductItemPost()
+#15 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(231): call_user_func_array(Array, Array)
+#16 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('createProductIt...', Array)
+#17 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(62): Illuminate\Routing\ControllerDispatcher->call(Object(ProductManagementController), Object(Illuminate\Routing\Route), 'createProductIt...')
+#18 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(967): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'ProductManageme...', 'createProductIt...')
+#19 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#20 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Route.php(109): call_user_func_array(Object(Closure), Array)
+#21 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1033): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1001): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#23 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(775): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#24 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(745): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#25 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Session\Middleware.php(72): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#26 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Cookie\Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#27 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Cookie\Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#28 D:\www\SimaProj\vendor\stack\builder\src\Stack\StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#29 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(641): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#30 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#31 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'description' at row 1 (SQL: insert into `product_items` (`imageUrl`, `title`, `name`, `productGroup`, `description`, `shortDescription`, `price`, `updated_at`, `created_at`) values (fafa5efeaf3cbe3b23b2748d13e629a1.jpg, Enter image title (optional), product Name, 2, <h1><span class="marker"><strong>Heading&nbsp;</strong></span></h1>
+
+<table>
+	<tbody>
+		<tr>
+			<th colspan="7" style="background-color:rgb(242, 242, 242); text-align:center">Випуск 1918 року</th>
+		</tr>
+		<tr>
+			<th colspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Зображення</th>
+			<th rowspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Номінал</th>
+			<th rowspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Рік</th>
+			<th rowspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Розміри</th>
+			<th rowspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Місце випуску</th>
+			<th rowspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Основний колір</th>
+		</tr>
+		<tr>
+			<th style="background-color:rgb(242, 242, 242); text-align:center">Лицьова сторона</th>
+			<th style="background-color:rgb(242, 242, 242); text-align:center">Зворотня сторона</th>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:2-hryvnia-1918-front.png"><img alt="2-hryvnia-1918-front.png" src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/2-hryvnia-1918-front.png/120px-2-hryvnia-1918-front.png" style="height:78px; width:120px" /></a></td>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:2-hryvnia-1918-back.png"><img alt="2-hryvnia-1918-back.png" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/2-hryvnia-1918-back.png/120px-2-hryvnia-1918-back.png" style="height:78px; width:120px" /></a></td>
+			<td>
+			<p>2</p>
+			</td>
+			<td>1918</td>
+			<td>118 х 70</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>синій</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%90%D0%B2%D0%B5%D1%80%D1%81.jpg"><img alt="10 гривен УНР. 1918. Аверс.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%90%D0%B2%D0%B5%D1%80%D1%81.jpg/120px-10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%90%D0%B2%D0%B5%D1%80%D1%81.jpg" style="height:79px; width:120px" /></a></td>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%A0%D0%B5%D0%B2%D0%B5%D1%80%D1%81.jpg"><img alt="10 гривен УНР. 1918. Реверс.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%A0%D0%B5%D0%B2%D0%B5%D1%80%D1%81.jpg/120px-10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%A0%D0%B5%D0%B2%D0%B5%D1%80%D1%81.jpg" style="height:78px; width:120px" /></a></td>
+			<td>
+			<p>10</p>
+			</td>
+			<td>1918</td>
+			<td>140 х 90</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>червоний</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Ukrainian_100_hryvnia%27s_note_of_the_People%27s_repub.jlic_of_Ukraine_(1918)_front_side.jpg"><img alt="Ukrainian 100 hryvnia's note of the People's repub.jlic of Ukraine (1918) front side.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Ukrainian_100_hryvnia%27s_note_of_the_People%27s_repub.jlic_of_Ukraine_%281918%29_front_side.jpg/120px-Ukrainian_100_hryvnia%27s_note_of_the_People%27s_repub.jlic_of_Ukraine_%281918%29_front_side.jpg" style="height:80px; width:120px" /></a></td>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Ukrainian_100_hryvnia%27s_note_of_the_People%27s_republic_of_Ukraine_(1918)_back_side.jpg"><img alt="Ukrainian 100 hryvnia's note of the People's republic of Ukraine (1918) back side.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ukrainian_100_hryvnia%27s_note_of_the_People%27s_republic_of_Ukraine_%281918%29_back_side.jpg/120px-Ukrainian_100_hryvnia%27s_note_of_the_People%27s_republic_of_Ukraine_%281918%29_back_side.jpg" style="height:80px; width:120px" /></a></td>
+			<td>
+			<p>100</p>
+			</td>
+			<td>1918</td>
+			<td>175 х 115</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>синій</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:500-grn-1918-a.jpg"><img alt="500-grn-1918-a.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/89/500-grn-1918-a.jpg/120px-500-grn-1918-a.jpg" style="height:76px; width:120px" /></a></td>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:500-grn-1918.jpg"><img alt="500-grn-1918.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/500-grn-1918.jpg/120px-500-grn-1918.jpg" style="height:76px; width:120px" /></a></td>
+			<td>
+			<p>500</p>
+			</td>
+			<td>1918</td>
+			<td>185 х 120</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>червоний<br />
+			синій</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:UkraineP24-1000Hryven-1918-donatedos_b.jpg"><img alt="UkraineP24-1000Hryven-1918-donatedos b.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/be/UkraineP24-1000Hryven-1918-donatedos_b.jpg/120px-UkraineP24-1000Hryven-1918-donatedos_b.jpg" style="height:75px; width:120px" /></a></td>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:UkraineP24-1000Hryven-1918-donatedos_f.jpg"><img alt="UkraineP24-1000Hryven-1918-donatedos f.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/UkraineP24-1000Hryven-1918-donatedos_f.jpg/120px-UkraineP24-1000Hryven-1918-donatedos_f.jpg" style="height:75px; width:120px" /></a></td>
+			<td>
+			<p>1000</p>
+			</td>
+			<td>1918</td>
+			<td>198 х 125</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>синій</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:2000griven.jpg"><img alt="2000griven.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/11/2000griven.jpg/120px-2000griven.jpg" style="height:78px; width:120px" /></a></td>
+			<td>&nbsp;</td>
+			<td>
+			<p>2000</p>
+			</td>
+			<td>1918</td>
+			<td>204 х 134</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>світло-коричневий</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Грошова реформа та її передумови[<a href="http://uk.wikipedia.org/w/index.phpEnter short description of producttitle=%D0%93%D1%80%D0%B8%D0%B2%D0%BD%D1%8F&amp;veaction=edit&amp;vesection=4">ред.</a>&nbsp;&bull;&nbsp;<a href="http://uk.wikipedia.org/w/index.php0title=%D0%93%D1%80%D0%B8%D0%B2%D0%BD%D1%8F&amp;action=edit&amp;section=4">ред. код</a>]</h2>
+
+<p><em>Докладніше:&nbsp;<a href="http://uk.wikipedia.org/wiki/%D0%86%D1%81%D1%82%D0%BE%D1%80%D1%96%D1%8F_%D1%83%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D0%B3%D1%80%D0%B8%D0%B2%D0%BD%D1%96">Історія української гривні</a></em></p>
+
+<p><span class="marker">Акт проголошення незалежності України відкрив дорогу для запровадження в молодій державі повноцінної національної валюти. Такою валютою мала стати, згідно з традиціями як доби Київської Русі, так і періоду визвольних змагань 1917&ndash;1920 років, гривня. Щодо назви розмінної монети, то для неї пропонувалися назви &laquo;сотий&raquo;, &laquo;резана&raquo;, але врешті було віддано перевагу звичній уже &laquo;копійці&raquo;. 1992 року перші зразки української національної валюти було виготовлено в&nbsp;</span></p>
+, 2015-03-30 19:37:34, 2015-03-30 19:37:34, ?, ?))' in D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php:625
+Stack trace:
+#0 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(581): Illuminate\Database\Connection->runQueryCallback('insert into `pr...', Array, Object(Closure))
+#1 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(370): Illuminate\Database\Connection->run('insert into `pr...', Array, Object(Closure))
+#2 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(327): Illuminate\Database\Connection->statement('insert into `pr...', Array)
+#3 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `pr...', Array)
+#4 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1910): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `pr...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(972): call_user_func_array(Array, Array)
+#7 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1580): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1580): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1550): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1456): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 D:\www\SimaProj\app\controllers\ProductManagementController.php(78): Illuminate\Database\Eloquent\Model->save()
+#12 [internal function]: ProductManagementController->createProductItemPost()
+#13 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(231): call_user_func_array(Array, Array)
+#14 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('createProductIt...', Array)
+#15 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(62): Illuminate\Routing\ControllerDispatcher->call(Object(ProductManagementController), Object(Illuminate\Routing\Route), 'createProductIt...')
+#16 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(967): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'ProductManageme...', 'createProductIt...')
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#18 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Route.php(109): call_user_func_array(Object(Closure), Array)
+#19 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1033): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#20 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1001): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#21 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(775): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(745): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#23 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Session\Middleware.php(72): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#24 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Cookie\Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#25 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Cookie\Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#26 D:\www\SimaProj\vendor\stack\builder\src\Stack\StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#27 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(641): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#28 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#29 {main} [] []
+[2015-03-30 19:37:52] local.ERROR: exception 'PDOException' with message 'SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'description' at row 1' in D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php:369
+Stack trace:
+#0 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(369): PDOStatement->execute(Array)
+#1 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(617): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `pr...', Array)
+#2 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(581): Illuminate\Database\Connection->runQueryCallback('insert into `pr...', Array, Object(Closure))
+#3 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(370): Illuminate\Database\Connection->run('insert into `pr...', Array, Object(Closure))
+#4 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(327): Illuminate\Database\Connection->statement('insert into `pr...', Array)
+#5 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `pr...', Array)
+#6 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1910): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `pr...', Array, 'id')
+#7 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#8 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(972): call_user_func_array(Array, Array)
+#9 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1580): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#10 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1580): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#11 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1550): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#12 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1456): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder), Array)
+#13 D:\www\SimaProj\app\controllers\ProductManagementController.php(78): Illuminate\Database\Eloquent\Model->save()
+#14 [internal function]: ProductManagementController->createProductItemPost()
+#15 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(231): call_user_func_array(Array, Array)
+#16 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('createProductIt...', Array)
+#17 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(62): Illuminate\Routing\ControllerDispatcher->call(Object(ProductManagementController), Object(Illuminate\Routing\Route), 'createProductIt...')
+#18 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(967): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'ProductManageme...', 'createProductIt...')
+#19 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#20 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Route.php(109): call_user_func_array(Object(Closure), Array)
+#21 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1033): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1001): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#23 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(775): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#24 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(745): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#25 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Session\Middleware.php(72): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#26 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Cookie\Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#27 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Cookie\Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#28 D:\www\SimaProj\vendor\stack\builder\src\Stack\StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#29 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(641): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#30 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#31 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'description' at row 1 (SQL: insert into `product_items` (`imageUrl`, `title`, `name`, `productGroup`, `description`, `shortDescription`, `price`, `updated_at`, `created_at`) values (fafa5efeaf3cbe3b23b2748d13e629a1.jpg, Enter image title (optional), product Name, 2, <h1><span class="marker"><strong>Heading&nbsp;</strong></span></h1>
+
+<table>
+	<tbody>
+		<tr>
+			<th colspan="7" style="background-color:rgb(242, 242, 242); text-align:center">Випуск 1918 року</th>
+		</tr>
+		<tr>
+			<th colspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Зображення</th>
+			<th rowspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Номінал</th>
+			<th rowspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Рік</th>
+			<th rowspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Розміри</th>
+			<th rowspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Місце випуску</th>
+			<th rowspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Основний колір</th>
+		</tr>
+		<tr>
+			<th style="background-color:rgb(242, 242, 242); text-align:center">Лицьова сторона</th>
+			<th style="background-color:rgb(242, 242, 242); text-align:center">Зворотня сторона</th>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:2-hryvnia-1918-front.png"><img alt="2-hryvnia-1918-front.png" src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/2-hryvnia-1918-front.png/120px-2-hryvnia-1918-front.png" style="height:78px; width:120px" /></a></td>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:2-hryvnia-1918-back.png"><img alt="2-hryvnia-1918-back.png" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/2-hryvnia-1918-back.png/120px-2-hryvnia-1918-back.png" style="height:78px; width:120px" /></a></td>
+			<td>
+			<p>2</p>
+			</td>
+			<td>1918</td>
+			<td>118 х 70</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>синій</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%90%D0%B2%D0%B5%D1%80%D1%81.jpg"><img alt="10 гривен УНР. 1918. Аверс.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%90%D0%B2%D0%B5%D1%80%D1%81.jpg/120px-10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%90%D0%B2%D0%B5%D1%80%D1%81.jpg" style="height:79px; width:120px" /></a></td>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%A0%D0%B5%D0%B2%D0%B5%D1%80%D1%81.jpg"><img alt="10 гривен УНР. 1918. Реверс.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%A0%D0%B5%D0%B2%D0%B5%D1%80%D1%81.jpg/120px-10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%A0%D0%B5%D0%B2%D0%B5%D1%80%D1%81.jpg" style="height:78px; width:120px" /></a></td>
+			<td>
+			<p>10</p>
+			</td>
+			<td>1918</td>
+			<td>140 х 90</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>червоний</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Ukrainian_100_hryvnia%27s_note_of_the_People%27s_repub.jlic_of_Ukraine_(1918)_front_side.jpg"><img alt="Ukrainian 100 hryvnia's note of the People's repub.jlic of Ukraine (1918) front side.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Ukrainian_100_hryvnia%27s_note_of_the_People%27s_repub.jlic_of_Ukraine_%281918%29_front_side.jpg/120px-Ukrainian_100_hryvnia%27s_note_of_the_People%27s_repub.jlic_of_Ukraine_%281918%29_front_side.jpg" style="height:80px; width:120px" /></a></td>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Ukrainian_100_hryvnia%27s_note_of_the_People%27s_republic_of_Ukraine_(1918)_back_side.jpg"><img alt="Ukrainian 100 hryvnia's note of the People's republic of Ukraine (1918) back side.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ukrainian_100_hryvnia%27s_note_of_the_People%27s_republic_of_Ukraine_%281918%29_back_side.jpg/120px-Ukrainian_100_hryvnia%27s_note_of_the_People%27s_republic_of_Ukraine_%281918%29_back_side.jpg" style="height:80px; width:120px" /></a></td>
+			<td>
+			<p>100</p>
+			</td>
+			<td>1918</td>
+			<td>175 х 115</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>синій</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:500-grn-1918-a.jpg"><img alt="500-grn-1918-a.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/89/500-grn-1918-a.jpg/120px-500-grn-1918-a.jpg" style="height:76px; width:120px" /></a></td>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:500-grn-1918.jpg"><img alt="500-grn-1918.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/500-grn-1918.jpg/120px-500-grn-1918.jpg" style="height:76px; width:120px" /></a></td>
+			<td>
+			<p>500</p>
+			</td>
+			<td>1918</td>
+			<td>185 х 120</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>червоний<br />
+			синій</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:UkraineP24-1000Hryven-1918-donatedos_b.jpg"><img alt="UkraineP24-1000Hryven-1918-donatedos b.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/be/UkraineP24-1000Hryven-1918-donatedos_b.jpg/120px-UkraineP24-1000Hryven-1918-donatedos_b.jpg" style="height:75px; width:120px" /></a></td>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:UkraineP24-1000Hryven-1918-donatedos_f.jpg"><img alt="UkraineP24-1000Hryven-1918-donatedos f.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/UkraineP24-1000Hryven-1918-donatedos_f.jpg/120px-UkraineP24-1000Hryven-1918-donatedos_f.jpg" style="height:75px; width:120px" /></a></td>
+			<td>
+			<p>1000</p>
+			</td>
+			<td>1918</td>
+			<td>198 х 125</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>синій</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:2000griven.jpg"><img alt="2000griven.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/11/2000griven.jpg/120px-2000griven.jpg" style="height:78px; width:120px" /></a></td>
+			<td>&nbsp;</td>
+			<td>
+			<p>2000</p>
+			</td>
+			<td>1918</td>
+			<td>204 х 134</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>світло-коричневий</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Грошова реформа та її передумови[<a href="http://uk.wikipedia.org/w/index.phpEnter short description of producttitle=%D0%93%D1%80%D0%B8%D0%B2%D0%BD%D1%8F&amp;veaction=edit&amp;vesection=4">ред.</a>&nbsp;&bull;&nbsp;<a href="http://uk.wikipedia.org/w/index.php0title=%D0%93%D1%80%D0%B8%D0%B2%D0%BD%D1%8F&amp;action=edit&amp;section=4">ред. код</a>]</h2>
+, 2015-03-30 19:37:52, 2015-03-30 19:37:52, ?, ?))' in D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php:625
+Stack trace:
+#0 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(581): Illuminate\Database\Connection->runQueryCallback('insert into `pr...', Array, Object(Closure))
+#1 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(370): Illuminate\Database\Connection->run('insert into `pr...', Array, Object(Closure))
+#2 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(327): Illuminate\Database\Connection->statement('insert into `pr...', Array)
+#3 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `pr...', Array)
+#4 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1910): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `pr...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(972): call_user_func_array(Array, Array)
+#7 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1580): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1580): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1550): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1456): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 D:\www\SimaProj\app\controllers\ProductManagementController.php(78): Illuminate\Database\Eloquent\Model->save()
+#12 [internal function]: ProductManagementController->createProductItemPost()
+#13 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(231): call_user_func_array(Array, Array)
+#14 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('createProductIt...', Array)
+#15 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(62): Illuminate\Routing\ControllerDispatcher->call(Object(ProductManagementController), Object(Illuminate\Routing\Route), 'createProductIt...')
+#16 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(967): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'ProductManageme...', 'createProductIt...')
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#18 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Route.php(109): call_user_func_array(Object(Closure), Array)
+#19 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1033): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#20 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1001): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#21 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(775): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(745): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#23 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Session\Middleware.php(72): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#24 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Cookie\Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#25 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Cookie\Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#26 D:\www\SimaProj\vendor\stack\builder\src\Stack\StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#27 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(641): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#28 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#29 {main} [] []
+[2015-03-30 19:42:32] local.ERROR: exception 'PDOException' with message 'SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'description' at row 1' in D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php:369
+Stack trace:
+#0 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(369): PDOStatement->execute(Array)
+#1 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(617): Illuminate\Database\Connection->Illuminate\Database\{closure}(Object(Illuminate\Database\MySqlConnection), 'insert into `pr...', Array)
+#2 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(581): Illuminate\Database\Connection->runQueryCallback('insert into `pr...', Array, Object(Closure))
+#3 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(370): Illuminate\Database\Connection->run('insert into `pr...', Array, Object(Closure))
+#4 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(327): Illuminate\Database\Connection->statement('insert into `pr...', Array)
+#5 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `pr...', Array)
+#6 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1910): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `pr...', Array, 'id')
+#7 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#8 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(972): call_user_func_array(Array, Array)
+#9 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1580): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#10 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1580): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#11 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1550): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#12 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1456): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder), Array)
+#13 D:\www\SimaProj\app\controllers\ProductManagementController.php(78): Illuminate\Database\Eloquent\Model->save()
+#14 [internal function]: ProductManagementController->createProductItemPost()
+#15 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(231): call_user_func_array(Array, Array)
+#16 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('createProductIt...', Array)
+#17 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(62): Illuminate\Routing\ControllerDispatcher->call(Object(ProductManagementController), Object(Illuminate\Routing\Route), 'createProductIt...')
+#18 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(967): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'ProductManageme...', 'createProductIt...')
+#19 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#20 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Route.php(109): call_user_func_array(Object(Closure), Array)
+#21 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1033): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1001): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#23 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(775): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#24 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(745): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#25 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Session\Middleware.php(72): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#26 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Cookie\Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#27 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Cookie\Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#28 D:\www\SimaProj\vendor\stack\builder\src\Stack\StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#29 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(641): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#30 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#31 {main}
+
+Next exception 'Illuminate\Database\QueryException' with message 'SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'description' at row 1 (SQL: insert into `product_items` (`imageUrl`, `title`, `name`, `productGroup`, `description`, `shortDescription`, `price`, `updated_at`, `created_at`) values (fafa5efeaf3cbe3b23b2748d13e629a1.jpg, Enter image title (optional), product Name, 2, <h1><span class="marker"><strong>Heading&nbsp;</strong></span></h1>
+
+<table>
+	<tbody>
+		<tr>
+			<th colspan="7" style="background-color:rgb(242, 242, 242); text-align:center">Випуск 1918 року</th>
+		</tr>
+		<tr>
+			<th colspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Зображення</th>
+			<th rowspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Номінал</th>
+			<th rowspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Рік</th>
+			<th rowspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Розміри</th>
+			<th rowspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Місце випуску</th>
+			<th rowspan="2" style="background-color:rgb(242, 242, 242); text-align:center">Основний колір</th>
+		</tr>
+		<tr>
+			<th style="background-color:rgb(242, 242, 242); text-align:center">Лицьова сторона</th>
+			<th style="background-color:rgb(242, 242, 242); text-align:center">Зворотня сторона</th>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:2-hryvnia-1918-front.png"><img alt="2-hryvnia-1918-front.png" src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/2-hryvnia-1918-front.png/120px-2-hryvnia-1918-front.png" style="height:78px; width:120px" /></a></td>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:2-hryvnia-1918-back.png"><img alt="2-hryvnia-1918-back.png" src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/2-hryvnia-1918-back.png/120px-2-hryvnia-1918-back.png" style="height:78px; width:120px" /></a></td>
+			<td>
+			<p>2</p>
+			</td>
+			<td>1918</td>
+			<td>118 х 70</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>синій</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%90%D0%B2%D0%B5%D1%80%D1%81.jpg"><img alt="10 гривен УНР. 1918. Аверс.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%90%D0%B2%D0%B5%D1%80%D1%81.jpg/120px-10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%90%D0%B2%D0%B5%D1%80%D1%81.jpg" style="height:79px; width:120px" /></a></td>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%A0%D0%B5%D0%B2%D0%B5%D1%80%D1%81.jpg"><img alt="10 гривен УНР. 1918. Реверс.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%A0%D0%B5%D0%B2%D0%B5%D1%80%D1%81.jpg/120px-10_%D0%B3%D1%80%D0%B8%D0%B2%D0%B5%D0%BD_%D0%A3%D0%9D%D0%A0._1918._%D0%A0%D0%B5%D0%B2%D0%B5%D1%80%D1%81.jpg" style="height:78px; width:120px" /></a></td>
+			<td>
+			<p>10</p>
+			</td>
+			<td>1918</td>
+			<td>140 х 90</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>червоний</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Ukrainian_100_hryvnia%27s_note_of_the_People%27s_repub.jlic_of_Ukraine_(1918)_front_side.jpg"><img alt="Ukrainian 100 hryvnia's note of the People's repub.jlic of Ukraine (1918) front side.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Ukrainian_100_hryvnia%27s_note_of_the_People%27s_repub.jlic_of_Ukraine_%281918%29_front_side.jpg/120px-Ukrainian_100_hryvnia%27s_note_of_the_People%27s_repub.jlic_of_Ukraine_%281918%29_front_side.jpg" style="height:80px; width:120px" /></a></td>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Ukrainian_100_hryvnia%27s_note_of_the_People%27s_republic_of_Ukraine_(1918)_back_side.jpg"><img alt="Ukrainian 100 hryvnia's note of the People's republic of Ukraine (1918) back side.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ukrainian_100_hryvnia%27s_note_of_the_People%27s_republic_of_Ukraine_%281918%29_back_side.jpg/120px-Ukrainian_100_hryvnia%27s_note_of_the_People%27s_republic_of_Ukraine_%281918%29_back_side.jpg" style="height:80px; width:120px" /></a></td>
+			<td>
+			<p>100</p>
+			</td>
+			<td>1918</td>
+			<td>175 х 115</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>синій</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:500-grn-1918-a.jpg"><img alt="500-grn-1918-a.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/89/500-grn-1918-a.jpg/120px-500-grn-1918-a.jpg" style="height:76px; width:120px" /></a></td>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:500-grn-1918.jpg"><img alt="500-grn-1918.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/500-grn-1918.jpg/120px-500-grn-1918.jpg" style="height:76px; width:120px" /></a></td>
+			<td>
+			<p>500</p>
+			</td>
+			<td>1918</td>
+			<td>185 х 120</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>червоний<br />
+			синій</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:UkraineP24-1000Hryven-1918-donatedos_b.jpg"><img alt="UkraineP24-1000Hryven-1918-donatedos b.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/be/UkraineP24-1000Hryven-1918-donatedos_b.jpg/120px-UkraineP24-1000Hryven-1918-donatedos_b.jpg" style="height:75px; width:120px" /></a></td>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:UkraineP24-1000Hryven-1918-donatedos_f.jpg"><img alt="UkraineP24-1000Hryven-1918-donatedos f.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/UkraineP24-1000Hryven-1918-donatedos_f.jpg/120px-UkraineP24-1000Hryven-1918-donatedos_f.jpg" style="height:75px; width:120px" /></a></td>
+			<td>
+			<p>1000</p>
+			</td>
+			<td>1918</td>
+			<td>198 х 125</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>синій</p>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="http://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:2000griven.jpg"><img alt="2000griven.jpg" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/11/2000griven.jpg/120px-2000griven.jpg" style="height:78px; width:120px" /></a></td>
+			<td>&nbsp;</td>
+			<td>
+			<p>2000</p>
+			</td>
+			<td>1918</td>
+			<td>204 х 134</td>
+			<td>Віддруковані в Берліні</td>
+			<td>
+			<p>світло-коричневий</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Грошова реформа та її передумови[<a href="http://uk.wikipedia.org/w/index.phpEnter short description of producttitle=%D0%93%D1%80%D0%B8%D0%B2%D0%BD%D1%8F&amp;veaction=edit&amp;vesection=4">ред.</a>&nbsp;&bull;&nbsp;<a href="http://uk.wikipedia.org/w/index.php0title=%D0%93%D1%80%D0%B8%D0%B2%D0%BD%D1%8F&amp;action=edit&amp;section=4">ред. код</a>]</h2>
+, 2015-03-30 19:42:32, 2015-03-30 19:42:32, ?, ?))' in D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php:625
+Stack trace:
+#0 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(581): Illuminate\Database\Connection->runQueryCallback('insert into `pr...', Array, Object(Closure))
+#1 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(370): Illuminate\Database\Connection->run('insert into `pr...', Array, Object(Closure))
+#2 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Connection.php(327): Illuminate\Database\Connection->statement('insert into `pr...', Array)
+#3 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Query\Processors\Processor.php(30): Illuminate\Database\Connection->insert('insert into `pr...', Array)
+#4 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Query\Builder.php(1910): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `pr...', Array, 'id')
+#5 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Builder.php(972): call_user_func_array(Array, Array)
+#7 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1580): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#8 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1580): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#9 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1550): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Model.php(1456): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder), Array)
+#11 D:\www\SimaProj\app\controllers\ProductManagementController.php(78): Illuminate\Database\Eloquent\Model->save()
+#12 [internal function]: ProductManagementController->createProductItemPost()
+#13 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Controller.php(231): call_user_func_array(Array, Array)
+#14 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(93): Illuminate\Routing\Controller->callAction('createProductIt...', Array)
+#15 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php(62): Illuminate\Routing\ControllerDispatcher->call(Object(ProductManagementController), Object(Illuminate\Routing\Route), 'createProductIt...')
+#16 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(967): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request), 'ProductManageme...', 'createProductIt...')
+#17 [internal function]: Illuminate\Routing\Router->Illuminate\Routing\{closure}()
+#18 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Route.php(109): call_user_func_array(Object(Closure), Array)
+#19 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1033): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#20 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Routing\Router.php(1001): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#21 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(775): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#22 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(745): Illuminate\Foundation\Application->dispatch(Object(Illuminate\Http\Request))
+#23 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Session\Middleware.php(72): Illuminate\Foundation\Application->handle(Object(Illuminate\Http\Request), 1, true)
+#24 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Cookie\Queue.php(47): Illuminate\Session\Middleware->handle(Object(Illuminate\Http\Request), 1, true)
+#25 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Cookie\Guard.php(51): Illuminate\Cookie\Queue->handle(Object(Illuminate\Http\Request), 1, true)
+#26 D:\www\SimaProj\vendor\stack\builder\src\Stack\StackedHttpKernel.php(23): Illuminate\Cookie\Guard->handle(Object(Illuminate\Http\Request), 1, true)
+#27 D:\www\SimaProj\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(641): Stack\StackedHttpKernel->handle(Object(Illuminate\Http\Request))
+#28 D:\www\SimaProj\public\index.php(49): Illuminate\Foundation\Application->run()
+#29 {main} [] []

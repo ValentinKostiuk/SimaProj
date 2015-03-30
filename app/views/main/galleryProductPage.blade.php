@@ -1,32 +1,55 @@
 @extends('layouts.mainLayout')
+@section('headerTags')
+	<link rel="stylesheet" href="/statics/styles/gallery.css">
+	<script type="text/javascript" src="/statics/scripts/galleryMenuInit.js"></script>
+@stop
 @section('content')
+	<div class="gallery-left-menu-wrapper">
+		<ul class="gallery-left-menu">
+			<li class="gallery-left-menu-item">
+				<a href="/gallery">Все товары</a>
+			</li>
+			<li class="gallery-left-menu-item">
+				<a href="/gallery/women">Женщинам</a>
+			</li>
+			<li class="gallery-left-menu-item">
+				<a href="/gallery/men">Мужчинам</a>
+			</li>
+			<li class="gallery-left-menu-item">
+				<a href="/gallery/kids">Детям</a>
+			</li>
+			<li class="gallery-left-menu-item">
+				<a href="/gallery/decor">Декор</a>
+			</li>
+		</ul>
+	</div>
 	@if(isset($product))
+		<div class="gallery-product-wrapper">
 
-		<h1 class="gallery-product-heading">{{$product['name']}}</h1>
+			<div class="gallery-product-main">
+				<img src="{{$product['imageUrl']}}" title="{{$product['title']}}" class="gallery-product-image"/>
 
-		<table id="galleryItems" class="gallery-product-table">
-			<tr>
-				<td class="gallery-product-image-col">
-					<img src="{{$product['imageUrl']}}" title="{{$product['title']}}" class="gallery-product-image"/>
-				</td>
-				<td class="gallery-product-short-description-col">
-					<span class="gallery-product-short-description-col-liable">Номер продукта:</span>
-					<span class="gallery-product-short-description-col-field">{{$product['id']}}</span><br/>
+				<div class="gallery-product-details">
+					<h2 class="gallery-product-heading">{{$product['name']}}</h2>
 
-					<span class="gallery-product-short-description-col-liable">Цена:</span>
+					<span class="gallery-product-short-description">{{$product['shortDescription']}}</span><br/>
+
+					<span class="gallery-product-short-description-label">Номер продукта:</span>
+
+					<span class="gallery-product-short-description-field">{{$product['id']}}</span><br/>
+
+					<span class="gallery-product-short-description-label">Цена:</span>
 					@if($product['price'] > 0)
-						<span class="gallery-product-short-description-col-field">{{$product['price']}} грн.</span>
+						<span class="gallery-product-short-description-field">₴ {{$product['price']}}</span>
 					@else
-						<span class="gallery-product-short-description-col-field">Этот товар безценен:)</span>
+						<span class="gallery-product-short-description-field">Этот товар безценен:)</span>
 					@endif
-					<br/>
-					<span class="gallery-product-short-description">{{$product['shortDescription']}}</span>
-				</td>
-			</tr>
-		</table>
+				</div>
+			</div>
 
-		<div class="gallery-product-long-description">
-			{{$product['description']}}
+			<div class="gallery-product-long-description">
+				{{$product['description']}}
+			</div>
 		</div>
 	@endif
 @stop
