@@ -82,7 +82,7 @@
 				</span>
 			</nav>
 			<div class="copyright-like">
-				<a href="http://valentin-kostiuk.16mb.com" target="_blank">2014 by vk<sup>&copy;</sup></a>
+				<a href="https://vk.com/mariia_diachenko" target="_blank">2015 designed by MD<sup>&copy;</sup></a>
 			</div>
 		</div>
 	</footer>

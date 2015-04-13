@@ -20,4 +20,14 @@ class MainSiteController extends BaseController
 		'model' => $model
 		));
 	}
+
+	public function showFaqPage()
+	{
+		return View::make('main.faqPage');
+	}
+
+	public function showContactsPage()
+	{
+		return View::make('main.contactsPage');
+	}
 } 

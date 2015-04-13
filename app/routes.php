@@ -1,6 +1,8 @@
 <?php
 
 Route::any('/', 'MainSiteController@showLandingPage');
+Route::any('/faq', 'MainSiteController@showFaqPage');
+Route::any('/contacts', 'MainSiteController@showContactsPage');
 
 Route::get('/gallery/product/{productId?}', 'GalleryController@showProduct');
 Route::get('/gallery/{productGroup?}', 'GalleryController@showProductGroup');

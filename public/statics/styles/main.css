@@ -150,9 +150,7 @@ html, body {
 /*-----------------------main page footer--------------------*/
 
 .footer-wrapper {
-	bottom: 0;
 	width: 100%;
-	height: 122px;
 	background: #F8D6AE;
 	text-align: center;
 }
