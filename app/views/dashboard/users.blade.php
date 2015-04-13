@@ -1,6 +1,6 @@
 @extends('layouts.dashboardLayout')
 @section('content')
-<h3 class="dashboard-form-heading">All Users</h3>
+<h3 class="dashboard-form-heading">All Users <span><a class = "add-new-item-link" href="{{{action('UserManagementController@createUserGet')}}}">add new +</a></span></h3>
 @foreach ($model['users'] as $user)
 <div class="dashboard-form-wrapper">
 	<h3 class="dashboard-form-heading">{{$user->username}}</h3>

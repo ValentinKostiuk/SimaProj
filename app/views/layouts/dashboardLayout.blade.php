@@ -3,17 +3,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Admin Dashboard</title>
-		<link rel="shortcut icon" href="//jquery.com/jquery-wp-content/themes/jquery.com/i/favicon.ico">
-		<link rel="stylesheet" href="/statics/styles/main.css">
 		<link rel="stylesheet" href="/statics/styles/dashboard.css">
 		<script type="text/javascript" src="/statics/scripts/libs/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="/statics/scripts/dashboardLayoutInit.js"></script>
 	</head>
 	<body>
-		<div class="window-border top"></div>
-		<div class="window-border bottom"></div>
-		<div class="window-border right"></div>
-		<div class="window-border left"></div>
 		<div class="whole-page-wrapper">
 			<header class="header-wrapper">
 				<div class="header-wrapper-inner">
@@ -76,9 +70,6 @@
 											</li>
 										</ul>
 									</div>
-								</li>
-								<li class="header-main-site-nav-menu-item main-menu-item">
-									<a href="dashboard/contactAdmin" onclick="return false;">Contact Admin</a>
 								</li>
 							</ul>
 						</nav>

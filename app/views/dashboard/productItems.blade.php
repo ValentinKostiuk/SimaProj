@@ -1,7 +1,7 @@
 @extends('layouts.dashboardLayout')
 @section('content')
 @if(isset($model['enabledItems']))
-<h3 class="dashboard-carousel-items-heading">All Gallery Items</h3>
+<h3 class="dashboard-carousel-items-heading">All Gallery Items<span><a class = "add-new-item-link" href="{{{action('ProductManagementController@createProductItemGet')}}}">add new +</a></span></h3>
 <div class="dashboard-carousel-items-wrapper">
 	@foreach ($model['enabledItems'] as $item)
 	<div class="dashboard-carousel-item-container">

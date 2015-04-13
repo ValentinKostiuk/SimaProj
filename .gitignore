@@ -9,3 +9,5 @@ Thumbs.db
 
 public/files/carousel
 public/files/products
+apacheLog/access.log
+apacheLog/error.log
