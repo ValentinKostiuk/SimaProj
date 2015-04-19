@@ -34,3 +34,10 @@ Route::post('/dashboard/productItem/create', 'ProductManagementController@create
 Route::post('/dashboard/productItem/disable', 'ProductManagementController@productItemDisable');
 Route::post('/dashboard/productItem/delete', 'ProductManagementController@productItemDelete');
 Route::post('/dashboard/productItem/enable', 'ProductManagementController@productItemEnable');
+//article management
+Route::get('/dashboard/articleItems', 'ArticleManagementController@articleItems');
+Route::get('/dashboard/articleItem/create', 'ArticleManagementController@createArticleItemGet');
+Route::post('/dashboard/articleItem/create', 'ArticleManagementController@createArticleItemPost');
+Route::post('/dashboard/productItem/disable', 'ArticleManagementController@articleItemDisable');
+Route::post('/dashboard/productItem/delete', 'ArticleManagementController@articleItemDelete');
+Route::post('/dashboard/productItem/enable', 'ArticleManagementController@articleItemEnable');

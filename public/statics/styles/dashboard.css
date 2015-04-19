@@ -400,6 +400,21 @@ html, body {
 	line-height: 30px;
 }
 
+/*----------Articles---------*/
+
+.dashboard-article-content{
+	display: inline-block;
+	width: 80%;
+	padding: 25px;
+	background-color: #FFFFFF;
+}
+
+.dashboard-article-item-forms-wrapper{
+	display: inline-block;
+	float: right;
+	width: 10%;
+}
+
 /*----------big menu---------*/
 .dashboard-big-menu-list{
 	display: inline-block;
