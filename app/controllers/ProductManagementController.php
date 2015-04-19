@@ -10,19 +10,12 @@ class ProductManagementController extends BaseController {
 			}
 		});
 		$this->storageFolder = Config::get('project.products');
-
-		$this->productGroupEnum = array(
-			0 => "all",
-			1 => "men",
-			2 => "women",
-			3 => "kids"
-		);
 	}
 
 	public function createProductItemGet()
 	{
 		$modelState = Session::get('modelState');
-		$model['productGroups'] = $this->productGroupEnum;
+		$model['productGroups'] = ProductGroup::lists('group', 'id');
 		return View::Make('dashboard.createProductItem', array(
 			'model' => $model,
 			'modelState' => $modelState
@@ -34,7 +27,7 @@ class ProductManagementController extends BaseController {
 		$errors = array();
 		$productTitle = trim(Input::get('productTitle', ''));
 		$productName = trim(Input::get('productName', ''));
-		$productGroup = Input::get('productGroup', 0);
+		$productGroups = array_merge(Input::get('productGroup'),['1']);
 		$productPrice = floatval(Input::get('productPrice', 0));
 		$productDescription = Input::get('productDescription', '');
 		$productShortDescription = Input::get('productShortDescription', '');
@@ -71,11 +64,12 @@ class ProductManagementController extends BaseController {
 		$productItem->imageUrl = $dbFileName;
 		$productItem->title = $productTitle;
 		$productItem->name = $productName;
-		$productItem->productGroup = $productGroup;
 		$productItem->description = $productDescription;
 		$productItem->shortDescription = $productShortDescription;
 		$productItem->price = $productPrice;
 		$productItem->save();
+
+		$productItem->groups()->attach($productGroups);
 
 		$modelState['success'][] = 'New product successfully added to gallery!';
 
@@ -88,7 +82,6 @@ class ProductManagementController extends BaseController {
 
 		$enabledProductItemsDb = ProductItem::all();
 		$model = array();
-
 		foreach($enabledProductItemsDb as $item) {
 			$model['enabledItems'][] = array(
 				'imageUrl' => Storage::url($this->storageFolder . $item['imageUrl']),
@@ -97,7 +90,7 @@ class ProductManagementController extends BaseController {
 				'price' => floatval($item['price']),
 				'description' => $item['description'],
 				'shortDescription' => $item['shortDescription'],
-				'productGroup' => $this->productGroupEnum[intval($item['productGroup'])],
+				'productGroups' => $item->groups->lists('group', 'id'),
 				'id' => $item['id']
 			);
 		}
@@ -112,12 +105,11 @@ class ProductManagementController extends BaseController {
 				'price' => floatval($item['price']),
 				'description' => $item['description'],
 				'shortDescription' => $item['shortDescription'],
-				'productGroup' => $this->productGroupEnum[intval($item['productGroup'])],
+				'productGroups' => $item->groups->lists('group', 'id'),
 				'id' => $item['id']
 			);
 		}
 
-		$model['productGroups'] = $this->productGroupEnum;
 		return View::Make('dashboard.productItems', array(
 			'model' => $model,
 			'modelState' => $modelState

@@ -11,7 +11,7 @@
 		</div>
 		<div class="dashboard-carousel-item-fields product-items">
 			<span class="dashboard-carousel-item-field-label">Product id: </span><span class="dashboard-carousel-item-field-value">{{$item['id']}}</span><br />
-			<span class="dashboard-carousel-item-field-label">Product group: </span><span class="dashboard-carousel-item-field-value">{{$item['productGroup']}}</span><br />
+			<span class="dashboard-carousel-item-field-label">Product group: </span><span class="dashboard-carousel-item-field-value">{{implode(', ', $item['productGroups'])}}</span><br />
 			<span class="dashboard-carousel-item-field-label">Product price: </span><span class="dashboard-carousel-item-field-value">{{$item['price']}}</span><br />
 			<span class="dashboard-carousel-item-field-label">On hover title: </span><span class="dashboard-carousel-item-field-value">{{$item['title']}}</span><br />
 			<span class="dashboard-carousel-item-field-label">Short description: </span><span class="dashboard-carousel-item-field-value">{{$item['shortDescription']}}</span><br />
@@ -47,7 +47,7 @@
 		</div>
 		<div class="dashboard-carousel-item-fields product-items">
 			<span class="dashboard-carousel-item-field-label">Product id: </span><span class="dashboard-carousel-item-field-value">{{$item['id']}}</span><br />
-			<span class="dashboard-carousel-item-field-label">Product group: </span><span class="dashboard-carousel-item-field-value">{{$item['productGroup']}}</span><br />
+			<span class="dashboard-carousel-item-field-label">Product group: </span><span class="dashboard-carousel-item-field-value">{{implode(', ', $item['productGroups'])}}</span><br />
 			<span class="dashboard-carousel-item-field-label">Product price: </span><span class="dashboard-carousel-item-field-value">{{$item['price']}}</span><br />
 			<span class="dashboard-carousel-item-field-label">On hover title: </span><span class="dashboard-carousel-item-field-value">{{$item['title']}}</span><br />
 			<span class="dashboard-carousel-item-field-label">Short description: </span><span class="dashboard-carousel-item-field-value">{{$item['shortDescription']}}</span><br />

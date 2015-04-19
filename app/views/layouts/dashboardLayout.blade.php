@@ -113,16 +113,3 @@
 		</div>
 	</body>
 </html>
-{{--<div class="header-main-site-sub-nav">--}}
-	{{--<ul class="header-main-site-sub-nav-menu">--}}
-		{{--<li class="header-main-site-sub-nav-menu-item main-menu-item">--}}
-			{{--<a href="/gallery/men">Для мужчин</a>--}}
-			{{--</li>--}}
-		{{--<li class="header-main-site-sub-nav-menu-item main-menu-item">--}}
-			{{--<a href="/gallery/women">Для дам</a>--}}
-			{{--</li>--}}
-		{{--<li class="header-main-site-sub-nav-menu-item main-menu-item">--}}
-			{{--<a href="/gallery/kids">Для Маленьких</a>--}}
-			{{--</li>--}}
-		{{--</ul>--}}
-{{--</div>--}}

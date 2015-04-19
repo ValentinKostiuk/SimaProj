@@ -201,7 +201,7 @@ html, body {
 
 .main-content-error-wrapper{
 	max-width: 80%;
-	margin: auto auto 20px;
+	margin: 20px auto 20px;
 	border: #CD3F3F solid 1px;
 	background-color: #FFB4B4;
 	border-radius: 6px;
@@ -215,7 +215,7 @@ html, body {
 
 .main-content-success-wrapper{
 	max-width: 80%;
-	margin: auto auto 20px;
+	margin: 20px auto 20px;
 	border: #009900 solid 1px;
 	background-color: #B2E0B2;
 	border-radius: 6px;
@@ -230,7 +230,7 @@ html, body {
 /*---------content----------------*/
 .dashboard-form-wrapper{
 	width: 80%;
-	margin: auto auto 20px;
+	margin: 20px auto 20px;
 	padding: 15px 20px 30px 20px;
 	text-align: center;
 	font-size: 14px;
@@ -269,7 +269,7 @@ html, body {
 
 .dashboard-select{
 	width: 272px;
-	height: 25px;
+	/*height: 25px;*/
 	margin-bottom: 15px;
 	padding: 0 10px;
 	line-height: 25px;
@@ -278,6 +278,12 @@ html, body {
 	border: #999999 solid 1px;
 	border-radius: 3px;
 }
+
+
+.dashboard-input-label[for=productGroup]{
+	vertical-align: top;
+}
+
 .dashboard-textaria{
 	width: 580px;
 	max-width: 580px;
@@ -419,4 +425,21 @@ html, body {
 .dashboard-big-menu-image{
 	width: 80px;
 	height: 80px;
+}
+
+
+
+.footer-inner .copyright-like {
+	text-align: center;
+	padding: 10px;
+}
+
+.footer-inner .copyright-like a {
+	color: #B3B3B3;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+.footer-inner .copyright-like a sup {
+	text-decoration: none;
 }

@@ -24,8 +24,8 @@
 				<label for="productPrice" class="dashboard-input-label">Enter product price:</label>
 				<input type="text" name="productPrice" id="productPrice" class="dashboard-input">
 				<br/>
-				<label for="productGroup" class="dashboard-input-label">Select product group:</label>
-				<select name="productGroup" id="productGroup" class="dashboard-select">
+				<label for="productGroup" class="dashboard-input-label">Select product group: (you&nbsp;can&nbsp;select&nbsp;more&nbsp;then&nbsp;one)</label>
+				<select name="productGroup[]" id="productGroup" class="dashboard-select" multiple="multiple">
 					@foreach ($model['productGroups'] as $key => $value)
 						<option value="{{$key}}">{{$value}}</option>
 					@endforeach
