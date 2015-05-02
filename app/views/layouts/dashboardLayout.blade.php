@@ -71,6 +71,19 @@
 										</ul>
 									</div>
 								</li>
+								<li class="header-main-site-nav-menu-item main-menu-item">
+									<a href="{{{action('ArticleManagementController@articleItems')}}}" onclick="return false;">Manage Articles</a>
+									<div class="header-main-site-sub-nav">
+										<ul class="header-main-site-sub-nav-menu">
+											<li class="header-main-site-sub-nav-menu-item main-menu-item">
+												<a href="{{{action('ArticleManagementController@articleItems')}}}">View all articles</a>
+											</li>
+											<li class="header-main-site-sub-nav-menu-item main-menu-item">
+												<a href="{{{action('ArticleManagementController@createArticleItemGet')}}}">Create article</a>
+											</li>
+										</ul>
+									</div>
+								</li>
 							</ul>
 						</nav>
 						<div class="header-container-ruler"></div>

@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ArticleItem' => $baseDir . '/app/models/ArticleItem.php',
+    'ArticleManagementController' => $baseDir . '/app/controllers/ArticleManagementController.php',
     'AuthController' => $baseDir . '/app/controllers/AuthController.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
@@ -1610,5 +1612,4 @@ return array(
     'Whoops\\Run' => $vendorDir . '/filp/whoops/src/Whoops/Run.php',
     'Whoops\\Util\\Misc' => $vendorDir . '/filp/whoops/src/Whoops/Util/Misc.php',
     'Whoops\\Util\\TemplateHelper' => $vendorDir . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
-    'dashboard\\ArticleManagementController' => $baseDir . '/app/controllers/ArticleManagementController.php',
 );
