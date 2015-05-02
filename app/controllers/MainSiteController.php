@@ -31,11 +31,6 @@ class MainSiteController extends BaseController
 		));
 	}
 
-	public function showFaqPage()
-	{
-		return View::make('main.faqPage');
-	}
-
 	public function showContactsPage()
 	{
 		return View::make('main.contactsPage');

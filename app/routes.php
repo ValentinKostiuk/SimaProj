@@ -1,11 +1,13 @@
 <?php
 
 Route::any('/', 'MainSiteController@showLandingPage');
-Route::any('/faq', 'MainSiteController@showFaqPage');
 Route::any('/contacts', 'MainSiteController@showContactsPage');
 
 Route::get('/gallery/product/{productId?}', 'GalleryController@showProduct');
 Route::get('/gallery/{productGroup?}', 'GalleryController@showProductGroup');
+
+Route::get('/articles', 'ArticleController@showAll');
+Route::get('/articles/{articleId?}', 'ArticleController@show');
 
 //Authorization routs
 Route::get('/auth/login', 'AuthController@login');

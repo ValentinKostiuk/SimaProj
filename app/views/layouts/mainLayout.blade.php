@@ -31,7 +31,7 @@
 							<a href="/gallery">Галерея</a>
 						</li>
 						<li class="header-main-site-nav-menu-item main-menu-item">
-							<a href="/faq">FAQ</a>
+							<a href="/articles">FAQ</a>
 						</li>
 						<li class="header-main-site-nav-menu-item main-menu-item">
 							<a href="/contacts">Контакты</a>
@@ -60,7 +60,7 @@
 						<a href="/gallery">Галерея</a>
 					</li>
 					<li class="footer-main-site-nav-menu-item main-menu-item">
-						<a href="/faq">FAQ</a>
+						<a href="/articles">FAQ</a>
 					</li>
 					<li class="footer-main-site-nav-menu-item main-menu-item">
 						<a href="/contacts">Контакты</a>
