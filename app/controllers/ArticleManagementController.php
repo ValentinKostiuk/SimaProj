@@ -59,36 +59,26 @@ class ArticleManagementController extends BaseController
 	public function articleItemDisable()
 	{
 		$item = ArticleItem::find(Input::get('id'));
-		$deletedName = $item->originalName;
+		$deletedName = $item->heading;
 		$item->delete();
-		$modelState['success'][] = 'Item ' . $deletedName . ' disabled successfully!';
-		return Redirect::action('CarouselManagementController@carouselItems')->with('modelState', $modelState);
+		$modelState['success'][] = 'Article \'' . $deletedName . '\' disabled successfully!';
+		return Redirect::action('ArticleManagementController@articleItems')->with('modelState', $modelState);
 	}
 
 	public function articleItemDelete()
 	{
 		$item = ArticleItem::withTrashed()->where('id', Input::get('id'))->firstOrFail();
-		$deletedItemName = $item['originalName'];
-		$fileInStoragePath = $this->storageFolder . $item['imageUrl'];
-		$imageHash = $item['imageUrl'];
+		$deletedItemName = $item['heading'];
 		$item->forceDelete();
-		if ($item = ArticleItem::withTrashed()->where('imageUrl', $imageHash)->count() == 0) {
-			Storage::delete($fileInStoragePath);
-		}
-		$modelState['success'][] = 'Item deleted ' . $deletedItemName . ' successfully!';
-		return Redirect::action('CarouselManagementController@carouselItems')->with('modelState', $modelState);
+		$modelState['success'][] = 'Article \'' . $deletedItemName . '\' deleted successfully!';
+		return Redirect::action('ArticleManagementController@articleItems')->with('modelState', $modelState);
 	}
 
 	public function articleItemEnable()
 	{
 		$item = ArticleItem::onlyTrashed()->where('id', Input::get('id'))->firstOrFail();
-		$imageHash = $item['imageUrl'];
-		if (ArticleItem::where('imageUrl', $imageHash)->count() > 0) {
-			$modelState['errors'][] = 'Item with same image is already enabled in carousel! Disable or delete active item, then try enable this again!';
-		} else {
 			$item->restore();
-			$modelState['success'][] = 'Item enabled ' . $item->originalName . ' successfully!';
-		}
-		return Redirect::action('CarouselManagementController@carouselItems')->with('modelState', $modelState);
+			$modelState['success'][] = 'Article \'' . $item->heading . '\' enabled successfully!';
+		return Redirect::action('ArticleManagementController@articleItems')->with('modelState', $modelState);
 	}
 } 
