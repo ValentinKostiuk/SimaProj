@@ -16,6 +16,16 @@ class MainSiteController extends BaseController
 			);
 		}
 
+		$articlesDb = ArticleItem::take(3)->get();
+
+		foreach($articlesDb as $article) {
+			$model['articles'][] = array(
+				'id' => $article['id'],
+				'heading' => $article['heading'],
+				'content' => strip_tags($article['content'])
+			);
+		}
+
 		return View::make('main.landingPage', array(
 		'model' => $model
 		));

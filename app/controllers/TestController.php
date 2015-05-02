@@ -2,7 +2,7 @@
 
 class TestController extends BaseController
 {
-	public function showProductGroup($productGroupStr = 'all')
+	public function show($productGroupStr = 'all')
 	{
 		$group = ProductGroup::where('group', $productGroupStr)->first();
 		$galleryItems = null;
