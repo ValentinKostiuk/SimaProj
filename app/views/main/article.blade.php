@@ -1,15 +1,14 @@
 @extends('layouts.mainLayout')
 @section('headerTags')
-	<link rel="stylesheet" href="/statics/styles/gallery.css">
+	<link rel="stylesheet" href="/statics/styles/articles.css">
 @stop
 @section('content')
 	@if(isset($article))
-		<div class="gallery-product-wrapper">
-
-			<div class="gallery-product-main">
+		<div class="articles-article-wrapper">
+			<div class="articles-article-heading">
 				<h2>{{$article['heading']}}</h2>
 
-				<div class="gallery-product-details">
+				<div class="articles-article-content">
 					{{$article['content']}}
 				</div>
 			</div>

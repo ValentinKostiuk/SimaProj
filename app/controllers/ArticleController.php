@@ -21,6 +21,10 @@ class ArticleController extends BaseController
 
 	public function showAll()
 	{
-		return View::Make('main.articles');
+		$articles = ArticleItem::all();
+
+		return View::Make('main.articles', array(
+			'articles' => $articles
+		));
 	}
 } 

@@ -1,0 +1,43 @@
+/*-----------all articles styles---------------*/
+.articles-all-articles-wrapper{
+	padding-top: 30px;
+	text-align: left;
+}
+
+.articles-all-article{
+	padding: 0 40px;
+}
+
+.articles-all-article-heading{
+	color: #48291A;
+	cursor: pointer;
+}
+
+.articles-all-article-content{
+	margin-bottom: 40px;
+	padding: 0 40px;
+	display: block;
+}
+
+.collapsed .articles-all-article-content{
+	display: none;
+}
+
+.articles-all-article-ruler {
+	border: none;
+	border-top: #48291A solid 1px;
+	margin-bottom: 40px;
+}
+
+.collapsed .articles-all-article-ruler {
+	display: none;
+}
+
+
+
+
+/*-----------single article stiles------------*/
+.articles-article-content{
+	padding: 0 30px;
+	text-align: left;
+}
