@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="/statics/styles/main.css">
 	<link rel="stylesheet" href="/statics/thirdPartyLibs/owl-carousel/owl.carousel.css">
 	<link rel="stylesheet" href="/statics/thirdPartyLibs/owl-carousel/owl.theme.css">
+	<link rel="stylesheet" href="/statics/fonts/fontello-fcdb8aa6/css/simafont.css">
 	<script type="text/javascript" src="/statics/scripts/libs/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="/statics/thirdPartyLibs/owl-carousel/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="/statics/scripts/mainLayoutInit.js"></script>

@@ -26,15 +26,14 @@ html, body {
 	text-align: center;
 }
 
-.header-logo {
-	display: inline-block;
-	text-decoration: none;
+.header-container-heading{
+	margin-top: 0;
 }
 
-.header-logo-image {
+.header-container .icon-tools,
+.header-container .icon-cog{
+	color: #009900;
 }
-
-
 
 .header-container-user-menu{
 	display: inline-block;
@@ -57,6 +56,7 @@ html, body {
 }
 .header-container-user-nav-menu-item a,
 .header-container-user-nav-menu-item span{
+	display: block;
 	color: #808080;
 	text-decoration: none;
 	font-size: 13px;
@@ -85,7 +85,7 @@ html, body {
 }
 
 .header-container-user-sub-nav-menu-item{
-	display: inline-block;
+	display: block;
 	position: relative;
 	white-space: nowrap;
 	list-style: none;
@@ -111,13 +111,13 @@ html, body {
 .header-main-site-nav-menu {
 	display: inline-block;
 	padding: 0;
+	margin-top: 0;
 	vertical-align: top;
 }
 
 .header-main-site-nav-menu-item {
 	display: inline-block;
 	position: relative;
-	height: 50px;
 	margin-top: 15px;
 	padding: 0 14px;
 	list-style: none;
@@ -424,22 +424,30 @@ html, body {
 }
 
 .dashboard-big-menu-list-item a{
+	display: inline-block;
+	width: 100%;
+	padding-right: 15px;
 	text-decoration: none;
 	color: #666666;
 }
 
+.dashboard-big-menu-list-item a:hover{
+	display: inline-block;
+	text-decoration: none;
+	background-color: #B2E0B2;
+	color: #009900;
+}
+
 .dashboard-big-menu-list-item span{
 	display: inline-block;
-	height: 80px;
-	vertical-align: middle;
+	vertical-align: top;
 	font-size: 20px;
-	line-height: 13px;
+	line-height: 100px;
 	padding-left: 10px;
 }
 
 .dashboard-big-menu-image{
-	width: 80px;
-	height: 80px;
+	font-size: 90px;
 }
 
 

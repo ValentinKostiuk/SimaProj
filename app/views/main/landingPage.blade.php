@@ -66,7 +66,7 @@
 				singleItem: true,
 				pagination: true,
 				navigation: true,
-				navigationText: ["<", ">"]
+				navigationText: ["<i class='icon-left-open'></i>", "<i class='icon-right-open'></i>"]
 			});
 		});
 	</script>

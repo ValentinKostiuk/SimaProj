@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Admin Dashboard</title>
 		<link rel="stylesheet" href="/statics/styles/dashboard.css">
+		<link rel="stylesheet" href="/statics/fonts/fontello-fcdb8aa6/css/simafont.css">
 		<script type="text/javascript" src="/statics/scripts/libs/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="/statics/scripts/dashboardLayoutInit.js"></script>
 	</head>
@@ -12,7 +13,8 @@
 			<header class="header-wrapper">
 				<div class="header-wrapper-inner">
 					<div class="header-container">
-						<h1>Welcome To System Dashboard</h1>
+						<h2 class="header-container-heading"><i class="icon-tools"></i>System Dashboard<i class="icon-cog"></i></h2>
+						<div class="header-container-ruler"></div>
 						<nav class="header-container-user-menu">
 							<ul class="header-container-user-nav-menu">
 								<li class="header-container-user-nav-menu-item user-menu-item">
@@ -59,14 +61,14 @@
 									</div>
 								</li>
 								<li class="header-main-site-nav-menu-item main-menu-item">
-									<a href="{{{action('ProductManagementController@productItems')}}}" onclick="return false;">Manage Gallery</a>
+									<a href="{{{action('ProductManagementController@productItems')}}}" onclick="return false;">Manage Products</a>
 									<div class="header-main-site-sub-nav">
 										<ul class="header-main-site-sub-nav-menu">
 											<li class="header-main-site-sub-nav-menu-item main-menu-item">
-												<a href="{{{action('ProductManagementController@productItems')}}}">View all gallery items</a>
+												<a href="{{{action('ProductManagementController@productItems')}}}">View all products</a>
 											</li>
 											<li class="header-main-site-sub-nav-menu-item main-menu-item">
-												<a href="{{{action('ProductManagementController@createProductItemGet')}}}">Create product item</a>
+												<a href="{{{action('ProductManagementController@createProductItemGet')}}}">Create product</a>
 											</li>
 										</ul>
 									</div>
