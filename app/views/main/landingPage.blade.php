@@ -15,7 +15,9 @@
 					<div id="carouselItems" class="owl-carousel">
 						@foreach ($model['carouselItems'] as $item)
 							<div class="owl-carousel-image-wrapper">
-								<a href="{{$item['linkTo']}}"><img src="{{$item['imageUrl']}}" title="{{$item['imageTitle']}}" class="owl-carousel-image"/></a>
+								<a href="{{$item['linkTo']}}"><img src="{{$item['imageUrl']}}"
+								                                   title="{{$item['imageTitle']}}"
+								                                   class="owl-carousel-image"/></a>
 							</div>
 						@endforeach
 					</div>
@@ -51,13 +53,16 @@
 	<div class="landing-page-horizontal-ruler"></div>
 
 	<div class="landing-page-articles-wrapper">
-		@foreach ($model['articles'] as $article)
-			<div class="landing-page-article">
-				<h2 class="landing-page-article-heading">{{$article['heading']}}</h2>
-				<div class="landing-page-article-text">{{$article['content']}}</div>
-				<a href="/articles/{{$article['id']}}" class="landing-page-article-read-more-link">Дальше</a>
-			</div>
-		@endforeach
+		@if(isset($model['articles']))
+			@foreach ($model['articles'] as $article)
+				<div class="landing-page-article">
+					<h2 class="landing-page-article-heading">{{$article['heading']}}</h2>
+
+					<div class="landing-page-article-text">{{$article['content']}}</div>
+					<a href="/articles/{{$article['id']}}" class="landing-page-article-read-more-link">Дальше</a>
+				</div>
+			@endforeach
+		@endif
 	</div>
 	<script type="text/javascript">
 		$(document).ready(function () {
